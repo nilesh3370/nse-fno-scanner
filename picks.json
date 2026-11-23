@@ -1,6 +1,6 @@
 {
-  "updated_at": "23 Nov 2026, 07:30 PM IST",
-  "universe_scanned": 60,
+  "updated_at": "23 Nov 2026, 07:39 PM IST",
+  "universe_scanned": 59,
   "expiry_meta": {
     "current_month": {
       "code": "current",
@@ -15,203 +15,129 @@
       "dte": 36
     },
     "recommended": "next",
-    "rule_reason": "Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days threshold) — automatically suggesting Next Month Expiry for optimal 30–45 DTE theta decay and lower gamma risk."
+    "rule_reason": "Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days) — recommending Next Month Expiry for optimal theta decay and lower expiry-week gamma risk."
   },
-  "market_note": "Combined News + Technical scan across 60 liquid NSE F&O stocks. Next expiry (29 Dec 2026, 36 DTE) is ≤45 days, so Next Month spreads are highlighted as Primary alongside Current Month levels.",
+  "market_note": "News + Technical hybrid scan across 59 liquid NSE F&O stocks (Market breadth: 75% above 50 DMA). Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days) — recommending Next Month Expiry for optimal theta decay and lower expiry-week gamma risk.",
   "bullish": [
     {
-      "symbol": "EICHERMOT",
-      "name": "Eicher Motors Ltd.",
+      "symbol": "M&M",
+      "name": "Mahindra & Mahindra",
       "sector": "Automobile",
       "bias": "bullish",
       "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 8171.0,
-      "chg_1d": 1.45,
-      "chg_20d": 17.0,
-      "rsi": 67.4,
-      "dma50": 7680.0,
-      "dma200": 7120.0,
-      "dist_52w_high": -0.4,
-      "vol_ratio": 1.52,
-      "tech_score": 92,
-      "news_score": 94,
-      "conviction": 93,
+      "cmp": 3487.4,
+      "chg_1d": -1.62,
+      "chg_20d": 21.89,
+      "rsi": 69.0,
+      "dma50": 3038.81,
+      "dma200": 3163.82,
+      "dist_52w_high": -8.23,
+      "vol_ratio": 1.15,
+      "tech_score": 98,
+      "news_score": 96,
+      "conviction": 97,
       "news_sentiment": "Strong Bullish Catalyst",
       "expiries": {
         "current": {
-          "zone": "₹8,000 – ₹8,050",
-          "invalidation": 7960.0,
-          "short_strike": 8000,
-          "hedge_strike": 7900,
-          "est_credit": 24.0
-        },
-        "next": {
-          "zone": "₹7,750 – ₹7,850",
-          "invalidation": 7680.0,
-          "short_strike": 7800,
-          "hedge_strike": 7600,
-          "est_credit": 68.0
-        }
-      },
-      "lot_size": 175,
-      "reasons": {
-        "technical": "Hit fresh all-time high (~₹8,200) after a +17% 1-month rally; strong support above 20 DMA and 50 DMA (₹7,680).",
-        "news": "ICICI Securities & top brokerages reiterated 'Buy' (targets ₹8,910–₹9,500) citing robust Royal Enfield booking pipeline, lean dealer inventory, and VECV earnings growth.",
-        "risk": "Use limit orders on higher-priced strikes; roll or exit if daily close breaks ₹7,680 (Dec series)."
-      },
-      "headlines": [
-        {
-          "title": "Eicher Motors hits all-time high; brokerages raise target up to ₹9,500 on Royal Enfield & VECV outlook",
-          "source": "Business Standard",
-          "sentiment": "Positive",
-          "url": "https://www.business-standard.com"
-        }
-      ]
-    },
-    {
-      "symbol": "INDHOTEL",
-      "name": "Indian Hotels Co.",
-      "sector": "Hospitality",
-      "bias": "bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 910.0,
-      "chg_1d": 1.85,
-      "chg_20d": 9.4,
-      "rsi": 66.2,
-      "dma50": 852.0,
-      "dma200": 788.0,
-      "dist_52w_high": -0.8,
-      "vol_ratio": 1.45,
-      "tech_score": 90,
-      "news_score": 88,
-      "conviction": 89,
-      "news_sentiment": "Bullish Catalyst",
-      "expiries": {
-        "current": {
-          "zone": "₹890 – ₹900",
-          "invalidation": 882.0,
-          "short_strike": 890,
-          "hedge_strike": 870,
-          "est_credit": 4.5
-        },
-        "next": {
-          "zone": "₹865 – ₹880",
-          "invalidation": 855.0,
-          "short_strike": 870,
-          "hedge_strike": 840,
-          "est_credit": 11.5
-        }
-      },
-      "lot_size": 1000,
-      "reasons": {
-        "technical": "Multi-year weekly breakout above ₹870–₹895 with expanding volume; holding firmly above 50 DMA (₹852).",
-        "news": "Hospitality sector capex & Q3-Q4 peak wedding/tourism occupancy tailwinds driving institutional upgrades across hotel peers.",
-        "risk": "Watch for broader mid-cap profit booking; exit Dec spread if daily close breaches ₹855."
-      },
-      "headlines": [
-        {
-          "title": "Hospitality stocks in focus on peak Q3 wedding & winter occupancy surge across metro and leisure destinations",
-          "source": "NSE Market Wire",
-          "sentiment": "Positive",
-          "url": "https://www.nseindia.com"
-        }
-      ]
-    },
-    {
-      "symbol": "PERSISTENT",
-      "name": "Persistent Systems",
-      "sector": "IT Services",
-      "bias": "bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 6283.0,
-      "chg_1d": 2.6,
-      "chg_20d": 10.4,
-      "rsi": 65.4,
-      "dma50": 5890.0,
-      "dma200": 5420.0,
-      "dist_52w_high": -2.1,
-      "vol_ratio": 1.51,
-      "tech_score": 88,
-      "news_score": 82,
-      "conviction": 86,
-      "news_sentiment": "Bullish Sector + Clarity",
-      "expiries": {
-        "current": {
-          "zone": "₹6,150 – ₹6,200",
-          "invalidation": 6100.0,
-          "short_strike": 6150,
-          "hedge_strike": 6050,
-          "est_credit": 21.0
-        },
-        "next": {
-          "zone": "₹5,950 – ₹6,050",
-          "invalidation": 5900.0,
-          "short_strike": 6000,
-          "hedge_strike": 5800,
-          "est_credit": 62.0
-        }
-      },
-      "lot_size": 200,
-      "reasons": {
-        "technical": "Strong mid-cap IT breakout (+2.6% session surge, +10.4% in 20D) trading cleanly above 50 DMA (₹5,890).",
-        "news": "Rallied alongside Nifty IT leaders (TCS, TechM); company clarified third-party US law firm incident did not compromise internal systems.",
-        "risk": "Avoid stacking redundant IT delta if also shorting Coforge puts."
-      },
-      "headlines": [
-        {
-          "title": "Persistent Systems shares gain over 2% amid IT rally; company clarifies own systems remain fully secure",
-          "source": "Upstox News",
-          "sentiment": "Positive",
-          "url": "https://upstox.com"
-        }
-      ]
-    },
-    {
-      "symbol": "COFORGE",
-      "name": "Coforge Ltd.",
-      "sector": "IT Services",
-      "bias": "bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 2143.0,
-      "chg_1d": 1.42,
-      "chg_20d": 11.2,
-      "rsi": 64.8,
-      "dma50": 1985.0,
-      "dma200": 1810.0,
-      "dist_52w_high": -1.6,
-      "vol_ratio": 1.32,
-      "tech_score": 89,
-      "news_score": 84,
-      "conviction": 87,
-      "news_sentiment": "Bullish Earnings Catalyst",
-      "expiries": {
-        "current": {
-          "zone": "₹2,100 – ₹2,120",
-          "invalidation": 2075.0,
-          "short_strike": 2100,
-          "hedge_strike": 2050,
-          "est_credit": 8.0
-        },
-        "next": {
-          "zone": "₹2,040 – ₹2,080",
-          "invalidation": 2010.0,
-          "short_strike": 2050,
-          "hedge_strike": 2000,
+          "zone": "₹3,350 – ₹3,400",
+          "invalidation": 3316.5,
+          "short_strike": 3400,
+          "hedge_strike": 3300,
           "est_credit": 22.0
+        },
+        "next": {
+          "zone": "₹3,250 – ₹3,300",
+          "invalidation": 3217.5,
+          "short_strike": 3300,
+          "hedge_strike": 3200,
+          "est_credit": 28.0
         }
       },
-      "lot_size": 375,
+      "lot_size": 350,
       "reasons": {
-        "technical": "Holding within 1.6% of 52-week high (₹2,178) in a sustained higher-low structure above 50 DMA (₹1,985).",
-        "news": "Backed by +67% YoY quarterly profit growth and strong US BFSI/travel order book momentum across mid-cap IT.",
-        "risk": "High-beta IT counter; always define risk with the ₹2,000 Put hedge."
+        "technical": "Trading at ₹3,487 (-8.2% from 52W high), above 50 DMA (₹3,039) & 200 DMA (₹3,164), 20D gain +21.9%, RSI(14) 69.0.",
+        "news": "Confirmed by recent news flow: \"M&MFIN Share Price Today - M&M Financial Services on NSE/BSE - scanx.trade\"",
+        "risk": "Daily ATR 2.6% (1.15x vol). Hedge with ₹3,200 Put; exit if daily close breaches ₹3,218."
       },
       "headlines": [
         {
-          "title": "Mid-cap IT momentum stays strong on Q2 earnings beat and healthy H2 deal ramp-up visibility",
-          "source": "NSE Market Wire",
+          "title": "M&MFIN Share Price Today - M&M Financial Services on NSE/BSE - scanx.trade",
+          "source": "scanx.trade",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1LbnBjVVRfaWVvbWcwSmt4cDhUNmtnZVhkOGY3VldKRDBXUlVRWTNzVnhGVzNuVExoYWsxa3kzXzdYcmRPY3F3U0tNMFRXSnNEeUs3WXA4OTRFWUZzZ1E2Qk9waE94YkpXUnpyX2xRWXhRX1BCVU04?oc=5"
+        },
+        {
+          "title": "Maruti Suzuki shares jump 5%, M&M, Tata Motors, Eicher Motors rally as Nifty Auto surges 2.6% - Moneycontrol.com",
+          "source": "Moneycontrol.com",
           "sentiment": "Positive",
-          "url": "https://www.nseindia.com"
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQN21KNmJoLVNDaTBMM2pBS2lZZFNRMktzMUpUTlNNZzNxZWJTV1QycWV6UmVpQjNQRUlCeDZtZ3lxYXlHNmV4LUR2eVNEQXhDYXZNbTh1RkFLM0gzSG40clZqMGhkdzhVTUY0Q1BWck94R3EzdmJkSjg4S3J2Z1VDV0xHamZBbVE1TkMyMzRQUzM3TFpJYjJhWXRmTUlxbU5kV0dpcTVkRzBkaWtaNDBfcVYyU0ZlN2gzSW5lZ2l4RkloMVRuOXZ2OFNHdHI3WU9pMVpORThYOURBaTNnMG1IZG9rNVlqalU20gHuAUFVX3lxTFAzcVVIdzFRWWlLX3hDNjRyZjJ3b3VxR3NWQVJtNE1LaEJ1VGNDdWFQVzFvb21DNklmV2xhZTN1V1FxVFlDYjVwLTQ4U1NyUVNzaGgzaWVEalZRY2NMdVZvY1BYb092dFJDdW1oQmk2OVBGZlNXNl8wU3JpS1U0aTBqU1ZtV1R6dFZWcEYwMC1Bd0xJWVQ4TDdVZFV0SU8yZkkyeF9LX0d5anM2RHdHUUFoSmtWczBYNloyRFpkWUE2ZnhDRHdXOTJFTUZ0SnNlVGlnUnZsQVVEQmw5RnpvUHVWV1RfazF6R0VNWGpsYlE?oc=5"
+        },
+        {
+          "title": "M&M Forecast — Price Target — Prediction for 2027 - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE94c1FlX0xFUzRzZUw0M1NmVWt6V1lQMm9qSThTbFRKRjlrRlctbV9OWXFBRmtyUmdZTWZyN2JLeU5zU3l0Rk1udHJCT2Y0ZTVpWEI1Wnkza0NhV3BTRkM5VG42YW5EV1dncmdnblYxaV9jbHdz?oc=5"
+        }
+      ]
+    },
+    {
+      "symbol": "DLF",
+      "name": "DLF Ltd.",
+      "sector": "Real Estate",
+      "bias": "bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 794.1,
+      "chg_1d": 1.16,
+      "chg_20d": 20.87,
+      "rsi": 75.5,
+      "dma50": 688.54,
+      "dma200": 630.06,
+      "dist_52w_high": -0.23,
+      "vol_ratio": 1.03,
+      "tech_score": 98,
+      "news_score": 80,
+      "conviction": 92,
+      "news_sentiment": "Strong Bullish Catalyst",
+      "expiries": {
+        "current": {
+          "zone": "₹760 – ₹780",
+          "invalidation": 752.4,
+          "short_strike": 780,
+          "hedge_strike": 760,
+          "est_credit": 4.4
+        },
+        "next": {
+          "zone": "₹740 – ₹760",
+          "invalidation": 732.6,
+          "short_strike": 760,
+          "hedge_strike": 740,
+          "est_credit": 5.6
+        }
+      },
+      "lot_size": 825,
+      "reasons": {
+        "technical": "Trading at ₹794.1 (-0.2% from 52W high), above 50 DMA (₹688.5) & 200 DMA (₹630.1), 20D gain +20.9%, RSI(14) 75.5.",
+        "news": "Confirmed by recent news flow: \"6 Stocks Hit 52-Week Highs on NSE: Honasa Consumer, DLF, Eicher Motors, Apollo Hospitals and Others in Focus - Dalal Street Investment Journal\"",
+        "risk": "Daily ATR 2.3% (1.03x vol). Hedge with ₹740 Put; exit if daily close breaches ₹732.6."
+      },
+      "headlines": [
+        {
+          "title": "6 Stocks Hit 52-Week Highs on NSE: Honasa Consumer, DLF, Eicher Motors, Apollo Hospitals and Others in Focus - Dalal Street Investment Journal",
+          "source": "Dalal Street Investment Journal",
+          "sentiment": "Positive",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNeTQyQ0FGRzdUemV5QTZnV0tLWVNMNTJKM3V1emJFbXhtWUdQNzQ4T2REcXluQWlKVWhpWWcwQm56N2dka1dlM1NxM0h4RVhSVDlLWkFDTDdtNUNFem03LXFNam1XS0k0UTNNWklnaG9rWlhPMTdtOW4tb0FiQ3VvcWc1b1B6VXFNc2hxR1QzQW96MU9QcDc5NWhZbWstVWt2VEpQNWZScG1reDlyalozb29DTkZUeEhzcktidjNYa0txcmkwSTBqb1duWGJrQ1QxaGsxNDFlcEdoY0ZMQmh1dXF3S2NMbFA2?oc=5"
+        },
+        {
+          "title": "DLF Forecast — Price Target — Prediction for 2027 - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5VSGk0VXMwckp1R3ducXlLc1pETlM4RFNzVk5aMlRMUU1SRGgzbmJLaTU3WFZ0aE0xV0xCUHpqbTJSd2d3eEoxYTV3dk1ieFpKNUk5VkZORGg0djMwQUE0dzhQTWtSa0ZMRWY0QzJKN0xqcnVz?oc=5"
+        },
+        {
+          "title": "DLF (NSEI:DLF) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUzlTNDNRYkZFd0lkRFdYa3lDMVp6Nm9acmtoekhFMFRGaGJyMTBsQ2JialdBOHNCWW8yTjZDRWRJYjJXbkp6QWhsNFZrVXlmTDhpWUZLVk5fZGJqY0Zsa2ZyOFZrc0h1Rl9BaXBsVkVEbEJXN0VZb0dPQkdHcGlkUHdWc3hpX0J4SW9uSUJhWC1QUlc3MWVnX0pCdzA?oc=5"
         }
       ]
     },
@@ -221,51 +147,246 @@
       "sector": "FMCG",
       "bias": "bullish",
       "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 919.0,
-      "chg_1d": 0.92,
-      "chg_20d": 6.8,
-      "rsi": 62.5,
-      "dma50": 874.0,
-      "dma200": 812.0,
-      "dist_52w_high": -0.7,
-      "vol_ratio": 1.18,
-      "tech_score": 86,
-      "news_score": 82,
-      "conviction": 85,
-      "news_sentiment": "Defensive Bullish",
+      "cmp": 919.5,
+      "chg_1d": 0.27,
+      "chg_20d": 19.96,
+      "rsi": 68.2,
+      "dma50": 826.04,
+      "dma200": 810.22,
+      "dist_52w_high": -0.59,
+      "vol_ratio": 0.67,
+      "tech_score": 98,
+      "news_score": 77,
+      "conviction": 91,
+      "news_sentiment": "Supportive News Flow",
       "expiries": {
         "current": {
-          "zone": "₹900 – ₹910",
-          "invalidation": 892.0,
+          "zone": "₹880 – ₹900",
+          "invalidation": 871.2,
           "short_strike": 900,
           "hedge_strike": 880,
-          "est_credit": 3.5
+          "est_credit": 4.4
         },
         "next": {
-          "zone": "₹875 – ₹890",
-          "invalidation": 865.0,
+          "zone": "₹860 – ₹880",
+          "invalidation": 851.4,
           "short_strike": 880,
-          "hedge_strike": 850,
-          "est_credit": 8.5
+          "hedge_strike": 840,
+          "est_credit": 11.2
         }
       },
       "lot_size": 1200,
       "reasons": {
-        "technical": "Trading 0.7% below its 52-week high (₹925) with low realized volatility—ideal for high-probability theta decay.",
-        "news": "Featured on institutional 'Stocks to Watch' following +31% quarterly profit growth and improving rural volume trends.",
-        "risk": "Lower IV compresses OTM premiums; avoid selling strikes too far out with weak reward-to-risk."
+        "technical": "Trading at ₹919.5 (-0.6% from 52W high), above 50 DMA (₹826.0) & 200 DMA (₹810.2), 20D gain +20.0%, RSI(14) 68.2.",
+        "news": "Recent coverage aligns with trend: \"Marico Share Price - Upstox\"",
+        "risk": "Daily ATR 2.1% (0.67x vol). Hedge with ₹840 Put; exit if daily close breaches ₹851.4."
       },
       "headlines": [
         {
-          "title": "Stocks to watch: Marico in focus on steady margin resilience and rural volume recovery",
-          "source": "Upstox / Market Wire",
+          "title": "Marico Share Price - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9lNWtHUUR0ZWM0TlNFVTVBaW1aSnZIeDBYUXY2OWY0TkRBQVRYaGpiaTFPR3dBZXd0ZW54NlhUX1R2VEVfODlUSVp3TU9HUWlxd1dkZHN1VVdFQXYwOVE3b001UQ?oc=5"
+        },
+        {
+          "title": "Marico shares spurt 6% on robust Q2 earnings, positive revision in guidance - Business Standard",
+          "source": "Business Standard",
           "sentiment": "Positive",
-          "url": "https://upstox.com"
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQYmlzVlpvejVtUW9KOU1UdXdaWkU4NGk5b24xdzkzWmI4YXNiMVZSX1dvU2YtZzhsVUhyM0NTcWNXazlXNE1JbGlCdThZeUxBc291Ukd3aEhmZFZUeHlMUUpZdFpxd2dxbmNUWnhRT2paejhubVVCRVpwV09CRkhfNkdqaGFtejVkeDhDTHlZTkc3N0lfNk1QbGtQdndRSU9sNzJnaXdmc2NqR1VOcW9MaFY2WGM0a2pnYUhzNm01RW9mUEVyaXlwVmt4LWUtVUpBdENGaDVva9IB3AFBVV95cUxNVGVRYTM0WTZ3N1B6VjkwVWhwUDhQRFBOS0hab050c19vekVfdlVJbHcxN3RqNUhSRk1fX2NfZm5ibjQ4SV8xdmx3RVZiVExxbXhlUWJ3MFdKdmpHMXFZOW1ZNFZid0JPS3o1aTNoaXJac3RxM3pybGlZNDk2Qkp5bGVGcVAtUVNyRmtTZVFIZFRIUzdMcU9fVGRpMUFnNWM2Y19VNFNiNlo5czVDSUZPX1V3OXhBNndNT1JIZGV1U0FUR1FOLWEtWDFiN0lkZmJLSzBIWGNveUNnd0xa?oc=5"
+        },
+        {
+          "title": "MARICO Forecast — Price Target — Prediction for 2027 - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92dThBVVJNLWJRdkU5Ri1jTk15ZlNoczNGcGhST056U0s2cEphTmVraXNJYlFvRTAwanRMMHNtTFBrN3FTUEl0S0RYWWFnUnpmQ2syZlV6TXhULUU5MjlmZzZBS2VVb3IzcGNZZ1pNazJTWGhHNlJwVg?oc=5"
+        }
+      ]
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "name": "Bajaj Finance Ltd.",
+      "sector": "NBFC",
+      "bias": "bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 1095.5,
+      "chg_1d": -2.36,
+      "chg_20d": 17.93,
+      "rsi": 60.7,
+      "dma50": 1004.73,
+      "dma200": 979.41,
+      "dist_52w_high": -6.88,
+      "vol_ratio": 0.92,
+      "tech_score": 98,
+      "news_score": 75,
+      "conviction": 90,
+      "news_sentiment": "Supportive News Flow",
+      "expiries": {
+        "current": {
+          "zone": "₹1,040 – ₹1,080",
+          "invalidation": 1029.6,
+          "short_strike": 1060,
+          "hedge_strike": 1040,
+          "est_credit": 4.4
+        },
+        "next": {
+          "zone": "₹1,020 – ₹1,040",
+          "invalidation": 1009.8,
+          "short_strike": 1040,
+          "hedge_strike": 1000,
+          "est_credit": 11.2
+        }
+      },
+      "lot_size": 125,
+      "reasons": {
+        "technical": "Trading at ₹1,096 (-6.9% from 52W high), above 50 DMA (₹1,005) & 200 DMA (₹979.4), 20D gain +17.9%, RSI(14) 60.7.",
+        "news": "Recent coverage aligns with trend: \"Bajaj Finance Share Price - Live NSE: BAJFINANCE Stock Price & Chart - Upstox\"",
+        "risk": "Daily ATR 2.8% (0.92x vol). Hedge with ₹1,000 Put; exit if daily close breaches ₹1,010."
+      },
+      "headlines": [
+        {
+          "title": "Bajaj Finance Share Price - Live NSE: BAJFINANCE Stock Price & Chart - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uWDYwYU9rV1lTNktHU2ZCaFBmU3p2OWIxTjZJNWZ3dVpZU0F3bG1wTVQ1QzFta3RNbGlKam1rV3NPd0ZsUDVGMm9mX2JVZkUyZWRwckVSRWxTNmFzbzFJak5BRDY1VU1qblFtSQ?oc=5"
+        },
+        {
+          "title": "If EPS Growth Is Important To You, Bajaj Finance (NSE:BAJFINANCE) Presents An Opportunity - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Positive",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZS1uYUs3aGJBTnp6WFRXRDdESWt2WmtkZUMyTEs2dFJqX3I4M3pxMjRZUlo3MkVFV3g2MUx0a3FTSWxhNlZZaEliZFJRQm1ZSml3Q2ZWOVZ6VWMwME13OU1SWklrQ2VpR2ZPWnFlbU1lRG5RTWY3V2VhVmpzWXctcF8xLWtOQWRxUTFfdDA3SFRZRFJKYWVfSGlxbU5DTXB1Nl9HS3NFd2xXLS1Na2lzUnczay0wYnRDRzdjQWJZV053R2ZWX0ppYnp0SllLZ2c1Z3ZBczl1TkRicDVBRFQ2MEltNTY3S1hRTzFnVtIB8gFBVV95cUxQMzlPLUhKTV95STNCYW5HZExyNHBLdXVKellUTDNRemlRWTZTRzhQc0Z5ZDg1b3FlZGxYNlcyTDI0Q3NuY2JMaTBnWnU1a0EzZnphcWwzRXUtMW5FNVhQWTBPTHZGMlZGQ3RlSU43dHZ3a2JHR1EyRTNBeXlBZlhaaWxmaVZHOFl1dElXTVZQdVNZdl9zckdfTTFkZU5zdVpoWk10dHR2MzVzZzYwT3hUeGEzM0dtTDR1N05LdXhaLWpjMm82RE9GR1hnZlVkMVlTdU4xSG5PUFAxRmNWcjktdG9zMFY0UzdrTEw0dGdzbGxkQQ?oc=5"
+        },
+        {
+          "title": "Bajaj Finance Share Price Today Live NSE/BSE Graph & Chart - Kotak Neo",
+          "source": "Kotak Neo",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1QbThaMkRUMEJBUFVDbUZ6bC1XZUtuRzlObHpFdlV2UnBLZHRFbmpENWY5Q0VLNjF5eUFEdXA0bS1rMEx2RVZ4OTdQZl9NbThYTW5UZVNxZy1ESGRnX3dRbjQxN1g5Nk4xdmc?oc=5"
+        }
+      ]
+    },
+    {
+      "symbol": "DIVISLAB",
+      "name": "Divi's Laboratories",
+      "sector": "Pharma",
+      "bias": "bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 11203.0,
+      "chg_1d": 0.2,
+      "chg_20d": 25.17,
+      "rsi": 68.7,
+      "dma50": 9810.61,
+      "dma200": 7645.31,
+      "dist_52w_high": -5.25,
+      "vol_ratio": 0.88,
+      "tech_score": 98,
+      "news_score": 68,
+      "conviction": 88,
+      "news_sentiment": "Supportive News Flow",
+      "expiries": {
+        "current": {
+          "zone": "₹10,500 – ₹11,000",
+          "invalidation": 10395.0,
+          "short_strike": 11000,
+          "hedge_strike": 10500,
+          "est_credit": 110.0
+        },
+        "next": {
+          "zone": "₹10,000 – ₹11,000",
+          "invalidation": 9900.0,
+          "short_strike": 10500,
+          "hedge_strike": 10000,
+          "est_credit": 140.0
+        }
+      },
+      "lot_size": 200,
+      "reasons": {
+        "technical": "Trading at ₹11,203 (-5.2% from 52W high), above 50 DMA (₹9,811) & 200 DMA (₹7,645), 20D gain +25.2%, RSI(14) 68.7.",
+        "news": "Recent coverage aligns with trend: \"Divis Laboratories Share Price - Live NSE: DIVISLAB Stock Price & Chart - Upstox\"",
+        "risk": "Daily ATR 2.7% (0.88x vol). Hedge with ₹10,000 Put; exit if daily close breaches ₹9,900."
+      },
+      "headlines": [
+        {
+          "title": "Divis Laboratories Share Price - Live NSE: DIVISLAB Stock Price & Chart - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4xZ0Zxem94U0owZ3BVakFqa2pfNl9wTU9iY2JvM19RblREM3hTRFJoUEZjZzU2SnpsenJQLS1rUGlzWnpCUXdfbVhfUGVxVVdPWDJaQjRiSzR2VVQwbnlwMXR0SWozR0Q0ZXMyR0NUQQ?oc=5"
+        },
+        {
+          "title": "Divi's Laboratories (DIVISLAB) Share Price Today (NSE), Market News - TechGraph",
+          "source": "TechGraph",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE11ZXMtVG5fcjRValBSLW1CTU1ySFVwNjM5d21vWHVUdlNlaklyT3g0dFoxVmIybDZGTjRwZ09Sc3lZaHktYlkwcjA5U2ZNRHFmenZLcTVPLTdoYV85TkdKOUh3?oc=5"
+        },
+        {
+          "title": "Divi's Laboratories (NSEI:DIVISLAB) - Stock Analysis - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOTY1UEI4MG9VVGh2dGZaRjVTc3l2Mk9HUHdKOUJpa041RnF4c3EtY1ZXV3hiNmw3M0lzRWMzUV9CWGpYMkxLeDZCZ1Zrc0pXN25tbjlCdFNUWlVjeGNrcjNrbk01Y3FXOGZVU20xOTUyRjc5Q0F6dFprcXp6OEhVcUR2OHNJOFdGNVFiNGtuNGJJRWRLdEhvMFJn?oc=5"
         }
       ]
     }
   ],
   "bearish": [
+    {
+      "symbol": "POLYCAB",
+      "name": "Polycab India Ltd.",
+      "sector": "Cables & Wires",
+      "bias": "bearish",
+      "strategy": "Bear Call Spread / OTM Call Sell",
+      "cmp": 7430.0,
+      "chg_1d": -1.85,
+      "chg_20d": -0.13,
+      "rsi": 38.3,
+      "dma50": 8014.18,
+      "dma200": 8452.99,
+      "dist_52w_high": -26.62,
+      "vol_ratio": 1.77,
+      "tech_score": 98,
+      "news_score": 87,
+      "conviction": 94,
+      "news_sentiment": "Heavy Bearish Catalyst",
+      "expiries": {
+        "current": {
+          "zone": "₹7,600 – ₹7,700",
+          "invalidation": 7777.0,
+          "short_strike": 7600,
+          "hedge_strike": 7800,
+          "est_credit": 44.0
+        },
+        "next": {
+          "zone": "₹7,800 – ₹8,000",
+          "invalidation": 8080.0,
+          "short_strike": 7900,
+          "hedge_strike": 8200,
+          "est_credit": 84.0
+        }
+      },
+      "lot_size": 125,
+      "reasons": {
+        "technical": "Weak trend at ₹7,430 (-26.6% off 52W high), below 50 DMA (₹8,014) & 200 DMA (₹8,453), 20D move -0.1%, RSI(14) 38.3.",
+        "news": "Confirmed by recent news flow: \"Polycab India (NSEI:POLYCAB) Stock Forecast & Analyst Predictions - Simply Wall St\"",
+        "risk": "Daily ATR 3.4% (1.77x vol). Check NSE MWPL ban list; hedge with ₹8,200 Call and exit above ₹8,080."
+      },
+      "headlines": [
+        {
+          "title": "Polycab India (NSEI:POLYCAB) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSVV3dUVPODNBX0tVN0tKcmkyaklGSEt1azVLUlRwNkpjejFOM2pWbkt6ZVRjemxFcG9LdUpFV0NIWEtUU0c5c3gxTlhmRV93bjhyUVNBay1BamNnVVNMd0JRUzhMb2dia0RvV2F0OGtKYUxrOWtEX1dVTGwtZWNHcV9pOEl0NjVvSDRydDZn?oc=5"
+        },
+        {
+          "title": "F&O alert: Polycab to exit NSE's Futures & Options segment; stock dips 5% - Business Standard",
+          "source": "Business Standard",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOY3A4WU9reFJtdE9sM2R3eVdrNlVHMzBSanpqVDdPTC1qN0ZuWkQ1d3JSaGFxVWIxS19lMHdmcWF0R0h2ZUo4ZmE1ZFNFdGU4MXFMVEVfcmNzSFl4dnhtUDVWanNackxkWnQ4d1M3alZvQk03UEVFTDk2NndyZURBUFc3a0V2b2lVMXVfLTdJU0ZQZllKV045Slc5cE5uNGVnZldWRURyN2x5RWtBMld0UDg1c3lRZjA4T2lmclBZNUtINlkxZ0pFa0ZpSTdvZmxX0gHWAUFVX3lxTE1vbWNtNUJER0kybndMT3RMR2MycGdQdWdxU2ZZN0pPdFV3bWFSTkdLX1NLanBxTnpkc2FUTlZid0gtLWktV09CdjFORFVWaHVTVWtrZEVueWJTN2dBNVFCcURRQ3oyV1cyUVZ6VlloNG5FVjJBS19GajZzUW9HeXdRaGVSX29mVC1CMXdQeklkZWdQZmtaMk5Gb3ZjV3ZpR05VR1NJNG5JbzRxT1YzbzkzVEw1QXJvdjdXeHAwZkctRUt3UFcxVjlBZm9iMUlnWVVzYjl3VEE?oc=5"
+        },
+        {
+          "title": "Polycab India Share Price Falls 4% After NSE F&O Exit; 100% Margin To Kick In From October 14 - Kotak Neo",
+          "source": "Kotak Neo",
+          "sentiment": "Negative",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPd2FpOVhJWnpjbHdwa2hFODFlS1pEdFVOcjFWQk9CUDRWQ0xFQWhjS2FxZ2huRFkwOXJMNTMxZ3REOVNBV1RITXVJYmFrT01wZU9KUnY3eERQLTVsZWZSNWRoRkRpN0FrMWp6TUxyaHVuS1E2ZTc3R0g3RFBMZ2hmYTJ3Z0JaMlZFbWsyLU9Bb0dCRTFSUzZaZHVEbUpZcjIxcy1Yd1RlZWxYRmpNcEE3UQ?oc=5"
+        }
+      ]
+    },
     {
       "symbol": "APLAPOLLO",
       "name": "APL Apollo Tubes",
@@ -273,45 +394,57 @@
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
       "cmp": 1670.0,
-      "chg_1d": -14.68,
-      "chg_20d": -21.3,
-      "rsi": 27.8,
-      "dma50": 1960.0,
-      "dma200": 2040.0,
-      "dist_52w_high": -26.5,
-      "vol_ratio": 2.45,
-      "tech_score": 91,
-      "news_score": 92,
-      "conviction": 91,
-      "news_sentiment": "Heavy News + Tech Breakdown",
+      "chg_1d": -21.29,
+      "chg_20d": -17.88,
+      "rsi": 19.4,
+      "dma50": 2151.55,
+      "dma200": 2019.92,
+      "dist_52w_high": -27.78,
+      "vol_ratio": 4.49,
+      "tech_score": 98,
+      "news_score": 68,
+      "conviction": 88,
+      "news_sentiment": "Bearish Overhang",
       "expiries": {
         "current": {
-          "zone": "₹1,750 – ₹1,780",
-          "invalidation": 1800.0,
+          "zone": "₹1,700 – ₹1,800",
+          "invalidation": 1818.0,
           "short_strike": 1750,
           "hedge_strike": 1800,
-          "est_credit": 8.0
+          "est_credit": 11.0
         },
         "next": {
-          "zone": "₹1,820 – ₹1,860",
-          "invalidation": 1880.0,
+          "zone": "₹1,800 – ₹1,900",
+          "invalidation": 1919.0,
           "short_strike": 1850,
           "hedge_strike": 1900,
-          "est_credit": 19.5
+          "est_credit": 14.0
         }
       },
       "lot_size": 350,
       "reasons": {
-        "technical": "Steep high-volume breakdown (-14.7% single-day drop, -21.3% in 20D) well below 50 DMA (₹1,960) and 200 DMA (₹2,040).",
-        "news": "Slumped after Tata Steel announced a ₹32,266 Cr deal to acquire a 26.6% controlling stake and merge its tubes/coated coil unit into APL Apollo.",
-        "risk": "Elevated IV and oversold RSI (<30) can spark sharp intraday bounces; strictly cap upside via Bear Call Spread."
+        "technical": "Weak trend at ₹1,670 (-27.8% off 52W high), below 50 DMA (₹2,152) & 200 DMA (₹2,020), 20D move -17.9%, RSI(14) 19.4.",
+        "news": "Recent coverage aligns with trend: \"Stocks to watch November 23: Tata Steel, APL Apollo Tubes, IndusInd Bank, NSE, Adani Energy, Waaree Energies and more - BusinessLine\"",
+        "risk": "Daily ATR 5.4% (4.49x vol). Check NSE MWPL ban list; hedge with ₹1,900 Call and exit above ₹1,919."
       },
       "headlines": [
         {
-          "title": "APL Apollo share price plunges over 14% after Tata Steel announces controlling stake deal & open offer",
-          "source": "Kotak Neo / Business Standard",
-          "sentiment": "Negative",
-          "url": "https://www.business-standard.com"
+          "title": "Stocks to watch November 23: Tata Steel, APL Apollo Tubes, IndusInd Bank, NSE, Adani Energy, Waaree Energies and more - BusinessLine",
+          "source": "BusinessLine",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxPb1UzTUxxb0pKcVpuSk5CYWw0TXNLSWFKX2l3cHBCNUNzVVQ0NzhneWdORnBJTk5jdUkwRm5WdUl6ZmtaVkRqNlNfRmxIOW5ybGwzaFpBT1Vva0MybUhuYTJteGFwRVNOSDBPMXo2aFdzTWR1SzBabmNyVTJxNS1FZlRZdGR5Mk9nXzg2Q29acS12OVVjZHRzUG9ZZGlmblBJb0ZnTTNhZm5vaFFqVVFKZ0Jjb1FyVWF5QnVvV0o4RFpXeDNrNFFnaGxwS0c4aElMNW4xTnUyZk5lX2hyam02cUZpWDBlcWJaQTRGd3VtdHJ6SVJZM0t0bm8tRXpVWHNPVGhzMWs3VDlGemJ3UGNCeW5Fa3FXMXRWY0IxMlZTOHNLdVZHeDZYX2tnRWF5LU15dkJJMVNmSlVqX2daUHhxYWphWjV4TnlhUVY2djhEN0R3VkxOM1h3VDBwN3lzSzlL0gHnAkFVX3lxTE9iWFlKZjZUV19BbEIzaHJMc1VaN3pTd3pqN093NnU5SmhfZkxyRFFiZUU3V3dKUnBPbEFLc0M5WDlmOUxmeDJmNWk0Mk8tNGdJZ3RkN2JZNE1ncHYtdklUMThOVzE5SXBoMXRURFV6T1hZME9Xa20zM1NrYWU0Zl9tN3VyM0tfQzJyZTk2ck1qZEpiMjFhdk5Ld3l5QkJwMmtPTzUtQzJKYzM0UUJwLXdWX1VhdFA1alRSX2d0dU83ajRlQ2NZM3I2b05MU0Rwdm9XRW1KVE1xSGUwZl8zT1hfTDVGYXNDUnh1UXdPMzFzWXJ3WW5YLVNwUWlkNlgyUi1CV1NRX1hBMzZoZmZkSUE2R29CdUdDVlJrdVRTY00zenBIdThla1dfTzRXaml2MnNiMVhWbjI4eGN1R1o4eVQxRGYyWjdWS2lxQXp5OFJLMTJvRkJ2X0FkNmlVVDhZRzZ6SncxY19Z?oc=5"
+        },
+        {
+          "title": "APL Apollo Tubes Share Price - Live NSE: APLAPOLLO Stock Price & Chart - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9kc2hfWXUxOTNHeEpsZTJiRVBUUlJTbEY3dDYtLTByNTBTMmNzLTRSRF9EVHE1S1FPS2c1ZGxPTjlSTXJMOV8tYjBfaU5haDJ6RlpQOUR1UXZwWktLcnZaQ1l0MUFKZ3I0QkJJ?oc=5"
+        },
+        {
+          "title": "Tata Steel to Acquire 26.38% Stake in APL Apollo Tubes (NSE:APLAPOLLO) in Rs 2,100 Per Share Deal - Kalkine Media",
+          "source": "Kalkine Media",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxORk4xYW1VOUV0WmEwZTBHY0ZJNkJPMU1zNFlQcGtEQTUyYk9hMGxCTFZFSG03czdkWjNTOUNVQjlfcDJIQzNuNE1VOF9ZZndXQVJROWxvcXZZOVJsR2k4U2ZVRHY1djJkeUNIdi1aQUxQZk8yRThSTTU0Zm54TjFiS0VDckJyemIyRHYyck94dV9PS2NoMXRFeTRoTEk0NXlNMU1ndzMydmJFVm9kT3A2emE5VFZDLTdwSTVpRnZpc21UVGRjVGFyLTlmVkdUWVlhbGY4MA?oc=5"
         }
       ]
     },
@@ -322,192 +455,179 @@
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
       "cmp": 163.0,
-      "chg_1d": -4.74,
-      "chg_20d": -8.4,
-      "rsi": 34.1,
-      "dma50": 176.5,
-      "dma200": 181.0,
-      "dist_52w_high": -16.2,
-      "vol_ratio": 1.85,
-      "tech_score": 87,
-      "news_score": 89,
+      "chg_1d": -8.43,
+      "chg_20d": -2.79,
+      "rsi": 32.0,
+      "dma50": 179.43,
+      "dma200": 191.5,
+      "dist_52w_high": -25.86,
+      "vol_ratio": 2.43,
+      "tech_score": 98,
+      "news_score": 68,
       "conviction": 88,
-      "news_sentiment": "Bearish Deal Outlay + Metals",
+      "news_sentiment": "Bearish Overhang",
       "expiries": {
         "current": {
-          "zone": "₹168 – ₹170",
-          "invalidation": 172.0,
+          "zone": "₹170 – ₹175",
+          "invalidation": 176.8,
           "short_strike": 170,
           "hedge_strike": 175,
-          "est_credit": 0.9
+          "est_credit": 1.1
         },
         "next": {
-          "zone": "₹175 – ₹180",
-          "invalidation": 182.0,
+          "zone": "₹170 – ₹180",
+          "invalidation": 181.8,
           "short_strike": 175,
-          "hedge_strike": 185,
-          "est_credit": 2.4
+          "hedge_strike": 180,
+          "est_credit": 1.4
         }
       },
       "lot_size": 5500,
       "reasons": {
-        "technical": "Dropped ~4.7% with heavy volume, rejecting below 50 DMA (₹176.5) and 200 DMA (₹181.0).",
-        "news": "Stock sold off on large ₹32,266 Cr capital commitment for the APL Apollo restructuring amid muted global steel spreads.",
-        "risk": "Global metal stimulus headlines can cause sudden gaps; keep ₹185 Call hedge active."
+        "technical": "Weak trend at ₹163 (-25.9% off 52W high), below 50 DMA (₹179.4) & 200 DMA (₹191.5), 20D move -2.8%, RSI(14) 32.0.",
+        "news": "Recent coverage aligns with trend: \"Tata Steel (NSE:TATASTEEL) Approves Acquisition of 26.38% Stake in APL Apollo Tubes for Rs 15,511 Crore - Kalkine Media\"",
+        "risk": "Daily ATR 3.5% (2.43x vol). Check NSE MWPL ban list; hedge with ₹180 Call and exit above ₹181.8."
       },
       "headlines": [
         {
-          "title": "Tata Steel falls nearly 5% after announcing ₹32,266 crore APL Apollo consolidation and stake deal",
+          "title": "Tata Steel (NSE:TATASTEEL) Approves Acquisition of 26.38% Stake in APL Apollo Tubes for Rs 15,511 Crore - Kalkine Media",
+          "source": "Kalkine Media",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPcmEyMEgtcEpSVFdhNFRCaERVaXhvd1dZZFBrcFk1OTViQlBoMlRRU3VSdzRaOHBYeEg2ZjZ5ejJ3aFpkNG9aRzlJampsQlV2cE1NMi1aVUlVekU3a0xjOWduNExpbmQyWmx0Y2lMOE5fMFNvdk9mSFExenJrYWxZUmlXdGo5SUw2WXhOX21rb3pjazdMSVpYelhoT2ZIZmRzaU1HRnBtM3BONVgtWHh1amVXdnBiLVRmd1N6emZsOHpxc09aQkwwbEM2TF94c3VDNzNra3JxMTZLVWQ2?oc=5"
+        },
+        {
+          "title": "Tata Steel (NSEI:TATASTEEL) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdGwyVEI0QWZIdzlfc1RxU2pSeGNVWGt3ZXMwWmdmdWM1M0hwQ0dfb1Nyb0FBTUdjRFgwbkp4Z20tZUVHN205TTA1UHo2N1pndE16X0ZBSTdIRk1DQjlzd0tUUnZ1Y2tsQ1c0RVZ2MTY4MFlGM1c5b2gxbHVkTHFuUkY1Q1Rqc1U?oc=5"
+        },
+        {
+          "title": "Tata Steel Ltd Partly Paid Up Share Price Today NSE/BSE Charts - Alice Blue",
+          "source": "Alice Blue",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQa2g5Ul8ycDI1Z2g2VTlaZXlPSzA5cEpRVGE3dURWOXcxMnlPeHpKTUV5UkRsbEtBNnV2RVFOYWl3NHA1MGoyM0ZiTUpvNHlsOXhObGRoY3ZGTHZGY2l0UkxRSEJsSmpweHhpQjFrYnU3QWt1aW1CVkRJTXNpMWtIUA?oc=5"
+        }
+      ]
+    },
+    {
+      "symbol": "HINDALCO",
+      "name": "Hindalco Industries",
+      "sector": "Metals",
+      "bias": "bearish",
+      "strategy": "Bear Call Spread / OTM Call Sell",
+      "cmp": 900.45,
+      "chg_1d": -3.13,
+      "chg_20d": 3.52,
+      "rsi": 43.1,
+      "dma50": 933.05,
+      "dma200": 976.72,
+      "dist_52w_high": -23.03,
+      "vol_ratio": 1.43,
+      "tech_score": 97,
+      "news_score": 68,
+      "conviction": 87,
+      "news_sentiment": "Bearish Overhang",
+      "expiries": {
+        "current": {
+          "zone": "₹920 – ₹940",
+          "invalidation": 949.4,
+          "short_strike": 920,
+          "hedge_strike": 940,
+          "est_credit": 4.4
+        },
+        "next": {
+          "zone": "₹960 – ₹980",
+          "invalidation": 989.8,
+          "short_strike": 960,
+          "hedge_strike": 1000,
+          "est_credit": 11.2
+        }
+      },
+      "lot_size": 1400,
+      "reasons": {
+        "technical": "Weak trend at ₹900.5 (-23.0% off 52W high), below 50 DMA (₹933.0) & 200 DMA (₹976.7), 20D move +3.5%, RSI(14) 43.1.",
+        "news": "Recent coverage aligns with trend: \"Hindalco Industries Share Price - Upstox\"",
+        "risk": "Daily ATR 3.0% (1.43x vol). Check NSE MWPL ban list; hedge with ₹1,000 Call and exit above ₹989.8."
+      },
+      "headlines": [
+        {
+          "title": "Hindalco Industries Share Price - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5LanFkeG95aGdQRGNtS2RLWTRfUkx0VnFNNmVIQ0pXWXFXUGZXcXFkYnF5YUhfS1hCNnR0QmhhazlPYmowNmdGclp6U3RqRDk5WjRwZmkyeUg4QWJGWXc3eGdZV2otYzFsZ05JWkp6WQ?oc=5"
+        },
+        {
+          "title": "STOCK OF THE DAY Hindalco: -Aditya Birla group to charge royalty from the company. -Royalty capped at 0.25% of revenue or max. Rs. 225 cr. Per annum. -Its slight negative but was expected #StockOfTheDay #Hindalco #MetalStocks #StockMarket - Facebook",
+          "source": "Facebook",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPX25teE02WDN3M3hnLU84WHdqb25Vai1Vd3lmSTQ4YWE1TkFiRnVtcGkyMUtLRnFzcnVCODhyUjRKVTZva2w2LUVpOGNwcHRqME5LeE9pRDc1ZWdlaWhwOVM4QmZ4UHZTSzkxOTYyeDBXdXdzYzR5Q0VfNEUwd0Q3SGxlOXpNN25meXpKSkxmbUlkN2NnRGtzd1FRLVRZZFF1SG51YWVGc184LXdKcHhDeUJBOF90VmowNUhOVU1TY1cyWEtvMGZuOVlvOHd2WEZXTW5yT2FFdFJkdnhTUHgwQk13?oc=5"
+        },
+        {
+          "title": "Hindalco Industries Share Price Target: Should You Buy, Sell or Hold This Aditya Birla Stock? - Kotak Neo",
           "source": "Kotak Neo",
-          "sentiment": "Negative",
-          "url": "https://www.kotakneo.com"
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcVJZeTJwQnBfZ29GY3h6SHFSclhwdWdZZkFrVmMwWkt2RWVVWDRBLV94ZFU4T3VhWEFlTU1za3NYQUlpSzk2dmhEU196LVhnV3RDNkJyTjB2dDhGNHZwMDJiTm1oSmFoNms0T05xc2dGQ0hhdFdSUE0wNFFRMEd6Zmo3SXduZ3B4eTBaLVI0S0czSDRk?oc=5"
         }
       ]
     },
     {
-      "symbol": "PAGEIND",
-      "name": "Page Industries",
-      "sector": "Apparel",
+      "symbol": "LUPIN",
+      "name": "Lupin Ltd.",
+      "sector": "Pharma",
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 30560.0,
-      "chg_1d": -1.4,
-      "chg_20d": -9.8,
-      "rsi": 34.2,
-      "dma50": 34916.0,
-      "dma200": 36928.0,
-      "dist_52w_high": -24.1,
-      "vol_ratio": 1.25,
-      "tech_score": 86,
-      "news_score": 82,
-      "conviction": 85,
-      "news_sentiment": "Bearish De-rating",
+      "cmp": 1975.6,
+      "chg_1d": -1.91,
+      "chg_20d": 2.42,
+      "rsi": 46.1,
+      "dma50": 2011.82,
+      "dma200": 2221.3,
+      "dist_52w_high": -21.72,
+      "vol_ratio": 0.86,
+      "tech_score": 95,
+      "news_score": 68,
+      "conviction": 86,
+      "news_sentiment": "Bearish Overhang",
       "expiries": {
         "current": {
-          "zone": "₹31,500 – ₹32,000",
-          "invalidation": 32500.0,
-          "short_strike": 32000,
-          "hedge_strike": 33000,
-          "est_credit": 140.0
+          "zone": "₹2,000 – ₹2,050",
+          "invalidation": 2070.5,
+          "short_strike": 2000,
+          "hedge_strike": 2050,
+          "est_credit": 11.0
         },
         "next": {
-          "zone": "₹33,000 – ₹34,000",
-          "invalidation": 34500.0,
-          "short_strike": 33500,
-          "hedge_strike": 35000,
-          "est_credit": 380.0
-        }
-      },
-      "lot_size": 15,
-      "reasons": {
-        "technical": "Sustained structural downtrend trading ~12% below 50 DMA (₹34,916) and ~17% below 200 DMA (₹36,928).",
-        "news": "Ongoing brokerage target cuts and discretionary apparel volume softness keep institutional rallies capped.",
-        "risk": "Low liquidity in far-OTM strikes; check bid-ask spread before placing orders."
-      },
-      "headlines": [
-        {
-          "title": "Discretionary apparel counters face valuation de-rating on sluggish urban volume growth",
-          "source": "NSE Market Wire",
-          "sentiment": "Negative",
-          "url": "https://www.nseindia.com"
-        }
-      ]
-    },
-    {
-      "symbol": "BHEL",
-      "name": "Bharat Heavy Electricals",
-      "sector": "Capital Goods / PSU",
-      "bias": "bearish",
-      "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 416.0,
-      "chg_1d": -4.1,
-      "chg_20d": -10.6,
-      "rsi": 36.5,
-      "dma50": 448.0,
-      "dma200": 456.0,
-      "dist_52w_high": -18.4,
-      "vol_ratio": 1.64,
-      "tech_score": 85,
-      "news_score": 80,
-      "conviction": 83,
-      "news_sentiment": "Bearish PSU Distribution",
-      "expiries": {
-        "current": {
-          "zone": "₹430 – ₹435",
-          "invalidation": 440.0,
-          "short_strike": 430,
-          "hedge_strike": 445,
-          "est_credit": 2.5
-        },
-        "next": {
-          "zone": "₹440 – ₹455",
-          "invalidation": 460.0,
-          "short_strike": 445,
-          "hedge_strike": 465,
-          "est_credit": 6.2
-        }
-      },
-      "lot_size": 2625,
-      "reasons": {
-        "technical": "Lower-high breakdown (-4.1% session drop) below both 50 DMA (₹448) and 200 DMA (₹456) on elevated volume.",
-        "news": "Execution margin concerns and broad PSU capital goods rotation weighing on near-term institutional appetite.",
-        "risk": "Frequently nears NSE MWPL F&O ban limit—verify daily MWPL % before entering."
-      },
-      "headlines": [
-        {
-          "title": "PSU capital goods stocks witness profit booking as institutional flows rotate toward IT and select autos",
-          "source": "NSE Market Wire",
-          "sentiment": "Negative",
-          "url": "https://www.nseindia.com"
-        }
-      ]
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "name": "IndusInd Bank Ltd.",
-      "sector": "Private Banking",
-      "bias": "bearish",
-      "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 963.0,
-      "chg_1d": -3.95,
-      "chg_20d": -7.8,
-      "rsi": 37.1,
-      "dma50": 1032.0,
-      "dma200": 1095.0,
-      "dist_52w_high": -22.0,
-      "vol_ratio": 1.55,
-      "tech_score": 84,
-      "news_score": 81,
-      "conviction": 83,
-      "news_sentiment": "Bearish Sector Underperformer",
-      "expiries": {
-        "current": {
-          "zone": "₹990 – ₹1,005",
-          "invalidation": 1015.0,
-          "short_strike": 1000,
-          "hedge_strike": 1020,
-          "est_credit": 5.0
-        },
-        "next": {
-          "zone": "₹1,020 – ₹1,045",
-          "invalidation": 1052.0,
-          "short_strike": 1030,
-          "hedge_strike": 1070,
+          "zone": "₹2,000 – ₹2,100",
+          "invalidation": 2121.0,
+          "short_strike": 2050,
+          "hedge_strike": 2100,
           "est_credit": 14.0
         }
       },
-      "lot_size": 500,
+      "lot_size": 425,
       "reasons": {
-        "technical": "Down ~4% with firm supply capping rallies around ₹1,024–₹1,042 near the declining 50 DMA (₹1,032).",
-        "news": "Nifty Bank weakness (-1% index drop as India VIX jumped) and MFI asset-quality overhang keep rallies sold into.",
-        "risk": "Keep spread width defined; bank stocks can react sharply to RBI/macro headlines."
+        "technical": "Weak trend at ₹1,976 (-21.7% off 52W high), below 50 DMA (₹2,012) & 200 DMA (₹2,221), 20D move +2.4%, RSI(14) 46.1.",
+        "news": "Recent coverage aligns with trend: \"Lupin (NSEI:LUPIN) Stock Forecast & Analyst Predictions - Simply Wall St\"",
+        "risk": "Daily ATR 2.1% (0.86x vol). Check NSE MWPL ban list; hedge with ₹2,100 Call and exit above ₹2,121."
       },
       "headlines": [
         {
-          "title": "Nifty Bank drags as private lenders face margin and asset-quality scrutiny amid rising India VIX",
-          "source": "Upstox / Market Wire",
-          "sentiment": "Negative",
-          "url": "https://upstox.com"
+          "title": "Lupin (NSEI:LUPIN) Stock Forecast & Analyst Predictions - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZ0NCU2tHZDJCU25LcVVNTTNHb2MtMmVMbDBpLVpPWmtreWpFNlhJVGI5X3BjYVBJVHNMWlB6Z2dfcmdxQTdxZXNkbWNZbDA3djc4SGtPYVhuRzJiR0ljMlR4V3lzRE5SYkttU3k4dWZnbUZDOW50SzhVdmlfZ3B0MENUdjh1TFJpS21mTXh3?oc=5"
+        },
+        {
+          "title": "Stocks to watch, Nov 4: Lupin, NSE, BSE, Nykaa, PFC, Premier Energies, Waaree Energies, Yatharth Hospital - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNGhKc1lhM0ZoRG8tV2xReGIzVi02X0VWRjBhcVBsRmtfTzFpNXBHYXgyWjdwaVVocklHOXgzZ1FncUN2SURkWUd0bmNjbkNkQXRXU3BQUy1DUDR4TElUQmh6elplVWV2UVFwQjVsSS1VbHh4RUFJUFJaQ1dteW43TXlxNXE2Q25HV1JWSjBOVzNzRlZzS05ZeHBzVXNKcjMwYXUzYWMzNmhmSnN0U3RrR1dFQlBiWHRELUZ2VmsyTDNGSWpzaWNxRUtHcnpXN2g0a2lvNFYwUWlscC04YWNRbURta1ozMnlZRTBB?oc=5"
+        },
+        {
+          "title": "Stocks to Watch Today: NSE, Lupin, Metropolis, MK Jewels, Lloyds Metals, MCX India, Awfis Space, Aarti... - Moneycontrol.com",
+          "source": "Moneycontrol.com",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPOTI3VEQ4RUd2cjZIN0lEYXVwclFuNDZzRFVDS2NxR3Baek9OQnVHMmNQSkVHandlOGp1c3BiZE9HSVkydGVYYlRsbzFuSjBwcW0xN1FiWXVoWTVKWDU0bWxQUFowc1haQTIyb0k5blVONmdRdnVxMnlwNVBNa1FMQ2FCd0FrdE9wQmFId2ZvMk90d29iM0NUREhZN3pzME9wRzVPT0hUVlFTWDNpLWNHOUJRS1hZN1VTN2JSMkJudkQ0SVJNOWlEMUl1N1MyTzRNRmxyYVo3VDV1ZDFjYjExRFFiMEZEWGF5Y1E0Q0duenZ0WHNrNTZwX1FzREJ0a3o2Y3ptbVpGR0NKZGVCMWNhLTBqOWNKc2RKZlhPbGw0NGlDZFhoZUpzS1NnT0xLTkZVbnZxdmhGSFJub2pfalM2NHhR0gHHAkFVX3lxTFBhS3FPVDloTE1NdVJTTXlpT2dQTjhJOGxQbGRMRnRQSGUxTThDSlllTzloemdwLUxRWmZIQ3AtUUNReFJZaWFRMVp1S05fdmFkNG9qYmtmemRpUFNNRjdXMVIxQWV0a2c2UXdsQUlBYmF0UklNdmxjczBYTUV2X3lPTHhjN1FmQzRNVnFOUmhBRFVfSTJmUzg1TnR3dTQzb2tuSTQ0RXN6SUlXazRNMUE2YTJ3RmttZlJCNkVSXy14eTVXcnZ0Z0RKSG93cFRZeHRQQVU2UFNVRkR1SVpNRm9BU0N0M2l6XzdNSGVIVmFHbUFBbkh2SE1ScDdOai1IWXBQbVZQRGs4ZjhaWlQ2cnEyUVZLNWQxNXpxYjVQTU1nb1VrQUFlRzR4MjdjQS1VTmlhb2x1cDFWa1ZnakJhT2lZSDJaSTdSRQ?oc=5"
         }
       ]
     }
