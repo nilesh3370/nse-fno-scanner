@@ -1,0 +1,36 @@
+name: Daily NSE F&O Scan
+
+on:
+  schedule:
+    # 02:45 UTC = 08:15 AM IST, Monday to Friday
+    - cron: "45 2 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run NSE F&O scanner
+        run: python scanner.py
+
+      - name: Commit updated picks.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add picks.json
+          git diff --staged --quiet || (git commit -m "chore: update daily NSE F&O picks" && git push)
