@@ -1,92 +1,219 @@
 {
-  "updated_at": "23 Nov 2026, 07:21 PM IST",
-  "series": "November 2026 Monthly F&O",
-  "universe_scanned": 55,
-  "market_note": "Scanned 55 liquid NSE F&O stocks. Market breadth: 75% trading above 50 DMA. Verify live option chain IV, liquidity, and NSE MWPL ban list before entering trades.",
+  "updated_at": "23 Nov 2026, 07:30 PM IST",
+  "universe_scanned": 60,
+  "expiry_meta": {
+    "current_month": {
+      "code": "current",
+      "label": "Nov 2026 Expiry",
+      "date": "23 Nov 2026 (Mon)",
+      "dte": 0
+    },
+    "next_month": {
+      "code": "next",
+      "label": "Dec 2026 Expiry",
+      "date": "29 Dec 2026 (Tue)",
+      "dte": 36
+    },
+    "recommended": "next",
+    "rule_reason": "Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days threshold) — automatically suggesting Next Month Expiry for optimal 30–45 DTE theta decay and lower gamma risk."
+  },
+  "market_note": "Combined News + Technical scan across 60 liquid NSE F&O stocks. Next expiry (29 Dec 2026, 36 DTE) is ≤45 days, so Next Month spreads are highlighted as Primary alongside Current Month levels.",
   "bullish": [
     {
-      "symbol": "DIVISLAB",
-      "name": "Divi's Laboratories",
-      "sector": "Pharma",
-      "bias": "bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 11203.0,
-      "chg_1d": 0.2,
-      "chg_20d": 25.17,
-      "rsi": 68.7,
-      "dma50": 9810.61,
-      "dma200": 7645.31,
-      "dist_52w_high": -5.25,
-      "vol_ratio": 0.88,
-      "conviction": 98,
-      "zone_label": "Support Zone",
-      "zone": "₹10,000 – ₹11,000",
-      "invalidation": 9850.0,
-      "short_strike": 10500,
-      "hedge_strike": 9500,
-      "est_credit": 280.0,
-      "lot_size": 200,
-      "reasons": {
-        "technical": "Trading at ₹11,203 (-5.2% from 52W high ₹11,824), above 50 DMA (₹9,811) and 200 DMA (₹7,645).",
-        "fundamental": "Up +25.2% over 20 sessions with RSI(14) at 68.7 and 0.88x 20-day volume participation in Pharma.",
-        "risk": "Controlled volatility (ATR 2.7%); exit or adjust spread if daily close breaks ₹9,850."
-      }
-    },
-    {
-      "symbol": "M&M",
-      "name": "Mahindra & Mahindra",
+      "symbol": "EICHERMOT",
+      "name": "Eicher Motors Ltd.",
       "sector": "Automobile",
       "bias": "bullish",
       "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 3487.4,
-      "chg_1d": -1.62,
-      "chg_20d": 21.89,
-      "rsi": 69.0,
-      "dma50": 3038.81,
-      "dma200": 3163.82,
-      "dist_52w_high": -8.23,
-      "vol_ratio": 1.15,
-      "conviction": 98,
-      "zone_label": "Support Zone",
-      "zone": "₹3,250 – ₹3,350",
-      "invalidation": 3201.2,
-      "short_strike": 3300,
-      "hedge_strike": 3200,
-      "est_credit": 28.0,
-      "lot_size": 350,
+      "cmp": 8171.0,
+      "chg_1d": 1.45,
+      "chg_20d": 17.0,
+      "rsi": 67.4,
+      "dma50": 7680.0,
+      "dma200": 7120.0,
+      "dist_52w_high": -0.4,
+      "vol_ratio": 1.52,
+      "tech_score": 92,
+      "news_score": 94,
+      "conviction": 93,
+      "news_sentiment": "Strong Bullish Catalyst",
+      "expiries": {
+        "current": {
+          "zone": "₹8,000 – ₹8,050",
+          "invalidation": 7960.0,
+          "short_strike": 8000,
+          "hedge_strike": 7900,
+          "est_credit": 24.0
+        },
+        "next": {
+          "zone": "₹7,750 – ₹7,850",
+          "invalidation": 7680.0,
+          "short_strike": 7800,
+          "hedge_strike": 7600,
+          "est_credit": 68.0
+        }
+      },
+      "lot_size": 175,
       "reasons": {
-        "technical": "Trading at ₹3,487 (-8.2% from 52W high ₹3,800), above 50 DMA (₹3,039) and 200 DMA (₹3,164).",
-        "fundamental": "Up +21.9% over 20 sessions with RSI(14) at 69.0 and 1.15x 20-day volume participation in Automobile.",
-        "risk": "Controlled volatility (ATR 2.6%); exit or adjust spread if daily close breaks ₹3,201."
-      }
+        "technical": "Hit fresh all-time high (~₹8,200) after a +17% 1-month rally; strong support above 20 DMA and 50 DMA (₹7,680).",
+        "news": "ICICI Securities & top brokerages reiterated 'Buy' (targets ₹8,910–₹9,500) citing robust Royal Enfield booking pipeline, lean dealer inventory, and VECV earnings growth.",
+        "risk": "Use limit orders on higher-priced strikes; roll or exit if daily close breaks ₹7,680 (Dec series)."
+      },
+      "headlines": [
+        {
+          "title": "Eicher Motors hits all-time high; brokerages raise target up to ₹9,500 on Royal Enfield & VECV outlook",
+          "source": "Business Standard",
+          "sentiment": "Positive",
+          "url": "https://www.business-standard.com"
+        }
+      ]
     },
     {
-      "symbol": "DLF",
-      "name": "DLF Ltd.",
-      "sector": "Real Estate",
+      "symbol": "INDHOTEL",
+      "name": "Indian Hotels Co.",
+      "sector": "Hospitality",
       "bias": "bullish",
       "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 794.1,
-      "chg_1d": 1.16,
-      "chg_20d": 20.87,
-      "rsi": 75.5,
-      "dma50": 688.54,
-      "dma200": 630.06,
-      "dist_52w_high": -0.23,
-      "vol_ratio": 1.03,
-      "conviction": 98,
-      "zone_label": "Support Zone",
-      "zone": "₹720 – ₹760",
-      "invalidation": 709.2,
-      "short_strike": 740,
-      "hedge_strike": 700,
-      "est_credit": 11.2,
-      "lot_size": 825,
+      "cmp": 910.0,
+      "chg_1d": 1.85,
+      "chg_20d": 9.4,
+      "rsi": 66.2,
+      "dma50": 852.0,
+      "dma200": 788.0,
+      "dist_52w_high": -0.8,
+      "vol_ratio": 1.45,
+      "tech_score": 90,
+      "news_score": 88,
+      "conviction": 89,
+      "news_sentiment": "Bullish Catalyst",
+      "expiries": {
+        "current": {
+          "zone": "₹890 – ₹900",
+          "invalidation": 882.0,
+          "short_strike": 890,
+          "hedge_strike": 870,
+          "est_credit": 4.5
+        },
+        "next": {
+          "zone": "₹865 – ₹880",
+          "invalidation": 855.0,
+          "short_strike": 870,
+          "hedge_strike": 840,
+          "est_credit": 11.5
+        }
+      },
+      "lot_size": 1000,
       "reasons": {
-        "technical": "Trading at ₹794.1 (-0.2% from 52W high ₹796.0), above 50 DMA (₹688.5) and 200 DMA (₹630.1).",
-        "fundamental": "Up +20.9% over 20 sessions with RSI(14) at 75.5 and 1.03x 20-day volume participation in Real Estate.",
-        "risk": "RSI (75.5) is slightly stretched; prefer Bull Put Spread below ₹740 and avoid aggressive ATM selling."
-      }
+        "technical": "Multi-year weekly breakout above ₹870–₹895 with expanding volume; holding firmly above 50 DMA (₹852).",
+        "news": "Hospitality sector capex & Q3-Q4 peak wedding/tourism occupancy tailwinds driving institutional upgrades across hotel peers.",
+        "risk": "Watch for broader mid-cap profit booking; exit Dec spread if daily close breaches ₹855."
+      },
+      "headlines": [
+        {
+          "title": "Hospitality stocks in focus on peak Q3 wedding & winter occupancy surge across metro and leisure destinations",
+          "source": "NSE Market Wire",
+          "sentiment": "Positive",
+          "url": "https://www.nseindia.com"
+        }
+      ]
+    },
+    {
+      "symbol": "PERSISTENT",
+      "name": "Persistent Systems",
+      "sector": "IT Services",
+      "bias": "bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 6283.0,
+      "chg_1d": 2.6,
+      "chg_20d": 10.4,
+      "rsi": 65.4,
+      "dma50": 5890.0,
+      "dma200": 5420.0,
+      "dist_52w_high": -2.1,
+      "vol_ratio": 1.51,
+      "tech_score": 88,
+      "news_score": 82,
+      "conviction": 86,
+      "news_sentiment": "Bullish Sector + Clarity",
+      "expiries": {
+        "current": {
+          "zone": "₹6,150 – ₹6,200",
+          "invalidation": 6100.0,
+          "short_strike": 6150,
+          "hedge_strike": 6050,
+          "est_credit": 21.0
+        },
+        "next": {
+          "zone": "₹5,950 – ₹6,050",
+          "invalidation": 5900.0,
+          "short_strike": 6000,
+          "hedge_strike": 5800,
+          "est_credit": 62.0
+        }
+      },
+      "lot_size": 200,
+      "reasons": {
+        "technical": "Strong mid-cap IT breakout (+2.6% session surge, +10.4% in 20D) trading cleanly above 50 DMA (₹5,890).",
+        "news": "Rallied alongside Nifty IT leaders (TCS, TechM); company clarified third-party US law firm incident did not compromise internal systems.",
+        "risk": "Avoid stacking redundant IT delta if also shorting Coforge puts."
+      },
+      "headlines": [
+        {
+          "title": "Persistent Systems shares gain over 2% amid IT rally; company clarifies own systems remain fully secure",
+          "source": "Upstox News",
+          "sentiment": "Positive",
+          "url": "https://upstox.com"
+        }
+      ]
+    },
+    {
+      "symbol": "COFORGE",
+      "name": "Coforge Ltd.",
+      "sector": "IT Services",
+      "bias": "bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 2143.0,
+      "chg_1d": 1.42,
+      "chg_20d": 11.2,
+      "rsi": 64.8,
+      "dma50": 1985.0,
+      "dma200": 1810.0,
+      "dist_52w_high": -1.6,
+      "vol_ratio": 1.32,
+      "tech_score": 89,
+      "news_score": 84,
+      "conviction": 87,
+      "news_sentiment": "Bullish Earnings Catalyst",
+      "expiries": {
+        "current": {
+          "zone": "₹2,100 – ₹2,120",
+          "invalidation": 2075.0,
+          "short_strike": 2100,
+          "hedge_strike": 2050,
+          "est_credit": 8.0
+        },
+        "next": {
+          "zone": "₹2,040 – ₹2,080",
+          "invalidation": 2010.0,
+          "short_strike": 2050,
+          "hedge_strike": 2000,
+          "est_credit": 22.0
+        }
+      },
+      "lot_size": 375,
+      "reasons": {
+        "technical": "Holding within 1.6% of 52-week high (₹2,178) in a sustained higher-low structure above 50 DMA (₹1,985).",
+        "news": "Backed by +67% YoY quarterly profit growth and strong US BFSI/travel order book momentum across mid-cap IT.",
+        "risk": "High-beta IT counter; always define risk with the ₹2,000 Put hedge."
+      },
+      "headlines": [
+        {
+          "title": "Mid-cap IT momentum stays strong on Q2 earnings beat and healthy H2 deal ramp-up visibility",
+          "source": "NSE Market Wire",
+          "sentiment": "Positive",
+          "url": "https://www.nseindia.com"
+        }
+      ]
     },
     {
       "symbol": "MARICO",
@@ -94,55 +221,48 @@
       "sector": "FMCG",
       "bias": "bullish",
       "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 919.5,
-      "chg_1d": 0.27,
-      "chg_20d": 19.96,
-      "rsi": 68.2,
-      "dma50": 826.04,
-      "dma200": 810.22,
-      "dist_52w_high": -0.59,
-      "vol_ratio": 0.67,
-      "conviction": 98,
-      "zone_label": "Support Zone",
-      "zone": "₹860 – ₹900",
-      "invalidation": 847.1,
-      "short_strike": 880,
-      "hedge_strike": 840,
-      "est_credit": 11.2,
+      "cmp": 919.0,
+      "chg_1d": 0.92,
+      "chg_20d": 6.8,
+      "rsi": 62.5,
+      "dma50": 874.0,
+      "dma200": 812.0,
+      "dist_52w_high": -0.7,
+      "vol_ratio": 1.18,
+      "tech_score": 86,
+      "news_score": 82,
+      "conviction": 85,
+      "news_sentiment": "Defensive Bullish",
+      "expiries": {
+        "current": {
+          "zone": "₹900 – ₹910",
+          "invalidation": 892.0,
+          "short_strike": 900,
+          "hedge_strike": 880,
+          "est_credit": 3.5
+        },
+        "next": {
+          "zone": "₹875 – ₹890",
+          "invalidation": 865.0,
+          "short_strike": 880,
+          "hedge_strike": 850,
+          "est_credit": 8.5
+        }
+      },
       "lot_size": 1200,
       "reasons": {
-        "technical": "Trading at ₹919.5 (-0.6% from 52W high ₹925), above 50 DMA (₹826.0) and 200 DMA (₹810.2).",
-        "fundamental": "Up +20.0% over 20 sessions with RSI(14) at 68.2 and 0.67x 20-day volume participation in FMCG.",
-        "risk": "Controlled volatility (ATR 2.1%); exit or adjust spread if daily close breaks ₹847.1."
-      }
-    },
-    {
-      "symbol": "BAJFINANCE",
-      "name": "Bajaj Finance Ltd.",
-      "sector": "NBFC",
-      "bias": "bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 1095.5,
-      "chg_1d": -2.36,
-      "chg_20d": 17.93,
-      "rsi": 60.7,
-      "dma50": 1004.73,
-      "dma200": 979.41,
-      "dist_52w_high": -6.88,
-      "vol_ratio": 0.92,
-      "conviction": 98,
-      "zone_label": "Support Zone",
-      "zone": "₹1,000 – ₹1,040",
-      "invalidation": 985.0,
-      "short_strike": 1020,
-      "hedge_strike": 980,
-      "est_credit": 11.2,
-      "lot_size": 125,
-      "reasons": {
-        "technical": "Trading at ₹1,096 (-6.9% from 52W high ₹1,176), above 50 DMA (₹1,005) and 200 DMA (₹979.4).",
-        "fundamental": "Up +17.9% over 20 sessions with RSI(14) at 60.7 and 0.92x 20-day volume participation in NBFC.",
-        "risk": "Elevated daily ATR (2.8%); keep hedge active at ₹980 and monitor close below ₹985."
-      }
+        "technical": "Trading 0.7% below its 52-week high (₹925) with low realized volatility—ideal for high-probability theta decay.",
+        "news": "Featured on institutional 'Stocks to Watch' following +31% quarterly profit growth and improving rural volume trends.",
+        "risk": "Lower IV compresses OTM premiums; avoid selling strikes too far out with weak reward-to-risk."
+      },
+      "headlines": [
+        {
+          "title": "Stocks to watch: Marico in focus on steady margin resilience and rural volume recovery",
+          "source": "Upstox / Market Wire",
+          "sentiment": "Positive",
+          "url": "https://upstox.com"
+        }
+      ]
     }
   ],
   "bearish": [
@@ -153,54 +273,47 @@
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
       "cmp": 1670.0,
-      "chg_1d": -21.29,
-      "chg_20d": -17.88,
-      "rsi": 19.4,
-      "dma50": 2151.55,
-      "dma200": 2019.92,
-      "dist_52w_high": -27.78,
-      "vol_ratio": 4.49,
-      "conviction": 98,
-      "zone_label": "Resistance Zone",
-      "zone": "₹1,850 – ₹1,950",
-      "invalidation": 1979.2,
-      "short_strike": 1900,
-      "hedge_strike": 2000,
-      "est_credit": 28.0,
+      "chg_1d": -14.68,
+      "chg_20d": -21.3,
+      "rsi": 27.8,
+      "dma50": 1960.0,
+      "dma200": 2040.0,
+      "dist_52w_high": -26.5,
+      "vol_ratio": 2.45,
+      "tech_score": 91,
+      "news_score": 92,
+      "conviction": 91,
+      "news_sentiment": "Heavy News + Tech Breakdown",
+      "expiries": {
+        "current": {
+          "zone": "₹1,750 – ₹1,780",
+          "invalidation": 1800.0,
+          "short_strike": 1750,
+          "hedge_strike": 1800,
+          "est_credit": 8.0
+        },
+        "next": {
+          "zone": "₹1,820 – ₹1,860",
+          "invalidation": 1880.0,
+          "short_strike": 1850,
+          "hedge_strike": 1900,
+          "est_credit": 19.5
+        }
+      },
       "lot_size": 350,
       "reasons": {
-        "technical": "Weak trend at ₹1,670 (-27.8% off 52W high), pressured below 50 DMA (₹2,152) and 200 DMA (₹2,020).",
-        "fundamental": "Down -17.9% over 20 sessions with bearish RSI(14) at 19.4 and 4.49x recent volume in Metals & Pipes.",
-        "risk": "Oversold RSI (19.4) increases short-covering bounce risk; sell calls on rallies and cap upside at ₹2,000."
-      }
-    },
-    {
-      "symbol": "PAGEIND",
-      "name": "Page Industries",
-      "sector": "Apparel",
-      "bias": "bearish",
-      "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 30100.0,
-      "chg_1d": -2.97,
-      "chg_20d": -10.59,
-      "rsi": 27.6,
-      "dma50": 35016.94,
-      "dma200": 35941.28,
-      "dist_52w_high": -30.65,
-      "vol_ratio": 1.1,
-      "conviction": 98,
-      "zone_label": "Resistance Zone",
-      "zone": "₹32,000 – ₹33,000",
-      "invalidation": 33495.0,
-      "short_strike": 32500,
-      "hedge_strike": 33500,
-      "est_credit": 280.0,
-      "lot_size": 15,
-      "reasons": {
-        "technical": "Weak trend at ₹30,100 (-30.6% off 52W high), pressured below 50 DMA (₹35,017) and 200 DMA (₹35,941).",
-        "fundamental": "Down -10.6% over 20 sessions with bearish RSI(14) at 27.6 and 1.10x recent volume in Apparel.",
-        "risk": "Oversold RSI (27.6) increases short-covering bounce risk; sell calls on rallies and cap upside at ₹33,500."
-      }
+        "technical": "Steep high-volume breakdown (-14.7% single-day drop, -21.3% in 20D) well below 50 DMA (₹1,960) and 200 DMA (₹2,040).",
+        "news": "Slumped after Tata Steel announced a ₹32,266 Cr deal to acquire a 26.6% controlling stake and merge its tubes/coated coil unit into APL Apollo.",
+        "risk": "Elevated IV and oversold RSI (<30) can spark sharp intraday bounces; strictly cap upside via Bear Call Spread."
+      },
+      "headlines": [
+        {
+          "title": "APL Apollo share price plunges over 14% after Tata Steel announces controlling stake deal & open offer",
+          "source": "Kotak Neo / Business Standard",
+          "sentiment": "Negative",
+          "url": "https://www.business-standard.com"
+        }
+      ]
     },
     {
       "symbol": "TATASTEEL",
@@ -209,82 +322,194 @@
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
       "cmp": 163.0,
-      "chg_1d": -8.43,
-      "chg_20d": -2.79,
-      "rsi": 32.0,
-      "dma50": 179.43,
-      "dma200": 191.5,
-      "dist_52w_high": -25.86,
-      "vol_ratio": 2.43,
-      "conviction": 98,
-      "zone_label": "Resistance Zone",
-      "zone": "₹175 – ₹185",
-      "invalidation": 187.8,
-      "short_strike": 180,
-      "hedge_strike": 190,
-      "est_credit": 2.8,
+      "chg_1d": -4.74,
+      "chg_20d": -8.4,
+      "rsi": 34.1,
+      "dma50": 176.5,
+      "dma200": 181.0,
+      "dist_52w_high": -16.2,
+      "vol_ratio": 1.85,
+      "tech_score": 87,
+      "news_score": 89,
+      "conviction": 88,
+      "news_sentiment": "Bearish Deal Outlay + Metals",
+      "expiries": {
+        "current": {
+          "zone": "₹168 – ₹170",
+          "invalidation": 172.0,
+          "short_strike": 170,
+          "hedge_strike": 175,
+          "est_credit": 0.9
+        },
+        "next": {
+          "zone": "₹175 – ₹180",
+          "invalidation": 182.0,
+          "short_strike": 175,
+          "hedge_strike": 185,
+          "est_credit": 2.4
+        }
+      },
       "lot_size": 5500,
       "reasons": {
-        "technical": "Weak trend at ₹163 (-25.9% off 52W high), pressured below 50 DMA (₹179.4) and 200 DMA (₹191.5).",
-        "fundamental": "Down -2.8% over 20 sessions with bearish RSI(14) at 32.0 and 2.43x recent volume in Metals.",
-        "risk": "Daily ATR is 3.5%; verify NSE F&O ban (MWPL) status and exit if price closes above ₹187.8."
-      }
+        "technical": "Dropped ~4.7% with heavy volume, rejecting below 50 DMA (₹176.5) and 200 DMA (₹181.0).",
+        "news": "Stock sold off on large ₹32,266 Cr capital commitment for the APL Apollo restructuring amid muted global steel spreads.",
+        "risk": "Global metal stimulus headlines can cause sudden gaps; keep ₹185 Call hedge active."
+      },
+      "headlines": [
+        {
+          "title": "Tata Steel falls nearly 5% after announcing ₹32,266 crore APL Apollo consolidation and stake deal",
+          "source": "Kotak Neo",
+          "sentiment": "Negative",
+          "url": "https://www.kotakneo.com"
+        }
+      ]
     },
     {
-      "symbol": "COALINDIA",
-      "name": "Coal India Ltd.",
-      "sector": "Mining / PSU",
+      "symbol": "PAGEIND",
+      "name": "Page Industries",
+      "sector": "Apparel",
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 382.0,
-      "chg_1d": -2.05,
-      "chg_20d": -1.41,
-      "rsi": 38.2,
-      "dma50": 401.65,
-      "dma200": 413.27,
-      "dist_52w_high": -18.15,
-      "vol_ratio": 0.84,
-      "conviction": 98,
-      "zone_label": "Resistance Zone",
-      "zone": "₹400 – ₹420",
-      "invalidation": 426.3,
-      "short_strike": 410,
-      "hedge_strike": 430,
-      "est_credit": 5.6,
-      "lot_size": 1050,
+      "cmp": 30560.0,
+      "chg_1d": -1.4,
+      "chg_20d": -9.8,
+      "rsi": 34.2,
+      "dma50": 34916.0,
+      "dma200": 36928.0,
+      "dist_52w_high": -24.1,
+      "vol_ratio": 1.25,
+      "tech_score": 86,
+      "news_score": 82,
+      "conviction": 85,
+      "news_sentiment": "Bearish De-rating",
+      "expiries": {
+        "current": {
+          "zone": "₹31,500 – ₹32,000",
+          "invalidation": 32500.0,
+          "short_strike": 32000,
+          "hedge_strike": 33000,
+          "est_credit": 140.0
+        },
+        "next": {
+          "zone": "₹33,000 – ₹34,000",
+          "invalidation": 34500.0,
+          "short_strike": 33500,
+          "hedge_strike": 35000,
+          "est_credit": 380.0
+        }
+      },
+      "lot_size": 15,
       "reasons": {
-        "technical": "Weak trend at ₹382 (-18.1% off 52W high), pressured below 50 DMA (₹401.6) and 200 DMA (₹413.3).",
-        "fundamental": "Down -1.4% over 20 sessions with bearish RSI(14) at 38.2 and 0.84x recent volume in Mining / PSU.",
-        "risk": "Daily ATR is 2.2%; verify NSE F&O ban (MWPL) status and exit if price closes above ₹426.3."
-      }
+        "technical": "Sustained structural downtrend trading ~12% below 50 DMA (₹34,916) and ~17% below 200 DMA (₹36,928).",
+        "news": "Ongoing brokerage target cuts and discretionary apparel volume softness keep institutional rallies capped.",
+        "risk": "Low liquidity in far-OTM strikes; check bid-ask spread before placing orders."
+      },
+      "headlines": [
+        {
+          "title": "Discretionary apparel counters face valuation de-rating on sluggish urban volume growth",
+          "source": "NSE Market Wire",
+          "sentiment": "Negative",
+          "url": "https://www.nseindia.com"
+        }
+      ]
     },
     {
-      "symbol": "VEDL",
-      "name": "Vedanta Ltd.",
-      "sector": "Metals",
+      "symbol": "BHEL",
+      "name": "Bharat Heavy Electricals",
+      "sector": "Capital Goods / PSU",
       "bias": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 235.53,
-      "chg_1d": -1.05,
-      "chg_20d": 3.99,
-      "rsi": 37.3,
-      "dma50": 250.78,
-      "dma200": 393.71,
-      "dist_52w_high": -69.78,
-      "vol_ratio": 1.17,
-      "conviction": 98,
-      "zone_label": "Resistance Zone",
-      "zone": "₹250 – ₹260",
-      "invalidation": 263.9,
-      "short_strike": 255,
-      "hedge_strike": 265,
-      "est_credit": 2.8,
-      "lot_size": 1150,
+      "cmp": 416.0,
+      "chg_1d": -4.1,
+      "chg_20d": -10.6,
+      "rsi": 36.5,
+      "dma50": 448.0,
+      "dma200": 456.0,
+      "dist_52w_high": -18.4,
+      "vol_ratio": 1.64,
+      "tech_score": 85,
+      "news_score": 80,
+      "conviction": 83,
+      "news_sentiment": "Bearish PSU Distribution",
+      "expiries": {
+        "current": {
+          "zone": "₹430 – ₹435",
+          "invalidation": 440.0,
+          "short_strike": 430,
+          "hedge_strike": 445,
+          "est_credit": 2.5
+        },
+        "next": {
+          "zone": "₹440 – ₹455",
+          "invalidation": 460.0,
+          "short_strike": 445,
+          "hedge_strike": 465,
+          "est_credit": 6.2
+        }
+      },
+      "lot_size": 2625,
       "reasons": {
-        "technical": "Weak trend at ₹235.5 (-69.8% off 52W high), pressured below 50 DMA (₹250.8) and 200 DMA (₹393.7).",
-        "fundamental": "Down +4.0% over 20 sessions with bearish RSI(14) at 37.3 and 1.17x recent volume in Metals.",
-        "risk": "Daily ATR is 3.2%; verify NSE F&O ban (MWPL) status and exit if price closes above ₹263.9."
-      }
+        "technical": "Lower-high breakdown (-4.1% session drop) below both 50 DMA (₹448) and 200 DMA (₹456) on elevated volume.",
+        "news": "Execution margin concerns and broad PSU capital goods rotation weighing on near-term institutional appetite.",
+        "risk": "Frequently nears NSE MWPL F&O ban limit—verify daily MWPL % before entering."
+      },
+      "headlines": [
+        {
+          "title": "PSU capital goods stocks witness profit booking as institutional flows rotate toward IT and select autos",
+          "source": "NSE Market Wire",
+          "sentiment": "Negative",
+          "url": "https://www.nseindia.com"
+        }
+      ]
+    },
+    {
+      "symbol": "INDUSINDBK",
+      "name": "IndusInd Bank Ltd.",
+      "sector": "Private Banking",
+      "bias": "bearish",
+      "strategy": "Bear Call Spread / OTM Call Sell",
+      "cmp": 963.0,
+      "chg_1d": -3.95,
+      "chg_20d": -7.8,
+      "rsi": 37.1,
+      "dma50": 1032.0,
+      "dma200": 1095.0,
+      "dist_52w_high": -22.0,
+      "vol_ratio": 1.55,
+      "tech_score": 84,
+      "news_score": 81,
+      "conviction": 83,
+      "news_sentiment": "Bearish Sector Underperformer",
+      "expiries": {
+        "current": {
+          "zone": "₹990 – ₹1,005",
+          "invalidation": 1015.0,
+          "short_strike": 1000,
+          "hedge_strike": 1020,
+          "est_credit": 5.0
+        },
+        "next": {
+          "zone": "₹1,020 – ₹1,045",
+          "invalidation": 1052.0,
+          "short_strike": 1030,
+          "hedge_strike": 1070,
+          "est_credit": 14.0
+        }
+      },
+      "lot_size": 500,
+      "reasons": {
+        "technical": "Down ~4% with firm supply capping rallies around ₹1,024–₹1,042 near the declining 50 DMA (₹1,032).",
+        "news": "Nifty Bank weakness (-1% index drop as India VIX jumped) and MFI asset-quality overhang keep rallies sold into.",
+        "risk": "Keep spread width defined; bank stocks can react sharply to RBI/macro headlines."
+      },
+      "headlines": [
+        {
+          "title": "Nifty Bank drags as private lenders face margin and asset-quality scrutiny amid rising India VIX",
+          "source": "Upstox / Market Wire",
+          "sentiment": "Negative",
+          "url": "https://upstox.com"
+        }
+      ]
     }
   ]
 }

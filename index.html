@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NSE F&O Daily Option Seller's Scanner</title>
+  <title>NSE F&O News + Technical Option Seller's Scanner</title>
   <style>
     :root {
       --bg: #0b0f17;
@@ -17,6 +17,7 @@
       --bear: #ef4444;
       --bear-bg: rgba(239, 68, 68, 0.12);
       --accent: #3b82f6;
+      --purple: #8b5cf6;
       --warn: #f59e0b;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,16 +28,16 @@
       line-height: 1.5;
       min-height: 100vh;
     }
-    .container { max-width: 1320px; margin: 0 auto; padding: 20px 18px 60px; }
+    .container { max-width: 1360px; margin: 0 auto; padding: 20px 18px 60px; }
     header {
       display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
-      gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--border); margin-bottom: 20px;
+      gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--border); margin-bottom: 16px;
     }
     .brand h1 { font-size: 1.45rem; font-weight: 700; letter-spacing: -0.02em; }
-    .brand p { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
-    .status-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .brand p { color: var(--muted); font-size: 0.86rem; margin-top: 4px; }
+    .status-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
     .pill {
-      font-size: 0.78rem; padding: 5px 10px; border-radius: 999px;
+      font-size: 0.76rem; padding: 5px 10px; border-radius: 999px;
       border: 1px solid var(--border); background: var(--surface); color: var(--muted);
     }
     .pill.live { border-color: rgba(16,185,129,0.45); color: #34d399; background: var(--bull-bg); }
@@ -50,47 +51,56 @@
     button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
     button.primary:hover { filter: brightness(1.1); }
 
-    .banner {
-      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
-      padding: 12px 16px; border-radius: 10px; margin-bottom: 18px; font-size: 0.88rem; color: #cbd5e1;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    .expiry-bar {
+      display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center;
+      background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(139,92,246,0.10));
+      border: 1px solid rgba(59,130,246,0.4); border-radius: 12px; padding: 14px 16px; margin-bottom: 16px;
     }
+    .expiry-title { font-weight: 700; font-size: 0.94rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .rec-tag {
+      background: var(--bull); color: #052e16; font-size: 0.72rem; font-weight: 800;
+      padding: 2px 8px; border-radius: 999px; text-transform: uppercase;
+    }
+    .expiry-sub { font-size: 0.82rem; color: #cbd5e1; margin-top: 4px; }
+    .expiry-switch { display: flex; gap: 6px; flex-wrap: wrap; }
+    .exp-btn.active { background: var(--purple); border-color: var(--purple); color: #fff; }
 
     .controls {
       display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
     .tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
     .search-box {
       background: var(--surface); border: 1px solid var(--border); color: var(--text);
-      padding: 7px 12px; border-radius: 8px; font-size: 0.85rem; min-width: 220px;
+      padding: 7px 12px; border-radius: 8px; font-size: 0.85rem; min-width: 230px;
     }
 
     .section-title {
-      display: flex; align-items: center; gap: 10px; margin: 22px 0 12px; font-size: 1.08rem;
+      display: flex; align-items: center; gap: 10px; margin: 22px 0 12px; font-size: 1.06rem;
     }
     .badge {
-      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+      font-size: 0.71rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
       padding: 3px 8px; border-radius: 6px;
     }
     .badge.bull { background: var(--bull-bg); color: #34d399; border: 1px solid rgba(16,185,129,0.35); }
     .badge.bear { background: var(--bear-bg); color: #f87171; border: 1px solid rgba(239,68,68,0.35); }
+    .badge.news { background: rgba(139,92,246,0.16); color: #c4b5fd; border: 1px solid rgba(139,92,246,0.4); }
 
     .grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(370px, 1fr)); gap: 16px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 16px;
     }
     .card {
       background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-      padding: 16px; display: flex; flex-direction: column; gap: 12px;
+      padding: 16px; display: flex; flex-direction: column; gap: 11px;
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
     .card:hover { border-color: #3b4f75; transform: translateY(-2px); }
     .card.bull { border-top: 3px solid var(--bull); }
     .card.bear { border-top: 3px solid var(--bear); }
     .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-    .sym { font-size: 1.15rem; font-weight: 700; }
-    .sub { font-size: 0.78rem; color: var(--muted); }
+    .sym { font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
     .price-box { text-align: right; }
     .cmp { font-size: 1.15rem; font-weight: 700; }
     .chg { font-size: 0.78rem; font-weight: 600; }
@@ -99,31 +109,35 @@
 
     .metrics {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
-      background: var(--surface-2); padding: 10px; border-radius: 8px; font-size: 0.78rem;
+      background: var(--surface-2); padding: 9px 10px; border-radius: 8px; font-size: 0.78rem;
     }
-    .m-label { color: var(--muted); font-size: 0.7rem; display: block; }
+    .m-label { color: var(--muted); font-size: 0.69rem; display: block; }
     .m-val { font-weight: 700; margin-top: 2px; display: block; }
 
     .levels {
-      display: flex; justify-content: space-between; gap: 8px; font-size: 0.8rem;
-      padding: 8px 10px; border: 1px dashed var(--border); border-radius: 8px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.79rem;
+      padding: 9px 10px; border: 1px dashed var(--border); border-radius: 8px; background: rgba(255,255,255,0.015);
     }
-    .reasons { font-size: 0.82rem; display: flex; flex-direction: column; gap: 6px; color: #cbd5e1; }
+    .reasons { font-size: 0.81rem; display: flex; flex-direction: column; gap: 6px; color: #cbd5e1; }
     .reasons strong { color: var(--text); }
 
-    .card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 6px; }
-    .conv-wrap { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--muted); }
-    .bar { width: 72px; height: 6px; background: #23304a; border-radius: 99px; overflow: hidden; }
-    .bar-fill.bull { height: 100%; background: var(--bull); }
-    .bar-fill.bear { height: 100%; background: var(--bear); }
+    .headline-box {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px;
+      font-size: 0.76rem; color: var(--muted);
+    }
+    .headline-box a { color: #93c5fd; text-decoration: none; }
+    .headline-box a:hover { text-decoration: underline; }
 
-    table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 12px; overflow: hidden; font-size: 0.84rem; }
-    th, td { padding: 11px 12px; text-align: left; border-bottom: 1px solid var(--border); }
-    th { background: var(--surface-2); color: var(--muted); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; }
+    .card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 6px; gap: 8px; }
+    .scores { font-size: 0.75rem; color: var(--muted); }
+    .scores strong { color: var(--text); }
+
+    table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 12px; overflow: hidden; font-size: 0.83rem; }
+    th, td { padding: 10px 11px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: var(--surface-2); color: var(--muted); font-weight: 600; font-size: 0.74rem; text-transform: uppercase; }
     tr:hover td { background: rgba(59,130,246,0.06); }
     .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
 
-    /* Modal */
     .modal-backdrop {
       position: fixed; inset: 0; background: rgba(0,0,0,0.72); display: none;
       align-items: center; justify-content: center; padding: 16px; z-index: 100;
@@ -131,25 +145,27 @@
     .modal-backdrop.open { display: flex; }
     .modal {
       background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-      max-width: 520px; width: 100%; padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      max-width: 540px; width: 100%; padding: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     }
-    .modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
-    .field label { display: block; font-size: 0.76rem; color: var(--muted); margin-bottom: 4px; }
+    .modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    .field label { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 4px; }
     .field input {
       width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border);
       background: var(--bg); color: var(--text); font-size: 0.9rem;
     }
     .sim-results {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
-      background: var(--surface-2); padding: 14px; border-radius: 10px; margin-bottom: 12px;
+      background: var(--surface-2); padding: 14px; border-radius: 10px; margin-bottom: 10px;
     }
-    .sim-item .k { font-size: 0.73rem; color: var(--muted); }
-    .sim-item .v { font-size: 1.05rem; font-weight: 700; margin-top: 2px; }
+    .sim-item .k { font-size: 0.72rem; color: var(--muted); }
+    .sim-item .v { font-size: 1.03rem; font-weight: 700; margin-top: 2px; }
     footer { margin-top: 34px; font-size: 0.78rem; color: var(--muted); text-align: center; }
-    @media (max-width: 520px) {
+    @media (max-width: 720px) {
+      .expiry-bar { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
       .metrics { grid-template-columns: repeat(2, 1fr); }
+      .levels { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -157,8 +173,8 @@
   <div class="container">
     <header>
       <div class="brand">
-        <h1>NSE F&O Daily Option Seller's Scanner</h1>
-        <p id="seriesMeta">Loading series info...</p>
+        <h1>NSE F&O News + Technical Option Seller's Scanner</h1>
+        <p id="seriesMeta">Loading universe & expiry metadata...</p>
       </div>
       <div class="status-bar">
         <span id="sourcePill" class="pill">Checking picks.json...</span>
@@ -171,9 +187,19 @@
       </div>
     </header>
 
-    <div class="banner">
-      <div id="marketNote">Loading daily market summary...</div>
-      <div style="font-size:0.78rem;color:var(--muted);">Auto-updated weekdays ~8:15 AM IST via GitHub Actions</div>
+    <div class="expiry-bar">
+      <div>
+        <div class="expiry-title">
+          <span id="recExpiryHeadline">Active Series</span>
+          <span class="rec-tag" id="recBadge">AUTO ≤45D RULE</span>
+        </div>
+        <div class="expiry-sub" id="ruleReasonText">Evaluating current vs next month DTE...</div>
+      </div>
+      <div class="expiry-switch">
+        <button class="exp-btn active" data-exp="auto" id="btnExpAuto">Recommended (Auto)</button>
+        <button class="exp-btn" data-exp="current" id="btnExpCurr">Current Month</button>
+        <button class="exp-btn" data-exp="next" id="btnExpNext">Next Month</button>
+      </div>
     </div>
 
     <div class="controls">
@@ -183,13 +209,13 @@
         <button class="tab" data-filter="bearish">Bearish Calls (5)</button>
         <button id="viewToggleBtn">Switch to Table View</button>
       </div>
-      <input type="text" id="searchInput" class="search-box" placeholder="Filter symbol or sector..." />
+      <input type="text" id="searchInput" class="search-box" placeholder="Filter symbol, sector, or news..." />
     </div>
 
     <div id="contentArea"></div>
 
     <footer>
-      Disclaimer: Automated technical & momentum screening for educational/analytical use—not SEBI-registered investment advice. Always verify live NSE option chain liquidity, IV, and MWPL ban list before trading.
+      Disclaimer: Combined News + Technical screening for analytical purposes only—not SEBI-registered investment advice. Always verify live NSE option chain liquidity, IV, and MWPL ban status.
     </footer>
   </div>
 
@@ -230,24 +256,44 @@
         <div class="sim-item"><div class="k">Spread Width</div><div class="v" id="outWidth">--</div></div>
       </div>
       <div style="font-size:0.76rem;color:var(--muted);">
-        Note: Replace estimated net credit with live bid-ask mid-price from your broker's option chain.
+        Tip: Use the top expiry toggle to switch between Current Month and Next Month strikes before simulating.
       </div>
     </div>
   </div>
 
   <script>
-    const FALLBACK_DATA = {"updated_at": "23 Nov 2026, 07:00 PM IST (Initial Snapshot)", "series": "December 2026 Monthly F&O", "universe_scanned": 55, "market_note": "Snapshot pre-loaded with December series setups. Trigger the GitHub Action or wait for 8:15 AM IST weekdays for live Yahoo Finance updates.", "bullish": [{"symbol": "INDHOTEL", "name": "Indian Hotels Co.", "sector": "Hospitality", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 910.0, "chg_1d": 1.85, "chg_20d": 9.4, "rsi": 66.2, "dma50": 852.0, "dma200": 788.0, "dist_52w_high": -0.8, "vol_ratio": 1.45, "conviction": 91, "zone_label": "Support Zone", "zone": "₹870 – ₹880", "invalidation": 860.0, "short_strike": 870, "hedge_strike": 840, "est_credit": 11.5, "lot_size": 1000, "reasons": {"technical": "Multi-year weekly breakout above ₹870–₹895 with expanding volume; holding comfortably above 50 DMA (₹852) and 200 DMA (₹788).", "fundamental": "Strong historical December tourism & wedding-season RevPAR tailwind supporting institutional accumulation.", "risk": "Watch for sudden broader mid-cap profit booking; exit or roll down if daily close breaches ₹860."}}, {"symbol": "COFORGE", "name": "Coforge Ltd.", "sector": "IT Services", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 2143.0, "chg_1d": 1.42, "chg_20d": 11.2, "rsi": 64.8, "dma50": 1985.0, "dma200": 1810.0, "dist_52w_high": -1.6, "vol_ratio": 1.32, "conviction": 89, "zone_label": "Support Zone", "zone": "₹2,050 – ₹2,080", "invalidation": 2020.0, "short_strike": 2050, "hedge_strike": 2000, "est_credit": 22.0, "lot_size": 375, "reasons": {"technical": "Trading within 1.6% of its 52-week high (₹2,178) in a clean higher-high, higher-low uptrend.", "fundamental": "Backed by strong Sep 2026 quarterly results (+67% YoY profit growth) and robust mid-cap IT deal pipeline.", "risk": "High-beta IT name sensitive to US macro/Fed commentary; strictly hedge with a Bull Put Spread."}}, {"symbol": "MARICO", "name": "Marico Ltd.", "sector": "FMCG", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 919.0, "chg_1d": 0.92, "chg_20d": 6.8, "rsi": 62.5, "dma50": 874.0, "dma200": 812.0, "dist_52w_high": -0.7, "vol_ratio": 1.18, "conviction": 86, "zone_label": "Support Zone", "zone": "₹880 – ₹890", "invalidation": 868.0, "short_strike": 880, "hedge_strike": 850, "est_credit": 8.5, "lot_size": 1200, "reasons": {"technical": "Within 0.7% of 52-week high (₹925) with low realized volatility—ideal profile for steady theta decay.", "fundamental": "Defensive FMCG strength supported by 31% quarterly profit growth and stable rural demand recovery.", "risk": "Lower IV means leaner OTM premiums; avoid chasing overly distant strikes with poor risk-reward."}}, {"symbol": "EICHERMOT", "name": "Eicher Motors Ltd.", "sector": "Automobile", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 8171.0, "chg_1d": 1.15, "chg_20d": 7.5, "rsi": 63.1, "dma50": 7790.0, "dma200": 7150.0, "dist_52w_high": -1.3, "vol_ratio": 1.24, "conviction": 85, "zone_label": "Support Zone", "zone": "₹7,850 – ₹7,950", "invalidation": 7780.0, "short_strike": 7800, "hedge_strike": 7600, "est_credit": 68.0, "lot_size": 175, "reasons": {"technical": "Holding ~1.3% below its 52-week high (₹8,275) with consistent buying support near 20 DMA.", "fundamental": "Steady upward momentum underpinned by 20% quarterly sales growth and strong festive dispatch numbers.", "risk": "Higher ticket price can create wider bid-ask spreads in far-OTM strikes; always use limit orders."}}, {"symbol": "PERSISTENT", "name": "Persistent Systems", "sector": "IT Services", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 6283.0, "chg_1d": 2.6, "chg_20d": 10.4, "rsi": 65.4, "dma50": 5890.0, "dma200": 5420.0, "dist_52w_high": -2.1, "vol_ratio": 1.51, "conviction": 84, "zone_label": "Support Zone", "zone": "₹6,000 – ₹6,050", "invalidation": 5920.0, "short_strike": 6000, "hedge_strike": 5800, "est_credit": 62.0, "lot_size": 200, "reasons": {"technical": "Leading mid-cap IT breakout (+2.6% session move) backed by broad Nifty IT relative strength.", "fundamental": "Strong sector tailwind alongside tier-1 peers (TCS, Tech Mahindra) and sustained enterprise AI spend.", "risk": "Avoid concentrating excessive portfolio delta in IT if also holding Coforge puts."}}], "bearish": [{"symbol": "APLAPOLLO", "name": "APL Apollo Tubes", "sector": "Metals & Pipes", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 1670.0, "chg_1d": -3.2, "chg_20d": -21.3, "rsi": 29.4, "dma50": 1960.0, "dma200": 2040.0, "dist_52w_high": -26.5, "vol_ratio": 1.88, "conviction": 90, "zone_label": "Resistance Zone", "zone": "₹1,800 – ₹1,850", "invalidation": 1860.0, "short_strike": 1820, "hedge_strike": 1880, "est_credit": 19.5, "lot_size": 350, "reasons": {"technical": "Steep multi-week breakdown (-21.3%) with heavy overhead supply below both 50 DMA and 200 DMA.", "fundamental": "Margin pressure and steel price volatility weighing on institutional sentiment; rallies face supply.", "risk": "Oversold RSI (<30) invites sharp short-covering bounces; sell calls on intraday pops with a hedge."}}, {"symbol": "TATASTEEL", "name": "Tata Steel Ltd.", "sector": "Metals", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 163.0, "chg_1d": -2.15, "chg_20d": -8.4, "rsi": 35.8, "dma50": 176.5, "dma200": 181.0, "dist_52w_high": -16.2, "vol_ratio": 1.42, "conviction": 86, "zone_label": "Resistance Zone", "zone": "₹175 – ₹180", "invalidation": 182.0, "short_strike": 175, "hedge_strike": 185, "est_credit": 2.4, "lot_size": 5500, "reasons": {"technical": "Sharp downward momentum (-8.4% over 20 sessions) with repeated rejections below 50 DMA (₹176.5).", "fundamental": "Broad global metal sector weakness and muted Chinese steel demand capping upside bounces.", "risk": "Sudden China stimulus headlines can trigger rapid gap-ups; cap upside risk via ₹185 Call hedge."}}, {"symbol": "PAGEIND", "name": "Page Industries", "sector": "Apparel", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 30560.0, "chg_1d": -1.4, "chg_20d": -9.8, "rsi": 34.2, "dma50": 34916.0, "dma200": 36928.0, "dist_52w_high": -24.1, "vol_ratio": 1.25, "conviction": 85, "zone_label": "Resistance Zone", "zone": "₹33,000 – ₹34,000", "invalidation": 34500.0, "short_strike": 33500, "hedge_strike": 35000, "est_credit": 380.0, "lot_size": 15, "reasons": {"technical": "Sustained structural downtrend trading deeply below both 50 DMA (₹34,916) and 200 DMA (₹36,928).", "fundamental": "Persistent valuation de-rating and sluggish volume recovery keep rallies capped at key moving averages.", "risk": "Thin option chain liquidity in far-OTM strikes; inspect bid-ask spread carefully before execution."}}, {"symbol": "BHEL", "name": "Bharat Heavy Electricals", "sector": "Capital Goods / PSU", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 416.0, "chg_1d": -4.1, "chg_20d": -10.6, "rsi": 36.5, "dma50": 448.0, "dma200": 456.0, "dist_52w_high": -18.4, "vol_ratio": 1.64, "conviction": 84, "zone_label": "Resistance Zone", "zone": "₹440 – ₹450", "invalidation": 455.0, "short_strike": 445, "hedge_strike": 465, "est_credit": 6.2, "lot_size": 2625, "reasons": {"technical": "Heavy selling pressure (-4.1% session drop) forming a clean lower-high breakdown below 50/200 DMA.", "fundamental": "Broad PSU & capital goods distribution; high retail leverage amplifies downside follow-through.", "risk": "Frequently approaches NSE MWPL F&O ban threshold—check daily MWPL % before initiating fresh trades."}}, {"symbol": "INDUSINDBK", "name": "IndusInd Bank Ltd.", "sector": "Private Banking", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 963.0, "chg_1d": -3.95, "chg_20d": -7.8, "rsi": 37.1, "dma50": 1032.0, "dma200": 1095.0, "dist_52w_high": -22.0, "vol_ratio": 1.55, "conviction": 83, "zone_label": "Resistance Zone", "zone": "₹1,020 – ₹1,040", "invalidation": 1048.0, "short_strike": 1030, "hedge_strike": 1070, "est_credit": 14.0, "lot_size": 500, "reasons": {"technical": "Down ~4% with firm technical supply zone capping upside around ₹1,024–₹1,042 (near 50 DMA).", "fundamental": "Underperforming Nifty Bank peers due to asset-quality overhang and muted NIM trajectory.", "risk": "Event-driven news spikes can occur in private banks; keep spread width tight and well-defined."}}]};
+    const FALLBACK_DATA = {"updated_at": "23 Nov 2026, 07:30 PM IST", "universe_scanned": 60, "expiry_meta": {"current_month": {"code": "current", "label": "Nov 2026 Expiry", "date": "23 Nov 2026 (Mon)", "dte": 0}, "next_month": {"code": "next", "label": "Dec 2026 Expiry", "date": "29 Dec 2026 (Tue)", "dte": 36}, "recommended": "next", "rule_reason": "Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days threshold) — automatically suggesting Next Month Expiry for optimal 30–45 DTE theta decay and lower gamma risk."}, "market_note": "Combined News + Technical scan across 60 liquid NSE F&O stocks. Next expiry (29 Dec 2026, 36 DTE) is ≤45 days, so Next Month spreads are highlighted as Primary alongside Current Month levels.", "bullish": [{"symbol": "EICHERMOT", "name": "Eicher Motors Ltd.", "sector": "Automobile", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 8171.0, "chg_1d": 1.45, "chg_20d": 17.0, "rsi": 67.4, "dma50": 7680.0, "dma200": 7120.0, "dist_52w_high": -0.4, "vol_ratio": 1.52, "tech_score": 92, "news_score": 94, "conviction": 93, "news_sentiment": "Strong Bullish Catalyst", "expiries": {"current": {"zone": "₹8,000 – ₹8,050", "invalidation": 7960.0, "short_strike": 8000, "hedge_strike": 7900, "est_credit": 24.0}, "next": {"zone": "₹7,750 – ₹7,850", "invalidation": 7680.0, "short_strike": 7800, "hedge_strike": 7600, "est_credit": 68.0}}, "lot_size": 175, "reasons": {"technical": "Hit fresh all-time high (~₹8,200) after a +17% 1-month rally; strong support above 20 DMA and 50 DMA (₹7,680).", "news": "ICICI Securities & top brokerages reiterated 'Buy' (targets ₹8,910–₹9,500) citing robust Royal Enfield booking pipeline, lean dealer inventory, and VECV earnings growth.", "risk": "Use limit orders on higher-priced strikes; roll or exit if daily close breaks ₹7,680 (Dec series)."}, "headlines": [{"title": "Eicher Motors hits all-time high; brokerages raise target up to ₹9,500 on Royal Enfield & VECV outlook", "source": "Business Standard", "sentiment": "Positive", "url": "https://www.business-standard.com"}]}, {"symbol": "INDHOTEL", "name": "Indian Hotels Co.", "sector": "Hospitality", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 910.0, "chg_1d": 1.85, "chg_20d": 9.4, "rsi": 66.2, "dma50": 852.0, "dma200": 788.0, "dist_52w_high": -0.8, "vol_ratio": 1.45, "tech_score": 90, "news_score": 88, "conviction": 89, "news_sentiment": "Bullish Catalyst", "expiries": {"current": {"zone": "₹890 – ₹900", "invalidation": 882.0, "short_strike": 890, "hedge_strike": 870, "est_credit": 4.5}, "next": {"zone": "₹865 – ₹880", "invalidation": 855.0, "short_strike": 870, "hedge_strike": 840, "est_credit": 11.5}}, "lot_size": 1000, "reasons": {"technical": "Multi-year weekly breakout above ₹870–₹895 with expanding volume; holding firmly above 50 DMA (₹852).", "news": "Hospitality sector capex & Q3-Q4 peak wedding/tourism occupancy tailwinds driving institutional upgrades across hotel peers.", "risk": "Watch for broader mid-cap profit booking; exit Dec spread if daily close breaches ₹855."}, "headlines": [{"title": "Hospitality stocks in focus on peak Q3 wedding & winter occupancy surge across metro and leisure destinations", "source": "NSE Market Wire", "sentiment": "Positive", "url": "https://www.nseindia.com"}]}, {"symbol": "PERSISTENT", "name": "Persistent Systems", "sector": "IT Services", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 6283.0, "chg_1d": 2.6, "chg_20d": 10.4, "rsi": 65.4, "dma50": 5890.0, "dma200": 5420.0, "dist_52w_high": -2.1, "vol_ratio": 1.51, "tech_score": 88, "news_score": 82, "conviction": 86, "news_sentiment": "Bullish Sector + Clarity", "expiries": {"current": {"zone": "₹6,150 – ₹6,200", "invalidation": 6100.0, "short_strike": 6150, "hedge_strike": 6050, "est_credit": 21.0}, "next": {"zone": "₹5,950 – ₹6,050", "invalidation": 5900.0, "short_strike": 6000, "hedge_strike": 5800, "est_credit": 62.0}}, "lot_size": 200, "reasons": {"technical": "Strong mid-cap IT breakout (+2.6% session surge, +10.4% in 20D) trading cleanly above 50 DMA (₹5,890).", "news": "Rallied alongside Nifty IT leaders (TCS, TechM); company clarified third-party US law firm incident did not compromise internal systems.", "risk": "Avoid stacking redundant IT delta if also shorting Coforge puts."}, "headlines": [{"title": "Persistent Systems shares gain over 2% amid IT rally; company clarifies own systems remain fully secure", "source": "Upstox News", "sentiment": "Positive", "url": "https://upstox.com"}]}, {"symbol": "COFORGE", "name": "Coforge Ltd.", "sector": "IT Services", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 2143.0, "chg_1d": 1.42, "chg_20d": 11.2, "rsi": 64.8, "dma50": 1985.0, "dma200": 1810.0, "dist_52w_high": -1.6, "vol_ratio": 1.32, "tech_score": 89, "news_score": 84, "conviction": 87, "news_sentiment": "Bullish Earnings Catalyst", "expiries": {"current": {"zone": "₹2,100 – ₹2,120", "invalidation": 2075.0, "short_strike": 2100, "hedge_strike": 2050, "est_credit": 8.0}, "next": {"zone": "₹2,040 – ₹2,080", "invalidation": 2010.0, "short_strike": 2050, "hedge_strike": 2000, "est_credit": 22.0}}, "lot_size": 375, "reasons": {"technical": "Holding within 1.6% of 52-week high (₹2,178) in a sustained higher-low structure above 50 DMA (₹1,985).", "news": "Backed by +67% YoY quarterly profit growth and strong US BFSI/travel order book momentum across mid-cap IT.", "risk": "High-beta IT counter; always define risk with the ₹2,000 Put hedge."}, "headlines": [{"title": "Mid-cap IT momentum stays strong on Q2 earnings beat and healthy H2 deal ramp-up visibility", "source": "NSE Market Wire", "sentiment": "Positive", "url": "https://www.nseindia.com"}]}, {"symbol": "MARICO", "name": "Marico Ltd.", "sector": "FMCG", "bias": "bullish", "strategy": "Bull Put Spread / OTM Put Sell", "cmp": 919.0, "chg_1d": 0.92, "chg_20d": 6.8, "rsi": 62.5, "dma50": 874.0, "dma200": 812.0, "dist_52w_high": -0.7, "vol_ratio": 1.18, "tech_score": 86, "news_score": 82, "conviction": 85, "news_sentiment": "Defensive Bullish", "expiries": {"current": {"zone": "₹900 – ₹910", "invalidation": 892.0, "short_strike": 900, "hedge_strike": 880, "est_credit": 3.5}, "next": {"zone": "₹875 – ₹890", "invalidation": 865.0, "short_strike": 880, "hedge_strike": 850, "est_credit": 8.5}}, "lot_size": 1200, "reasons": {"technical": "Trading 0.7% below its 52-week high (₹925) with low realized volatility—ideal for high-probability theta decay.", "news": "Featured on institutional 'Stocks to Watch' following +31% quarterly profit growth and improving rural volume trends.", "risk": "Lower IV compresses OTM premiums; avoid selling strikes too far out with weak reward-to-risk."}, "headlines": [{"title": "Stocks to watch: Marico in focus on steady margin resilience and rural volume recovery", "source": "Upstox / Market Wire", "sentiment": "Positive", "url": "https://upstox.com"}]}], "bearish": [{"symbol": "APLAPOLLO", "name": "APL Apollo Tubes", "sector": "Metals & Pipes", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 1670.0, "chg_1d": -14.68, "chg_20d": -21.3, "rsi": 27.8, "dma50": 1960.0, "dma200": 2040.0, "dist_52w_high": -26.5, "vol_ratio": 2.45, "tech_score": 91, "news_score": 92, "conviction": 91, "news_sentiment": "Heavy News + Tech Breakdown", "expiries": {"current": {"zone": "₹1,750 – ₹1,780", "invalidation": 1800.0, "short_strike": 1750, "hedge_strike": 1800, "est_credit": 8.0}, "next": {"zone": "₹1,820 – ₹1,860", "invalidation": 1880.0, "short_strike": 1850, "hedge_strike": 1900, "est_credit": 19.5}}, "lot_size": 350, "reasons": {"technical": "Steep high-volume breakdown (-14.7% single-day drop, -21.3% in 20D) well below 50 DMA (₹1,960) and 200 DMA (₹2,040).", "news": "Slumped after Tata Steel announced a ₹32,266 Cr deal to acquire a 26.6% controlling stake and merge its tubes/coated coil unit into APL Apollo.", "risk": "Elevated IV and oversold RSI (<30) can spark sharp intraday bounces; strictly cap upside via Bear Call Spread."}, "headlines": [{"title": "APL Apollo share price plunges over 14% after Tata Steel announces controlling stake deal & open offer", "source": "Kotak Neo / Business Standard", "sentiment": "Negative", "url": "https://www.business-standard.com"}]}, {"symbol": "TATASTEEL", "name": "Tata Steel Ltd.", "sector": "Metals", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 163.0, "chg_1d": -4.74, "chg_20d": -8.4, "rsi": 34.1, "dma50": 176.5, "dma200": 181.0, "dist_52w_high": -16.2, "vol_ratio": 1.85, "tech_score": 87, "news_score": 89, "conviction": 88, "news_sentiment": "Bearish Deal Outlay + Metals", "expiries": {"current": {"zone": "₹168 – ₹170", "invalidation": 172.0, "short_strike": 170, "hedge_strike": 175, "est_credit": 0.9}, "next": {"zone": "₹175 – ₹180", "invalidation": 182.0, "short_strike": 175, "hedge_strike": 185, "est_credit": 2.4}}, "lot_size": 5500, "reasons": {"technical": "Dropped ~4.7% with heavy volume, rejecting below 50 DMA (₹176.5) and 200 DMA (₹181.0).", "news": "Stock sold off on large ₹32,266 Cr capital commitment for the APL Apollo restructuring amid muted global steel spreads.", "risk": "Global metal stimulus headlines can cause sudden gaps; keep ₹185 Call hedge active."}, "headlines": [{"title": "Tata Steel falls nearly 5% after announcing ₹32,266 crore APL Apollo consolidation and stake deal", "source": "Kotak Neo", "sentiment": "Negative", "url": "https://www.kotakneo.com"}]}, {"symbol": "PAGEIND", "name": "Page Industries", "sector": "Apparel", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 30560.0, "chg_1d": -1.4, "chg_20d": -9.8, "rsi": 34.2, "dma50": 34916.0, "dma200": 36928.0, "dist_52w_high": -24.1, "vol_ratio": 1.25, "tech_score": 86, "news_score": 82, "conviction": 85, "news_sentiment": "Bearish De-rating", "expiries": {"current": {"zone": "₹31,500 – ₹32,000", "invalidation": 32500.0, "short_strike": 32000, "hedge_strike": 33000, "est_credit": 140.0}, "next": {"zone": "₹33,000 – ₹34,000", "invalidation": 34500.0, "short_strike": 33500, "hedge_strike": 35000, "est_credit": 380.0}}, "lot_size": 15, "reasons": {"technical": "Sustained structural downtrend trading ~12% below 50 DMA (₹34,916) and ~17% below 200 DMA (₹36,928).", "news": "Ongoing brokerage target cuts and discretionary apparel volume softness keep institutional rallies capped.", "risk": "Low liquidity in far-OTM strikes; check bid-ask spread before placing orders."}, "headlines": [{"title": "Discretionary apparel counters face valuation de-rating on sluggish urban volume growth", "source": "NSE Market Wire", "sentiment": "Negative", "url": "https://www.nseindia.com"}]}, {"symbol": "BHEL", "name": "Bharat Heavy Electricals", "sector": "Capital Goods / PSU", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 416.0, "chg_1d": -4.1, "chg_20d": -10.6, "rsi": 36.5, "dma50": 448.0, "dma200": 456.0, "dist_52w_high": -18.4, "vol_ratio": 1.64, "tech_score": 85, "news_score": 80, "conviction": 83, "news_sentiment": "Bearish PSU Distribution", "expiries": {"current": {"zone": "₹430 – ₹435", "invalidation": 440.0, "short_strike": 430, "hedge_strike": 445, "est_credit": 2.5}, "next": {"zone": "₹440 – ₹455", "invalidation": 460.0, "short_strike": 445, "hedge_strike": 465, "est_credit": 6.2}}, "lot_size": 2625, "reasons": {"technical": "Lower-high breakdown (-4.1% session drop) below both 50 DMA (₹448) and 200 DMA (₹456) on elevated volume.", "news": "Execution margin concerns and broad PSU capital goods rotation weighing on near-term institutional appetite.", "risk": "Frequently nears NSE MWPL F&O ban limit—verify daily MWPL % before entering."}, "headlines": [{"title": "PSU capital goods stocks witness profit booking as institutional flows rotate toward IT and select autos", "source": "NSE Market Wire", "sentiment": "Negative", "url": "https://www.nseindia.com"}]}, {"symbol": "INDUSINDBK", "name": "IndusInd Bank Ltd.", "sector": "Private Banking", "bias": "bearish", "strategy": "Bear Call Spread / OTM Call Sell", "cmp": 963.0, "chg_1d": -3.95, "chg_20d": -7.8, "rsi": 37.1, "dma50": 1032.0, "dma200": 1095.0, "dist_52w_high": -22.0, "vol_ratio": 1.55, "tech_score": 84, "news_score": 81, "conviction": 83, "news_sentiment": "Bearish Sector Underperformer", "expiries": {"current": {"zone": "₹990 – ₹1,005", "invalidation": 1015.0, "short_strike": 1000, "hedge_strike": 1020, "est_credit": 5.0}, "next": {"zone": "₹1,020 – ₹1,045", "invalidation": 1052.0, "short_strike": 1030, "hedge_strike": 1070, "est_credit": 14.0}}, "lot_size": 500, "reasons": {"technical": "Down ~4% with firm supply capping rallies around ₹1,024–₹1,042 near the declining 50 DMA (₹1,032).", "news": "Nifty Bank weakness (-1% index drop as India VIX jumped) and MFI asset-quality overhang keep rallies sold into.", "risk": "Keep spread width defined; bank stocks can react sharply to RBI/macro headlines."}, "headlines": [{"title": "Nifty Bank drags as private lenders face margin and asset-quality scrutiny amid rising India VIX", "source": "Upstox / Market Wire", "sentiment": "Negative", "url": "https://upstox.com"}]}]};
 
     let state = {
       data: FALLBACK_DATA,
       filter: "all",
       view: "cards",
+      expMode: "auto",
       query: "",
       activeStock: null
     };
 
     const fmtINR = (n) => "₹" + Number(n).toLocaleString("en-IN", { maximumFractionDigits: 2 });
     const fmtSign = (n) => (n >= 0 ? "+" : "") + Number(n).toFixed(2) + "%";
+
+    function activeExpiryKey() {
+      if (state.expMode === "current" || state.expMode === "next") return state.expMode;
+      const meta = state.data.expiry_meta || {};
+      if (meta.recommended) return meta.recommended;
+      const nextDte = meta.next_month ? meta.next_month.dte : 36;
+      return nextDte <= 45 ? "next" : "current";
+    }
+
+    function getLevels(s, key) {
+      if (s.expiries && s.expiries[key]) return s.expiries[key];
+      return {
+        zone: s.zone || "--",
+        invalidation: s.invalidation || s.cmp,
+        short_strike: s.short_strike,
+        hedge_strike: s.hedge_strike,
+        est_credit: s.est_credit
+      };
+    }
 
     async function loadData() {
       const pill = document.getElementById("sourcePill");
@@ -261,7 +307,7 @@
         pill.className = "pill live";
       } catch (err) {
         state.data = FALLBACK_DATA;
-        pill.textContent = "Local Fallback Snapshot";
+        pill.textContent = "Local Snapshot";
         pill.className = "pill local";
       }
       render();
@@ -273,18 +319,42 @@
       return list.filter(item =>
         item.symbol.toLowerCase().includes(q) ||
         item.name.toLowerCase().includes(q) ||
-        item.sector.toLowerCase().includes(q)
+        item.sector.toLowerCase().includes(q) ||
+        (item.reasons && item.reasons.news && item.reasons.news.toLowerCase().includes(q))
       );
     }
 
     function renderCard(s) {
       const isBull = s.bias === "bullish";
       const cls = isBull ? "bull" : "bear";
+      const expKey = activeExpiryKey();
+      const otherKey = expKey === "next" ? "current" : "next";
+      const activeLvl = getLevels(s, expKey);
+      const otherLvl = getLevels(s, otherKey);
+      const meta = state.data.expiry_meta || {};
+      const activeLabel = expKey === "next"
+        ? (meta.next_month ? meta.next_month.label : "Next Month")
+        : (meta.current_month ? meta.current_month.label : "Current Month");
+      const otherLabel = otherKey === "next"
+        ? (meta.next_month ? meta.next_month.label : "Next Month")
+        : (meta.current_month ? meta.current_month.label : "Current Month");
+
+      const headlinesHtml = (s.headlines || []).slice(0, 2).map(h => `
+        <div style="margin-top:4px;">
+          • ${h.url ? `<a href="${h.url}" target="_blank" rel="noopener">${h.title}</a>` : h.title}
+          <span style="opacity:0.75;">(${h.source})</span>
+        </div>
+      `).join("");
+
       return `
         <div class="card ${cls}">
           <div class="card-head">
             <div>
-              <div class="sym">${s.symbol} <span class="badge ${cls}">${isBull ? "PUT SELL" : "CALL SELL"}</span></div>
+              <div class="sym">
+                ${s.symbol}
+                <span class="badge ${cls}">${isBull ? "PUT SELL" : "CALL SELL"}</span>
+                <span class="badge news">${s.news_sentiment || "News+Tech"}</span>
+              </div>
               <div class="sub">${s.name} · ${s.sector}</div>
             </div>
             <div class="price-box">
@@ -301,22 +371,31 @@
           </div>
 
           <div class="levels">
-            <div><strong>${s.zone_label}:</strong> ${s.zone}</div>
-            <div><strong>Invalidation:</strong> ${fmtINR(s.invalidation)}</div>
+            <div>
+              <div style="color:var(--muted);font-size:0.7rem;">PRIMARY (${activeLabel})</div>
+              <div><strong>Sell ${activeLvl.short_strike} / Buy ${activeLvl.hedge_strike}</strong></div>
+              <div>Zone: ${activeLvl.zone}</div>
+            </div>
+            <div>
+              <div style="color:var(--muted);font-size:0.7rem;">ALT (${otherLabel})</div>
+              <div>Sell ${otherLvl.short_strike} / Buy ${otherLvl.hedge_strike}</div>
+              <div>Invalidation: ${fmtINR(activeLvl.invalidation)}</div>
+            </div>
           </div>
 
           <div class="reasons">
-            <div><strong>Technical:</strong> ${s.reasons.technical}</div>
-            <div><strong>Momentum/Drivers:</strong> ${s.reasons.fundamental}</div>
+            <div><strong>Technical (${s.tech_score || s.conviction}/100):</strong> ${s.reasons.technical}</div>
+            <div><strong>News Catalyst (${s.news_score || s.conviction}/100):</strong> ${s.reasons.news || s.reasons.fundamental || ""}</div>
             <div><strong>Risk:</strong> ${s.reasons.risk}</div>
           </div>
 
+          ${headlinesHtml ? `<div class="headline-box"><strong>Latest News Trigger:</strong>${headlinesHtml}</div>` : ""}
+
           <div class="card-foot">
-            <div class="conv-wrap">
-              <span>Conviction ${s.conviction}/100</span>
-              <div class="bar"><div class="bar-fill ${cls}" style="width:${s.conviction}%"></div></div>
+            <div class="scores">
+              Composite: <strong>${s.conviction}/100</strong> (65% Tech + 35% News)
             </div>
-            <button class="primary" onclick="openSim('${s.symbol}')">Simulate Spread</button>
+            <button class="primary" onclick="openSim('${s.symbol}')">Simulate ${activeLabel}</button>
           </div>
         </div>
       `;
@@ -324,6 +403,7 @@
 
     function renderTable(items) {
       if (!items.length) return `<p style="color:var(--muted);padding:16px;">No matching stocks.</p>`;
+      const expKey = activeExpiryKey();
       return `
         <div class="table-wrap">
           <table>
@@ -334,26 +414,30 @@
                 <th>CMP</th>
                 <th>20D %</th>
                 <th>RSI</th>
-                <th>Key Zone</th>
-                <th>Suggested Spread</th>
-                <th>Conviction</th>
+                <th>Current Mo Spread</th>
+                <th>Next Mo Spread</th>
+                <th>Tech / News</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              ${items.map(s => `
-                <tr>
-                  <td><strong>${s.symbol}</strong><br><span style="font-size:0.75rem;color:var(--muted);">${s.sector}</span></td>
-                  <td><span class="badge ${s.bias === "bullish" ? "bull" : "bear"}">${s.bias}</span></td>
-                  <td>${fmtINR(s.cmp)}</td>
-                  <td class="${s.chg_20d >= 0 ? "pos" : "neg"}">${fmtSign(s.chg_20d)}</td>
-                  <td>${s.rsi}</td>
-                  <td>${s.zone}</td>
-                  <td>Sell ${s.short_strike} / Buy ${s.hedge_strike}</td>
-                  <td>${s.conviction}/100</td>
-                  <td><button onclick="openSim('${s.symbol}')">Simulate</button></td>
-                </tr>
-              `).join("")}
+              ${items.map(s => {
+                const cLvl = getLevels(s, "current");
+                const nLvl = getLevels(s, "next");
+                return `
+                  <tr>
+                    <td><strong>${s.symbol}</strong><br><span style="font-size:0.74rem;color:var(--muted);">${s.sector}</span></td>
+                    <td><span class="badge ${s.bias === "bullish" ? "bull" : "bear"}">${s.bias}</span></td>
+                    <td>${fmtINR(s.cmp)}</td>
+                    <td class="${s.chg_20d >= 0 ? "pos" : "neg"}">${fmtSign(s.chg_20d)}</td>
+                    <td>${s.rsi}</td>
+                    <td>${cLvl.short_strike} / ${cLvl.hedge_strike}</td>
+                    <td><strong>${nLvl.short_strike} / ${nLvl.hedge_strike}</strong></td>
+                    <td>${s.tech_score || "-"} / ${s.news_score || "-"} (<strong>${s.conviction}</strong>)</td>
+                    <td><button onclick="openSim('${s.symbol}')">Simulate (${expKey === "next" ? "Next" : "Curr"})</button></td>
+                  </tr>
+                `;
+              }).join("")}
             </tbody>
           </table>
         </div>
@@ -362,9 +446,24 @@
 
     function render() {
       const d = state.data;
-      document.getElementById("seriesMeta").textContent = `${d.series || "NSE F&O"} · Universe: ${d.universe_scanned || 55} liquid stocks`;
+      const meta = d.expiry_meta || {};
+      const curr = meta.current_month || { label: "Current Month", date: "--", dte: 0 };
+      const next = meta.next_month || { label: "Next Month", date: "--", dte: 36 };
+      const expKey = activeExpiryKey();
+
+      document.getElementById("seriesMeta").textContent =
+        `Universe: ${d.universe_scanned || 60} liquid NSE F&O stocks · Current: ${curr.date} (${curr.dte} DTE) · Next: ${next.date} (${next.dte} DTE)`;
       document.getElementById("updatedPill").textContent = `Updated: ${d.updated_at}`;
-      document.getElementById("marketNote").textContent = d.market_note || "";
+
+      const activeObj = expKey === "next" ? next : curr;
+      document.getElementById("recExpiryHeadline").textContent =
+        `Showing Strikes For: ${activeObj.label} (${activeObj.date} · ${activeObj.dte} DTE)`;
+      document.getElementById("recBadge").textContent =
+        next.dte <= 45 ? `NEXT EXPIRY ≤ 45D (${next.dte} DTE)` : `CURRENT EXPIRY ACTIVE`;
+      document.getElementById("ruleReasonText").textContent = meta.rule_reason || d.market_note || "";
+
+      document.getElementById("btnExpCurr").textContent = `${curr.label} (${curr.dte}d)`;
+      document.getElementById("btnExpNext").textContent = `${next.label} (${next.dte}d)`;
 
       const bulls = filterList(d.bullish || []);
       const bears = filterList(d.bearish || []);
@@ -380,11 +479,11 @@
 
       let html = "";
       if (state.filter === "all" || state.filter === "bullish") {
-        html += `<div class="section-title"><span class="badge bull">Bullish</span> Top Put Selling / Bull Put Spread Candidates (${bulls.length})</div>`;
+        html += `<div class="section-title"><span class="badge bull">Bullish News + Tech</span> Top Put Selling / Bull Put Spread Candidates (${bulls.length})</div>`;
         html += `<div class="grid">${bulls.map(renderCard).join("") || '<p style="color:var(--muted)">No matching bullish stocks.</p>'}</div>`;
       }
       if (state.filter === "all" || state.filter === "bearish") {
-        html += `<div class="section-title"><span class="badge bear">Bearish</span> Top Call Selling / Bear Call Spread Candidates (${bears.length})</div>`;
+        html += `<div class="section-title"><span class="badge bear">Bearish News + Tech</span> Top Call Selling / Bear Call Spread Candidates (${bears.length})</div>`;
         html += `<div class="grid">${bears.map(renderCard).join("") || '<p style="color:var(--muted)">No matching bearish stocks.</p>'}</div>`;
       }
       area.innerHTML = html;
@@ -395,11 +494,18 @@
       const s = all.find(x => x.symbol === symbol);
       if (!s) return;
       state.activeStock = s;
-      document.getElementById("simTitle").textContent = `${s.symbol} — ${s.strategy}`;
-      document.getElementById("simSub").textContent = `CMP: ${fmtINR(s.cmp)} · ${s.zone_label}: ${s.zone}`;
-      document.getElementById("inShort").value = s.short_strike;
-      document.getElementById("inHedge").value = s.hedge_strike;
-      document.getElementById("inCredit").value = s.est_credit;
+      const expKey = activeExpiryKey();
+      const lvl = getLevels(s, expKey);
+      const meta = state.data.expiry_meta || {};
+      const expName = expKey === "next"
+        ? (meta.next_month ? meta.next_month.label : "Next Month")
+        : (meta.current_month ? meta.current_month.label : "Current Month");
+
+      document.getElementById("simTitle").textContent = `${s.symbol} — ${expName}`;
+      document.getElementById("simSub").textContent = `CMP: ${fmtINR(s.cmp)} · Zone: ${lvl.zone}`;
+      document.getElementById("inShort").value = lvl.short_strike;
+      document.getElementById("inHedge").value = lvl.hedge_strike;
+      document.getElementById("inCredit").value = lvl.est_credit;
       document.getElementById("inLots").value = 1;
       document.getElementById("simLotSize").textContent = s.lot_size;
       recalcSim();
@@ -431,6 +537,15 @@
       document.getElementById("outRR").textContent = rr;
       document.getElementById("outWidth").textContent = fmtINR(width);
     }
+
+    document.querySelectorAll(".exp-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".exp-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.expMode = btn.dataset.exp;
+        render();
+      });
+    });
 
     document.querySelectorAll(".tab").forEach(btn => {
       btn.addEventListener("click", () => {
