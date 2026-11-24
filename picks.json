@@ -1,24 +1,816 @@
 {
-  "updated_at": "23 Nov 2026, 07:57 PM IST",
+  "updated_at": "24 Nov 2026, 06:27 PM IST",
   "universe_scanned": 59,
   "expiry_meta": {
     "current_month": {
       "code": "current",
-      "label": "Nov 2026 Expiry",
-      "date": "23 Nov 2026 (Mon)",
-      "dte": 0
+      "label": "Dec 2026 Expiry",
+      "date": "29 Dec 2026 (Tue)",
+      "dte": 35
     },
     "next_month": {
       "code": "next",
-      "label": "Dec 2026 Expiry",
-      "date": "29 Dec 2026 (Tue)",
-      "dte": 36
+      "label": "Jan 2027 Expiry",
+      "date": "25 Jan 2027 (Mon)",
+      "dte": 62
     },
-    "recommended": "next",
-    "rule_reason": "Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days) — recommending Next Month Expiry for optimal theta decay and lower gamma risk."
+    "recommended": "current",
+    "rule_reason": "Next monthly expiry (25 Jan 2027) is 62 days away (> 45 days) — recommending Current Month Expiry (29 Dec 2026, 35 DTE)."
   },
-  "market_note": "Scanned 59 NSE F&O stocks (Breadth: 76% > 50 DMA) + 3 MCX Mini Commodities (GOLDM, SILVERM, CRUDEOILM). Next monthly expiry (29 Dec 2026) is 36 days away (≤ 45 days) — recommending Next Month Expiry for optimal theta decay and lower gamma risk.",
+  "market_note": "Scanned 59 NSE F&O stocks (Breadth: 76% > 50 DMA) + 3 MCX Mini Commodities (GOLDM, SILVERM, CRUDEOILM). Next monthly expiry (25 Jan 2027) is 62 days away (> 45 days) — recommending Current Month Expiry (29 Dec 2026, 35 DTE).",
   "bullish": [
+    {
+      "symbol": "KOTAKBANK",
+      "name": "Kotak Mahindra Bank",
+      "sector": "Private Banking",
+      "bias": "bullish",
+      "rating": 95,
+      "tier": "Strong Bullish",
+      "tier_code": "strong_bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 502.85,
+      "chg_1d": -2.51,
+      "chg_20d": 16.81,
+      "rsi": 68.9,
+      "dma20": 476.37,
+      "dma50": 445.01,
+      "dma200": 405.05,
+      "dist_52w_high": -3.58,
+      "vol_ratio": 0.8,
+      "scores": {
+        "tech": 98,
+        "sr": 87,
+        "news": 96,
+        "composite": 95
+      },
+      "sr": {
+        "s2": 445.01,
+        "s1": 476.37,
+        "pivot": 487.32,
+        "r1": 521.5,
+        "r2": 571.22,
+        "s1_dist_pct": -5.27,
+        "r1_dist_pct": 3.71,
+        "structure": "Higher-Low Uptrend Holding Above DMA Support"
+      },
+      "expiries": {
+        "current": {
+          "zone": "₹460 – ₹480",
+          "invalidation": 455.4,
+          "short_strike": 470,
+          "hedge_strike": 450,
+          "est_credit": 5.6
+        },
+        "next": {
+          "zone": "₹460 – ₹480",
+          "invalidation": 455.4,
+          "short_strike": 470,
+          "hedge_strike": 450,
+          "est_credit": 5.6
+        }
+      },
+      "lot_size": 400,
+      "reasons": {
+        "technical": "CMP ₹502.9 (-2.51% 1D, +16.8% 20D) above 50 DMA (₹445.0) & 200 DMA (₹405.1), RSI 68.9.",
+        "sr_analysis": "Immediate support S1 at ₹476.4 (-5.3%) and major floor S2 at ₹445.0; resistance R1 at ₹521.5.",
+        "news": "Strong confirming catalyst: \"Kotak Mahindra Bank stock outlook bullish: HSBC upgrades rating on loan growth, CEO clarity; check target... - Moneycontrol.com\"",
+        "risk": "ATR 2.3% (0.80x vol). Cap downside with 450 PE hedge; exit if daily close breaches ₹455.4."
+      },
+      "conclusion": "STRONG BULLISH (95/100) — Sell Dec 470 PE / Buy 450 PE anchored safely below S1 (₹476.4), backed by higher-low uptrend holding above dma support and aligned news flow.",
+      "headlines": [
+        {
+          "title": "Kotak Mahindra Bank stock outlook bullish: HSBC upgrades rating on loan growth, CEO clarity; check target... - Moneycontrol.com",
+          "source": "Moneycontrol.com",
+          "sentiment": "Positive",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQcE1JczhZM01MTGpTXzhwMmlYR3piYjJ3Q2huY0xSdlJkclEzNzhmMEhfb0ZPM0ZoT0hBLUo4bXlFOXJEd1FJZ3oyMU5ZMnkzYm9VTjRoZWxVSnZiRnFBWHhOeGRQb1NyZ2x3RERLZjlzekcyOG5PaFNaTUozTnQxZkhraVZlSThRZFNTaXV6LTdLbEVhUXRKeWxQNlREQ0dnRGxfWGFNOXRYUXVUUXdubjcxajBZUVEwOFBrc3pWS3BOQlBYSmJGUFA3QVhnRTBReUo1dVJXY2c3TVVYOHMyLXdfVjMyaEFpaWxJV2N3TzRnR3pLU1o0eHR1a0ZCYjlINWU00gGIAkFVX3lxTFBfMTZBWEdZa0hsZURTS1VDeGhLUmVSMVhhVXREUlpqUThhc1F3aXpMX1MyRk8tNFhXM3pWaURFdmFfWklrSWo3ZXdhTzZTbGtWUWtfdHYxWUo3SjB0N3RJZHRDWU1xMHh4emtURnppeFNERTF0YzVSQ2ZNQklRaXBCTHVfWkZQcmVMMzA0TUY1UmhtdXNONHl0bUxoSi1GSU1LLXBHWnY4NzFhSkthc3FhQloxeDd5WmxwOTBpZlJFNkwtaE5BR3BkeWhCWUprQklpSDZsdHRDTzktQ0JMbThFU0hadmlHakUyZWMzOUJsbGpKbmNPTGtkbVpZdnBXYmc4UkRzRVR1cw?oc=5"
+        },
+        {
+          "title": "Kotak Mahindra Bank shares down over 3% - The Hindu",
+          "source": "The Hindu",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQLW1UVHdkd0lMaXFzUHZlR1BlQmpOdS02eGtNZGh6MXdCTC1laG5KbG0yU1pXN2FPazk3VzRtZmFkVjVQQzBWNllUMVhhaFRsTDdtSnQzcG9QZ3VLNEdReWVsRVlQRTlSNDNqdTNZXzU0bmRpdkgwNzRvYzgzeXI0ZDdkRklmUTNrZG1Ia0ZkckhBWllUVWs4LWs3TmtDX2xsQVHSAagBQVVfeXFMT0FvUDEyZVF3QUpKTmw4LUNzX3A0RWU4UzJhaGFwZmtIZ3Q5eXQyUHJsRFVHNEhzMjVTNGZWVUhNb0ZOZjNFalN5VFBKajREcjZmY1VvTlJIYXNUZFZpb3VmS2RtSzV4QzZ6Nnh4Z0xWdFNFV0pMM0lJSTZXLVZkNkdqWmxMdnRtajZ4RlpmVGdqZWQydWlYVGxOYTI2T3I4T05TaUtyYUpH?oc=5"
+        },
+        {
+          "title": "Kotak Secures 9.99% Federal Bank Stake in Surprise RBI Move - NiftyTrader",
+          "source": "NiftyTrader",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB5SzQ5ejQzMUdaMVE5S0FOb1dzYlZjQmt6V2FhT3RhTXFZZlBQOFdXTzF6Q1NaUzNtSFEzWFVPR3ZyMFNlTjctN3ZoYWlDMXkycFRlOXhmRW1jSGtnSFZhdS1JdDl0V3FfdkpwQ1JSMmNUMmFFR0VTdzhTQXg?oc=5"
+        }
+      ],
+      "chart_data": [
+        {
+          "d": "01 Oct",
+          "o": 426.0,
+          "h": 435.6,
+          "l": 416.05,
+          "c": 418.35,
+          "dma20": 414.15,
+          "dma50": 404.76
+        },
+        {
+          "d": "05 Oct",
+          "o": 418.0,
+          "h": 424.45,
+          "l": 413.75,
+          "c": 416.0,
+          "dma20": 413.89,
+          "dma50": 405.41
+        },
+        {
+          "d": "06 Oct",
+          "o": 422.0,
+          "h": 435.3,
+          "l": 421.3,
+          "c": 431.9,
+          "dma20": 414.26,
+          "dma50": 406.35
+        },
+        {
+          "d": "07 Oct",
+          "o": 432.05,
+          "h": 441.5,
+          "l": 429.0,
+          "c": 440.0,
+          "dma20": 415.15,
+          "dma50": 407.46
+        },
+        {
+          "d": "08 Oct",
+          "o": 440.0,
+          "h": 440.0,
+          "l": 432.95,
+          "c": 435.0,
+          "dma20": 415.94,
+          "dma50": 408.45
+        },
+        {
+          "d": "09 Oct",
+          "o": 438.0,
+          "h": 445.25,
+          "l": 437.85,
+          "c": 441.0,
+          "dma20": 417.29,
+          "dma50": 409.47
+        },
+        {
+          "d": "12 Oct",
+          "o": 442.2,
+          "h": 443.65,
+          "l": 438.9,
+          "c": 443.4,
+          "dma20": 418.63,
+          "dma50": 410.55
+        },
+        {
+          "d": "13 Oct",
+          "o": 443.1,
+          "h": 443.35,
+          "l": 437.5,
+          "c": 439.0,
+          "dma20": 419.63,
+          "dma50": 411.52
+        },
+        {
+          "d": "14 Oct",
+          "o": 439.0,
+          "h": 444.9,
+          "l": 437.2,
+          "c": 438.05,
+          "dma20": 421.05,
+          "dma50": 412.34
+        },
+        {
+          "d": "15 Oct",
+          "o": 439.65,
+          "h": 447.95,
+          "l": 437.6,
+          "c": 447.95,
+          "dma20": 422.69,
+          "dma50": 413.33
+        },
+        {
+          "d": "16 Oct",
+          "o": 448.7,
+          "h": 453.1,
+          "l": 443.65,
+          "c": 447.4,
+          "dma20": 424.24,
+          "dma50": 414.28
+        },
+        {
+          "d": "19 Oct",
+          "o": 440.5,
+          "h": 447.15,
+          "l": 438.6,
+          "c": 442.3,
+          "dma20": 425.73,
+          "dma50": 415.25
+        },
+        {
+          "d": "21 Oct",
+          "o": 444.45,
+          "h": 446.85,
+          "l": 434.5,
+          "c": 437.8,
+          "dma20": 426.88,
+          "dma50": 416.19
+        },
+        {
+          "d": "22 Oct",
+          "o": 435.2,
+          "h": 442.5,
+          "l": 433.75,
+          "c": 437.0,
+          "dma20": 428.1,
+          "dma50": 417.06
+        },
+        {
+          "d": "23 Oct",
+          "o": 438.25,
+          "h": 439.4,
+          "l": 427.7,
+          "c": 430.5,
+          "dma20": 428.96,
+          "dma50": 417.81
+        },
+        {
+          "d": "26 Oct",
+          "o": 440.9,
+          "h": 446.3,
+          "l": 437.6,
+          "c": 440.75,
+          "dma20": 430.75,
+          "dma50": 418.82
+        },
+        {
+          "d": "27 Oct",
+          "o": 441.45,
+          "h": 444.8,
+          "l": 439.9,
+          "c": 442.5,
+          "dma20": 432.67,
+          "dma50": 419.82
+        },
+        {
+          "d": "28 Oct",
+          "o": 441.0,
+          "h": 444.3,
+          "l": 438.3,
+          "c": 440.0,
+          "dma20": 434.59,
+          "dma50": 420.8
+        },
+        {
+          "d": "29 Oct",
+          "o": 441.8,
+          "h": 460.2,
+          "l": 439.25,
+          "c": 459.0,
+          "dma20": 437.24,
+          "dma50": 422.12
+        },
+        {
+          "d": "30 Oct",
+          "o": 459.2,
+          "h": 462.9,
+          "l": 457.05,
+          "c": 461.6,
+          "dma20": 439.47,
+          "dma50": 423.6
+        },
+        {
+          "d": "02 Nov",
+          "o": 462.0,
+          "h": 465.95,
+          "l": 456.45,
+          "c": 458.35,
+          "dma20": 441.47,
+          "dma50": 424.96
+        },
+        {
+          "d": "03 Nov",
+          "o": 460.0,
+          "h": 464.65,
+          "l": 455.4,
+          "c": 464.65,
+          "dma20": 443.91,
+          "dma50": 426.31
+        },
+        {
+          "d": "04 Nov",
+          "o": 462.95,
+          "h": 465.45,
+          "l": 456.35,
+          "c": 459.4,
+          "dma20": 445.28,
+          "dma50": 427.44
+        },
+        {
+          "d": "05 Nov",
+          "o": 472.45,
+          "h": 472.5,
+          "l": 457.15,
+          "c": 467.0,
+          "dma20": 446.63,
+          "dma50": 428.75
+        },
+        {
+          "d": "06 Nov",
+          "o": 464.15,
+          "h": 480.0,
+          "l": 463.0,
+          "c": 480.0,
+          "dma20": 448.88,
+          "dma50": 430.32
+        },
+        {
+          "d": "09 Nov",
+          "o": 482.35,
+          "h": 483.2,
+          "l": 474.65,
+          "c": 479.5,
+          "dma20": 450.81,
+          "dma50": 431.58
+        },
+        {
+          "d": "11 Nov",
+          "o": 485.8,
+          "h": 491.05,
+          "l": 481.45,
+          "c": 487.7,
+          "dma20": 453.02,
+          "dma50": 432.85
+        },
+        {
+          "d": "12 Nov",
+          "o": 485.95,
+          "h": 494.05,
+          "l": 484.35,
+          "c": 490.4,
+          "dma20": 455.59,
+          "dma50": 434.18
+        },
+        {
+          "d": "13 Nov",
+          "o": 490.4,
+          "h": 490.4,
+          "l": 483.95,
+          "c": 488.55,
+          "dma20": 458.12,
+          "dma50": 435.56
+        },
+        {
+          "d": "16 Nov",
+          "o": 490.5,
+          "h": 497.9,
+          "l": 489.55,
+          "c": 494.2,
+          "dma20": 460.43,
+          "dma50": 436.95
+        },
+        {
+          "d": "17 Nov",
+          "o": 494.5,
+          "h": 499.9,
+          "l": 492.2,
+          "c": 497.25,
+          "dma20": 462.92,
+          "dma50": 438.42
+        },
+        {
+          "d": "18 Nov",
+          "o": 498.0,
+          "h": 503.05,
+          "l": 492.2,
+          "c": 494.85,
+          "dma20": 465.55,
+          "dma50": 439.9
+        },
+        {
+          "d": "19 Nov",
+          "o": 495.0,
+          "h": 503.0,
+          "l": 492.0,
+          "c": 503.0,
+          "dma20": 468.81,
+          "dma50": 441.47
+        },
+        {
+          "d": "20 Nov",
+          "o": 499.0,
+          "h": 516.6,
+          "l": 499.0,
+          "c": 515.8,
+          "dma20": 472.75,
+          "dma50": 443.34
+        },
+        {
+          "d": "23 Nov",
+          "o": 518.3,
+          "h": 521.5,
+          "l": 501.1,
+          "c": 502.85,
+          "dma20": 476.37,
+          "dma50": 445.01
+        }
+      ]
+    },
+    {
+      "symbol": "DIVISLAB",
+      "name": "Divi's Laboratories",
+      "sector": "Pharma",
+      "bias": "bullish",
+      "rating": 93,
+      "tier": "Strong Bullish",
+      "tier_code": "strong_bullish",
+      "strategy": "Bull Put Spread / OTM Put Sell",
+      "cmp": 11203.0,
+      "chg_1d": 0.2,
+      "chg_20d": 25.17,
+      "rsi": 68.7,
+      "dma20": 10538.3,
+      "dma50": 9810.61,
+      "dma200": 7645.31,
+      "dist_52w_high": -5.25,
+      "vol_ratio": 0.88,
+      "scores": {
+        "tech": 98,
+        "sr": 87,
+        "news": 91,
+        "composite": 93
+      },
+      "sr": {
+        "s2": 9810.61,
+        "s1": 10538.3,
+        "pivot": 10629.0,
+        "r1": 11824.0,
+        "r2": 13593.0,
+        "s1_dist_pct": -5.93,
+        "r1_dist_pct": 5.54,
+        "structure": "Higher-Low Uptrend Holding Above DMA Support"
+      },
+      "expiries": {
+        "current": {
+          "zone": "₹10,000 – ₹10,500",
+          "invalidation": 9900.0,
+          "short_strike": 10500,
+          "hedge_strike": 10000,
+          "est_credit": 140.0
+        },
+        "next": {
+          "zone": "₹10,000 – ₹10,500",
+          "invalidation": 9900.0,
+          "short_strike": 10500,
+          "hedge_strike": 10000,
+          "est_credit": 140.0
+        }
+      },
+      "lot_size": 200,
+      "reasons": {
+        "technical": "CMP ₹11,203 (+0.20% 1D, +25.2% 20D) above 50 DMA (₹9,811) & 200 DMA (₹7,645), RSI 68.7.",
+        "sr_analysis": "Immediate support S1 at ₹10,538 (-5.9%) and major floor S2 at ₹9,811; resistance R1 at ₹11,824.",
+        "news": "Strong confirming catalyst: \"Divis Laboratories Share Price - Live NSE: DIVISLAB Stock Price & Chart - Upstox\"",
+        "risk": "ATR 2.7% (0.88x vol). Cap downside with 10000 PE hedge; exit if daily close breaches ₹9,900."
+      },
+      "conclusion": "STRONG BULLISH (93/100) — Sell Dec 10500 PE / Buy 10000 PE anchored safely below S1 (₹10,538), backed by higher-low uptrend holding above dma support and aligned news flow.",
+      "headlines": [
+        {
+          "title": "Divis Laboratories Share Price - Live NSE: DIVISLAB Stock Price & Chart - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4xZ0Zxem94U0owZ3BVakFqa2pfNl9wTU9iY2JvM19RblREM3hTRFJoUEZjZzU2SnpsenJQLS1rUGlzWnpCUXdfbVhfUGVxVVdPWDJaQjRiSzR2VVQwbnlwMXR0SWozR0Q0ZXMyR0NUQQ?oc=5"
+        },
+        {
+          "title": "Divi's Laboratories Q2 FY27 Results: Shares Jump 6% In Early Trade As Net Profit Rises 64%, EBITDA Surges 76% - Kotak Neo",
+          "source": "Kotak Neo",
+          "sentiment": "Positive",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYVp5M3hpajgyRjFPVkhod21xdFI3S2pEZFhaQnRGaVhydjBSTDBrUmxRcV9kd1dIRUZ3LUZ5V1ZUbVE0c2RnMUdRUUJsc0wyNnR1Y21ydmF5TVl5d1lEaVJybGVpeVpwRXI2QzVBbUpRZzZXeWtibDZfNTQzb2lHYlIzYXZBNEc0REs0cjA5bDFXYkk?oc=5"
+        },
+        {
+          "title": "Divi's Laboratories (DIVISLAB) Share Price Today (NSE), Market News - TechGraph",
+          "source": "TechGraph",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE11ZXMtVG5fcjRValBSLW1CTU1ySFVwNjM5d21vWHVUdlNlaklyT3g0dFoxVmIybDZGTjRwZ09Sc3lZaHktYlkwcjA5U2ZNRHFmenZLcTVPLTdoYV85TkdKOUh3?oc=5"
+        }
+      ],
+      "chart_data": [
+        {
+          "d": "01 Oct",
+          "o": 9277.0,
+          "h": 9318.0,
+          "l": 9078.0,
+          "c": 9249.0,
+          "dma20": 9383.6,
+          "dma50": 8807.07
+        },
+        {
+          "d": "05 Oct",
+          "o": 9251.0,
+          "h": 9285.5,
+          "l": 9113.5,
+          "c": 9196.0,
+          "dma20": 9380.9,
+          "dma50": 8845.49
+        },
+        {
+          "d": "06 Oct",
+          "o": 9210.0,
+          "h": 9557.5,
+          "l": 9165.0,
+          "c": 9550.0,
+          "dma20": 9403.4,
+          "dma50": 8891.52
+        },
+        {
+          "d": "07 Oct",
+          "o": 9500.5,
+          "h": 9660.0,
+          "l": 9494.0,
+          "c": 9588.0,
+          "dma20": 9417.05,
+          "dma50": 8935.0
+        },
+        {
+          "d": "08 Oct",
+          "o": 9588.0,
+          "h": 9658.0,
+          "l": 9355.0,
+          "c": 9361.0,
+          "dma20": 9406.35,
+          "dma50": 8973.72
+        },
+        {
+          "d": "09 Oct",
+          "o": 9417.0,
+          "h": 9460.5,
+          "l": 9273.0,
+          "c": 9340.0,
+          "dma20": 9398.95,
+          "dma50": 9004.83
+        },
+        {
+          "d": "12 Oct",
+          "o": 9346.0,
+          "h": 9431.5,
+          "l": 9297.0,
+          "c": 9426.0,
+          "dma20": 9398.33,
+          "dma50": 9036.65
+        },
+        {
+          "d": "13 Oct",
+          "o": 9411.0,
+          "h": 9423.5,
+          "l": 9164.5,
+          "c": 9285.0,
+          "dma20": 9396.48,
+          "dma50": 9061.23
+        },
+        {
+          "d": "14 Oct",
+          "o": 9315.0,
+          "h": 9315.0,
+          "l": 8937.5,
+          "c": 9023.0,
+          "dma20": 9387.73,
+          "dma50": 9069.99
+        },
+        {
+          "d": "15 Oct",
+          "o": 9085.0,
+          "h": 9124.5,
+          "l": 8950.0,
+          "c": 9030.0,
+          "dma20": 9381.33,
+          "dma50": 9083.03
+        },
+        {
+          "d": "16 Oct",
+          "o": 9030.5,
+          "h": 9248.0,
+          "l": 8985.5,
+          "c": 9144.5,
+          "dma20": 9372.4,
+          "dma50": 9098.16
+        },
+        {
+          "d": "19 Oct",
+          "o": 9191.5,
+          "h": 9323.5,
+          "l": 9045.0,
+          "c": 9087.0,
+          "dma20": 9358.0,
+          "dma50": 9112.92
+        },
+        {
+          "d": "21 Oct",
+          "o": 9190.0,
+          "h": 9243.0,
+          "l": 9041.0,
+          "c": 9190.0,
+          "dma20": 9346.98,
+          "dma50": 9131.22
+        },
+        {
+          "d": "22 Oct",
+          "o": 9114.0,
+          "h": 9190.0,
+          "l": 9006.5,
+          "c": 9162.0,
+          "dma20": 9337.48,
+          "dma50": 9148.46
+        },
+        {
+          "d": "23 Oct",
+          "o": 9165.0,
+          "h": 9175.5,
+          "l": 8797.0,
+          "c": 8950.0,
+          "dma20": 9303.77,
+          "dma50": 9155.89
+        },
+        {
+          "d": "26 Oct",
+          "o": 8900.0,
+          "h": 9080.0,
+          "l": 8860.0,
+          "c": 9050.0,
+          "dma20": 9276.17,
+          "dma50": 9164.89
+        },
+        {
+          "d": "27 Oct",
+          "o": 9090.0,
+          "h": 9505.5,
+          "l": 9067.0,
+          "c": 9505.5,
+          "dma20": 9270.48,
+          "dma50": 9185.0
+        },
+        {
+          "d": "28 Oct",
+          "o": 9460.0,
+          "h": 9699.5,
+          "l": 9370.0,
+          "c": 9558.5,
+          "dma20": 9270.9,
+          "dma50": 9206.63
+        },
+        {
+          "d": "29 Oct",
+          "o": 9563.0,
+          "h": 9685.5,
+          "l": 9534.0,
+          "c": 9664.0,
+          "dma20": 9282.55,
+          "dma50": 9230.28
+        },
+        {
+          "d": "30 Oct",
+          "o": 9680.0,
+          "h": 9865.0,
+          "l": 9621.5,
+          "c": 9780.0,
+          "dma20": 9306.98,
+          "dma50": 9254.12
+        },
+        {
+          "d": "02 Nov",
+          "o": 9900.0,
+          "h": 9990.0,
+          "l": 9868.0,
+          "c": 9945.5,
+          "dma20": 9341.8,
+          "dma50": 9281.83
+        },
+        {
+          "d": "03 Nov",
+          "o": 9965.0,
+          "h": 10064.0,
+          "l": 9863.0,
+          "c": 10064.0,
+          "dma20": 9385.2,
+          "dma50": 9311.71
+        },
+        {
+          "d": "04 Nov",
+          "o": 10060.0,
+          "h": 10067.0,
+          "l": 9946.0,
+          "c": 10037.5,
+          "dma20": 9409.58,
+          "dma50": 9340.52
+        },
+        {
+          "d": "05 Nov",
+          "o": 10100.0,
+          "h": 10159.0,
+          "l": 9888.0,
+          "c": 10140.5,
+          "dma20": 9437.2,
+          "dma50": 9373.41
+        },
+        {
+          "d": "06 Nov",
+          "o": 10130.0,
+          "h": 10320.5,
+          "l": 10040.5,
+          "c": 10320.5,
+          "dma20": 9485.17,
+          "dma50": 9404.93
+        },
+        {
+          "d": "09 Nov",
+          "o": 11097.0,
+          "h": 11824.0,
+          "l": 11071.0,
+          "c": 11565.5,
+          "dma20": 9596.45,
+          "dma50": 9455.74
+        },
+        {
+          "d": "11 Nov",
+          "o": 11760.0,
+          "h": 11800.5,
+          "l": 11190.0,
+          "c": 11367.0,
+          "dma20": 9693.5,
+          "dma50": 9501.88
+        },
+        {
+          "d": "12 Nov",
+          "o": 11329.0,
+          "h": 11485.0,
+          "l": 11272.0,
+          "c": 11485.0,
+          "dma20": 9803.5,
+          "dma50": 9546.8
+        },
+        {
+          "d": "13 Nov",
+          "o": 11411.5,
+          "h": 11645.5,
+          "l": 11350.5,
+          "c": 11442.0,
+          "dma20": 9924.45,
+          "dma50": 9586.3
+        },
+        {
+          "d": "16 Nov",
+          "o": 11490.0,
+          "h": 11544.5,
+          "l": 10954.0,
+          "c": 11080.0,
+          "dma20": 10026.95,
+          "dma50": 9624.6
+        },
+        {
+          "d": "17 Nov",
+          "o": 11087.0,
+          "h": 11207.5,
+          "l": 11030.0,
+          "c": 11150.0,
+          "dma20": 10127.23,
+          "dma50": 9663.2
+        },
+        {
+          "d": "18 Nov",
+          "o": 11180.0,
+          "h": 11265.0,
+          "l": 11049.0,
+          "c": 11049.0,
+          "dma20": 10225.33,
+          "dma50": 9699.18
+        },
+        {
+          "d": "19 Nov",
+          "o": 11060.0,
+          "h": 11178.0,
+          "l": 10965.0,
+          "c": 11178.0,
+          "dma20": 10324.73,
+          "dma50": 9740.74
+        },
+        {
+          "d": "20 Nov",
+          "o": 11125.0,
+          "h": 11198.0,
+          "l": 11025.0,
+          "c": 11180.5,
+          "dma20": 10425.65,
+          "dma50": 9778.05
+        },
+        {
+          "d": "23 Nov",
+          "o": 11249.0,
+          "h": 11375.0,
+          "l": 11185.5,
+          "c": 11203.0,
+          "dma20": 10538.3,
+          "dma50": 9810.61
+        }
+      ]
+    },
     {
       "symbol": "MARICO",
       "name": "Marico Ltd.",
@@ -55,11 +847,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹860 – ₹880",
-          "invalidation": 851.4,
-          "short_strike": 880,
-          "hedge_strike": 860,
-          "est_credit": 4.4
+          "zone": "₹840 – ₹880",
+          "invalidation": 831.6,
+          "short_strike": 860,
+          "hedge_strike": 820,
+          "est_credit": 11.2
         },
         "next": {
           "zone": "₹840 – ₹880",
@@ -73,17 +865,11 @@
       "reasons": {
         "technical": "CMP ₹919.5 (+0.27% 1D, +20.0% 20D) above 50 DMA (₹826.0) & 200 DMA (₹810.2), RSI 68.2.",
         "sr_analysis": "Immediate support S1 at ₹870.2 (-5.4%) and major floor S2 at ₹826.0; resistance R1 at ₹977.",
-        "news": "Aligned market coverage: \"Marico Share Price - Upstox\"",
+        "news": "Aligned market coverage: \"Marico shares spurt 6% on robust Q2 earnings, positive revision in guidance - Business Standard\"",
         "risk": "ATR 2.1% (0.67x vol). Cap downside with 820 PE hedge; exit if daily close breaches ₹831.6."
       },
       "conclusion": "STRONG BULLISH (90/100) — Sell Dec 860 PE / Buy 820 PE anchored safely below S1 (₹870.2), backed by breakout near 52w high above support and aligned news flow.",
       "headlines": [
-        {
-          "title": "Marico Share Price - Upstox",
-          "source": "Upstox",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9lNWtHUUR0ZWM0TlNFVTVBaW1aSnZIeDBYUXY2OWY0TkRBQVRYaGpiaTFPR3dBZXd0ZW54NlhUX1R2VEVfODlUSVp3TU9HUWlxd1dkZHN1VVdFQXYwOVE3b001UQ?oc=5"
-        },
         {
           "title": "Marico shares spurt 6% on robust Q2 earnings, positive revision in guidance - Business Standard",
           "source": "Business Standard",
@@ -91,10 +877,16 @@
           "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQYmlzVlpvejVtUW9KOU1UdXdaWkU4NGk5b24xdzkzWmI4YXNiMVZSX1dvU2YtZzhsVUhyM0NTcWNXazlXNE1JbGlCdThZeUxBc291Ukd3aEhmZFZUeHlMUUpZdFpxd2dxbmNUWnhRT2paejhubVVCRVpwV09CRkhfNkdqaGFtejVkeDhDTHlZTkc3N0lfNk1QbGtQdndRSU9sNzJnaXdmc2NqR1VOcW9MaFY2WGM0a2pnYUhzNm01RW9mUEVyaXlwVmt4LWUtVUpBdENGaDVva9IB3AFBVV95cUxNVGVRYTM0WTZ3N1B6VjkwVWhwUDhQRFBOS0hab050c19vekVfdlVJbHcxN3RqNUhSRk1fX2NfZm5ibjQ4SV8xdmx3RVZiVExxbXhlUWJ3MFdKdmpHMXFZOW1ZNFZid0JPS3o1aTNoaXJac3RxM3pybGlZNDk2Qkp5bGVGcVAtUVNyRmtTZVFIZFRIUzdMcU9fVGRpMUFnNWM2Y19VNFNiNlo5czVDSUZPX1V3OXhBNndNT1JIZGV1U0FUR1FOLWEtWDFiN0lkZmJLSzBIWGNveUNnd0xa?oc=5"
         },
         {
-          "title": "Marico (MARICO) Share Price Today (NSE), Market News - TechGraph",
-          "source": "TechGraph",
+          "title": "MARICO Forecast — Price Target — Prediction for 2027 - TradingView",
+          "source": "TradingView",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE10UF9RaHpYVHR0Q0NsYnh3VkRtbXVVOFdOSjZBSDlteE1fcDZtaDF0VU45RnJkODNScUNteEZsdzJEeExxYUxsNlhQd1NkWW1BNEp4aHZTMHpyUGFVRmtF?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE92dThBVVJNLWJRdkU5Ri1jTk15ZlNoczNGcGhST056U0s2cEphTmVraXNJYlFvRTAwanRMMHNtTFBrN3FTUEl0S0RYWWFnUnpmQ2syZlV6TXhULUU5MjlmZzZBS2VVb3IzcGNZZ1pNazJTWGhHNlJwVg?oc=5"
+        },
+        {
+          "title": "Stocks to watch, Nov 3: Lupin, ITC, Marico, NBCC, SBI, NSE, VMS TMT, Samvardhana Motherson, PTC India - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPS21ydHRNLUcwRkVLcG1SNFo4aWVuWWt3UFJscDJGZUZvMzduNXNjcHJLNlY4MEVKSEpFWDJZSWxteUZKZURCUi1Rb0NLaW1aSVVGOFdsSDRvOHFJX0JHZF9XVVpGTTd2aTdwbWtjdW5WUm9hdWotQWdKQkVOazlwRmM5ckxBQmJmM2JZSnZVTnlfZWVhTVl5YzFBYjBTVWFablZ6TEJSLVU4bEpQQkY2R0JNRFcwd0tqYTRVb0lqZkI4YUlXY0QwYW9JbG5vQVBPNEp4Q09tVEI5ekdxMVlZbHE0TG4?oc=5"
         }
       ],
       "chart_data": [
@@ -416,398 +1208,398 @@
       ]
     },
     {
-      "symbol": "DRREDDY",
-      "name": "Dr. Reddy's Labs",
-      "sector": "Pharma",
+      "symbol": "PERSISTENT",
+      "name": "Persistent Systems",
+      "sector": "IT Services",
       "bias": "bullish",
       "rating": 90,
       "tier": "Strong Bullish",
       "tier_code": "strong_bullish",
       "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 1380.1,
-      "chg_1d": -0.73,
-      "chg_20d": 12.25,
-      "rsi": 64.4,
-      "dma20": 1367.03,
-      "dma50": 1269.15,
-      "dma200": 1254.48,
-      "dist_52w_high": -1.85,
-      "vol_ratio": 0.47,
+      "cmp": 6282.5,
+      "chg_1d": 2.59,
+      "chg_20d": 9.69,
+      "rsi": 67.9,
+      "dma20": 5995.7,
+      "dma50": 5721.44,
+      "dma200": 5294.33,
+      "dist_52w_high": -4.12,
+      "vol_ratio": 1.92,
       "scores": {
-        "tech": 96,
-        "sr": 95,
-        "news": 77,
+        "tech": 98,
+        "sr": 87,
+        "news": 80,
         "composite": 90
       },
       "sr": {
-        "s2": 1269.15,
-        "s1": 1357.59,
-        "pivot": 1336.73,
-        "r1": 1406.1,
-        "r2": 1518.83,
-        "s1_dist_pct": -1.63,
-        "r1_dist_pct": 1.88,
-        "structure": "Breakout Near 52W High Above Support"
+        "s2": 5721.44,
+        "s1": 5995.7,
+        "pivot": 6074.0,
+        "r1": 6439.45,
+        "r2": 6813.5,
+        "s1_dist_pct": -4.57,
+        "r1_dist_pct": 2.5,
+        "structure": "Higher-Low Uptrend Holding Above DMA Support"
       },
       "expiries": {
         "current": {
-          "zone": "₹1,320 – ₹1,360",
-          "invalidation": 1306.8,
-          "short_strike": 1340,
-          "hedge_strike": 1300,
-          "est_credit": 8.8
+          "zone": "₹5,800 – ₹6,000",
+          "invalidation": 5742.0,
+          "short_strike": 5900,
+          "hedge_strike": 5700,
+          "est_credit": 56.0
         },
         "next": {
-          "zone": "₹1,320 – ₹1,360",
-          "invalidation": 1306.8,
-          "short_strike": 1340,
-          "hedge_strike": 1300,
-          "est_credit": 11.2
+          "zone": "₹5,800 – ₹6,000",
+          "invalidation": 5742.0,
+          "short_strike": 5900,
+          "hedge_strike": 5700,
+          "est_credit": 56.0
         }
       },
-      "lot_size": 625,
+      "lot_size": 200,
       "reasons": {
-        "technical": "CMP ₹1,380 (-0.73% 1D, +12.2% 20D) above 50 DMA (₹1,269) & 200 DMA (₹1,254), RSI 64.4.",
-        "sr_analysis": "Immediate support S1 at ₹1,358 (-1.6%) and major floor S2 at ₹1,269; resistance R1 at ₹1,406.",
-        "news": "Aligned market coverage: \"Dr. Reddy’s Laboratories (DRREDDY) Share Price Today (NSE), Market News - TechGraph\"",
-        "risk": "ATR 1.8% (0.47x vol). Cap downside with 1300 PE hedge; exit if daily close breaches ₹1,307."
+        "technical": "CMP ₹6,282 (+2.59% 1D, +9.7% 20D) above 50 DMA (₹5,721) & 200 DMA (₹5,294), RSI 67.9.",
+        "sr_analysis": "Immediate support S1 at ₹5,996 (-4.6%) and major floor S2 at ₹5,721; resistance R1 at ₹6,439.",
+        "news": "Strong confirming catalyst: \"3 Indian Founder Led Stocks With Revenue Growth Up To 30%\"",
+        "risk": "ATR 2.8% (1.92x vol). Cap downside with 5700 PE hedge; exit if daily close breaches ₹5,742."
       },
-      "conclusion": "STRONG BULLISH (90/100) — Sell Dec 1340 PE / Buy 1300 PE anchored safely below S1 (₹1,358), backed by breakout near 52w high above support and aligned news flow.",
+      "conclusion": "STRONG BULLISH (90/100) — Sell Dec 5900 PE / Buy 5700 PE anchored safely below S1 (₹5,996), backed by higher-low uptrend holding above dma support and aligned news flow.",
       "headlines": [
         {
-          "title": "Dr. Reddy’s Laboratories (DRREDDY) Share Price Today (NSE), Market News - TechGraph",
-          "source": "TechGraph",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBYOG5ZVFpPUXhwbkQ5cVFlblZ1bko2VElVaGt4bFQ2dXRhZGZvb0FZT1dzYjJuMmpMZHZpSGFnV0ZtWDZDbkQxUmp3bUpyRTVrMVloV2c1Y1JrRkdhUTBBNQ?oc=5"
-        },
-        {
-          "title": "Dr. Reddy's Laboratories (NSEI:DRREDDY) Stock Forecast & Analyst Predictions - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaFdVdGI1Y0hLX1ZmZXZZRld3SW9nYmVNQkNVZVVjOHE2NTRVMThkTFpFeElaVmROWkgzaGFJUFVZYTBkRU5JaURKeEprV2J6bzVObWFWRkFsOHJjQl9uYk5VWS1jMWF6LVk0Q0VtMDlKMEtZdEZiUXpVX05zcWFHT3Q5M2U5aDR5Qjd6V1hIeEhJbDNBNnBkOGpVbmplcnhGczhqRDV2MA?oc=5"
-        },
-        {
-          "title": "Sun Pharma, Dr Reddy's Labs, Onesource: Nifty Pharma rallies 3%; details - Business Standard",
-          "source": "Business Standard",
+          "title": "3 Indian Founder Led Stocks With Revenue Growth Up To 30%",
+          "source": "Simply Wall St.",
           "sentiment": "Positive",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNQzNvcHpPZm1Fei1RYllNRzR3WnRMOV93a0ZTd0Vvb1VnSVZ2S3l2QmNtUXFWajZQNElIVUdCQUVCZFlNRUpGVDlnSWc3SHdwSDlHXzJmcEhEMWJydlc5ZHp5UjFOdWFKWFVkNHVXYV9zSVJ1ZmxGOHM4SHF2bldEWXQwa0dDUm1iWU01RmJOVHU5MXpqbnVVOHZUQ3NuX2Zydkx6dklJT0lvWFlRQ3lvUUZFVWhua2g5cjJGQUEyQVRlX3l5Ujd5b2stZE16OWhKZ1p6cHNlaTdWdDjSAeABQVVfeXFMTWJrZ0IwS25yWWZzMTFWMVpoLXNYeE1mMmVuN25iT0Y1Q3JVOEJkZVhpcURaTnpPaHJoV05YeHhTb2dFYjZlMHZfZndtWkQ4amZSN1FLRFp3QUNXTlU5aWlpa3VyVHBSZjQ5NUFaTWtuckM0MFBIeUtESm53Qk9rYjRaejBwZFR3QTJucmJnOEt6SGxZZDRQS094RTNrcTJYS25UNTlBRkotT1F0NVhoQ2hGOWdtbTlLc1lQeUE0NXpZZXVQTllVUWl5RzA4cWdnUHlFT09OV1dDNkFFdHh1RGU?oc=5"
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-indian-founder-led-stocks-043710798.html"
+        },
+        {
+          "title": "3 Indian IT Stocks Better Placed for Tighter H 1B Rules",
+          "source": "Simply Wall St.",
+          "sentiment": "Neutral",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-indian-stocks-better-placed-070804284.html"
+        },
+        {
+          "title": "3 Indian Growth Stocks Retail Investors Are Watching For AI And Infrastructure Exposure",
+          "source": "Simply Wall St.",
+          "sentiment": "Positive",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/3-indian-growth-stocks-retail-232219559.html"
         }
       ],
       "chart_data": [
         {
           "d": "01 Oct",
-          "o": 1233.0,
-          "h": 1233.9,
-          "l": 1194.9,
-          "c": 1206.2,
-          "dma20": 1181.68,
-          "dma50": 1176.25
+          "o": 5276.0,
+          "h": 5396.0,
+          "l": 5250.5,
+          "c": 5367.0,
+          "dma20": 5424.57,
+          "dma50": 5488.69
         },
         {
           "d": "05 Oct",
-          "o": 1198.0,
-          "h": 1206.6,
-          "l": 1189.0,
-          "c": 1203.0,
-          "dma20": 1184.08,
-          "dma50": 1176.99
+          "o": 5448.0,
+          "h": 5620.0,
+          "l": 5387.5,
+          "c": 5530.0,
+          "dma20": 5418.23,
+          "dma50": 5499.6
         },
         {
           "d": "06 Oct",
-          "o": 1207.0,
-          "h": 1212.7,
-          "l": 1195.0,
-          "c": 1208.0,
-          "dma20": 1186.93,
-          "dma50": 1178.11
+          "o": 5520.0,
+          "h": 5553.5,
+          "l": 5463.5,
+          "c": 5521.0,
+          "dma20": 5412.12,
+          "dma50": 5506.37
         },
         {
           "d": "07 Oct",
-          "o": 1208.0,
-          "h": 1222.8,
-          "l": 1192.2,
-          "c": 1203.8,
-          "dma20": 1189.92,
-          "dma50": 1179.17
+          "o": 5513.5,
+          "h": 5529.0,
+          "l": 5447.5,
+          "c": 5507.0,
+          "dma20": 5410.48,
+          "dma50": 5511.15
         },
         {
           "d": "08 Oct",
-          "o": 1197.3,
-          "h": 1201.2,
-          "l": 1167.2,
-          "c": 1180.0,
-          "dma20": 1191.37,
-          "dma50": 1180.06
+          "o": 5504.5,
+          "h": 5629.0,
+          "l": 5430.0,
+          "c": 5468.0,
+          "dma20": 5405.88,
+          "dma50": 5511.94
         },
         {
           "d": "09 Oct",
-          "o": 1180.0,
-          "h": 1200.8,
-          "l": 1172.0,
-          "c": 1197.0,
-          "dma20": 1193.97,
-          "dma50": 1181.15
+          "o": 5499.0,
+          "h": 5789.0,
+          "l": 5499.0,
+          "c": 5770.0,
+          "dma20": 5423.43,
+          "dma50": 5517.67
         },
         {
           "d": "12 Oct",
-          "o": 1197.0,
-          "h": 1235.0,
-          "l": 1196.9,
-          "c": 1229.4,
-          "dma20": 1198.29,
-          "dma50": 1182.85
+          "o": 5770.0,
+          "h": 5830.0,
+          "l": 5736.0,
+          "c": 5787.0,
+          "dma20": 5437.3,
+          "dma50": 5523.12
         },
         {
           "d": "13 Oct",
-          "o": 1230.9,
-          "h": 1250.7,
-          "l": 1223.3,
-          "c": 1240.0,
-          "dma20": 1202.01,
-          "dma50": 1184.68
+          "o": 5801.0,
+          "h": 6008.5,
+          "l": 5787.0,
+          "c": 5988.0,
+          "dma20": 5460.9,
+          "dma50": 5531.9
         },
         {
           "d": "14 Oct",
-          "o": 1234.2,
-          "h": 1234.4,
-          "l": 1209.6,
-          "c": 1216.0,
-          "dma20": 1205.56,
-          "dma50": 1185.4
+          "o": 5988.0,
+          "h": 6078.0,
+          "l": 5882.5,
+          "c": 5898.0,
+          "dma20": 5481.93,
+          "dma50": 5538.36
         },
         {
           "d": "15 Oct",
-          "o": 1211.1,
-          "h": 1234.2,
-          "l": 1206.6,
-          "c": 1218.8,
-          "dma20": 1209.5,
-          "dma50": 1186.33
+          "o": 5955.0,
+          "h": 6010.0,
+          "l": 5791.5,
+          "c": 5840.0,
+          "dma20": 5501.93,
+          "dma50": 5545.18
         },
         {
           "d": "16 Oct",
-          "o": 1222.0,
-          "h": 1233.0,
-          "l": 1214.1,
-          "c": 1233.0,
-          "dma20": 1212.4,
-          "dma50": 1187.47
+          "o": 5600.0,
+          "h": 5755.0,
+          "l": 5492.0,
+          "c": 5741.0,
+          "dma20": 5515.32,
+          "dma50": 5549.6
         },
         {
           "d": "19 Oct",
-          "o": 1232.0,
-          "h": 1245.0,
-          "l": 1227.0,
-          "c": 1242.5,
-          "dma20": 1215.28,
-          "dma50": 1188.9
+          "o": 5742.0,
+          "h": 5909.0,
+          "l": 5635.0,
+          "c": 5690.0,
+          "dma20": 5529.02,
+          "dma50": 5554.21
         },
         {
           "d": "21 Oct",
-          "o": 1245.0,
-          "h": 1252.0,
-          "l": 1232.5,
-          "c": 1244.5,
-          "dma20": 1217.59,
-          "dma50": 1190.35
+          "o": 5700.0,
+          "h": 5868.0,
+          "l": 5690.0,
+          "c": 5858.5,
+          "dma20": 5549.5,
+          "dma50": 5561.88
         },
         {
           "d": "22 Oct",
-          "o": 1236.0,
-          "h": 1250.7,
-          "l": 1212.7,
-          "c": 1239.0,
-          "dma20": 1218.99,
-          "dma50": 1191.95
+          "o": 5820.0,
+          "h": 5906.5,
+          "l": 5733.5,
+          "c": 5740.5,
+          "dma20": 5568.23,
+          "dma50": 5567.21
         },
         {
           "d": "23 Oct",
-          "o": 1236.2,
-          "h": 1250.6,
-          "l": 1215.6,
-          "c": 1229.5,
-          "dma20": 1219.9,
-          "dma50": 1192.44
+          "o": 5810.0,
+          "h": 5914.5,
+          "l": 5674.5,
+          "c": 5727.5,
+          "dma20": 5592.6,
+          "dma50": 5571.04
         },
         {
           "d": "26 Oct",
-          "o": 1260.0,
-          "h": 1319.0,
-          "l": 1224.0,
-          "c": 1310.9,
-          "dma20": 1225.43,
-          "dma50": 1194.66
+          "o": 5600.0,
+          "h": 5873.5,
+          "l": 5600.0,
+          "c": 5850.0,
+          "dma20": 5621.25,
+          "dma50": 5578.56
         },
         {
           "d": "27 Oct",
-          "o": 1309.0,
-          "h": 1323.7,
-          "l": 1299.4,
-          "c": 1310.0,
-          "dma20": 1230.88,
-          "dma50": 1196.74
+          "o": 5800.0,
+          "h": 5861.0,
+          "l": 5690.0,
+          "c": 5832.5,
+          "dma20": 5644.27,
+          "dma50": 5584.75
         },
         {
           "d": "28 Oct",
-          "o": 1302.0,
-          "h": 1338.2,
-          "l": 1301.0,
-          "c": 1335.4,
-          "dma20": 1236.6,
-          "dma50": 1199.45
+          "o": 5726.0,
+          "h": 5872.5,
+          "l": 5650.0,
+          "c": 5848.0,
+          "dma20": 5670.25,
+          "dma50": 5590.11
         },
         {
           "d": "29 Oct",
-          "o": 1343.5,
-          "h": 1352.8,
-          "l": 1336.1,
-          "c": 1345.0,
-          "dma20": 1241.25,
-          "dma50": 1202.51
+          "o": 5845.0,
+          "h": 5905.5,
+          "l": 5800.0,
+          "c": 5880.0,
+          "dma20": 5706.15,
+          "dma50": 5596.31
         },
         {
           "d": "30 Oct",
-          "o": 1345.0,
-          "h": 1363.7,
-          "l": 1345.0,
-          "c": 1352.0,
-          "dma20": 1247.2,
-          "dma50": 1205.97
+          "o": 5884.0,
+          "h": 6048.5,
+          "l": 5884.0,
+          "c": 6048.0,
+          "dma20": 5744.6,
+          "dma50": 5608.42
         },
         {
           "d": "02 Nov",
-          "o": 1352.0,
-          "h": 1364.9,
-          "l": 1336.7,
-          "c": 1342.0,
-          "dma20": 1253.99,
-          "dma50": 1209.41
+          "o": 6000.0,
+          "h": 6104.5,
+          "l": 5952.0,
+          "c": 6051.0,
+          "dma20": 5778.8,
+          "dma50": 5619.24
         },
         {
           "d": "03 Nov",
-          "o": 1355.0,
-          "h": 1368.3,
-          "l": 1338.5,
-          "c": 1368.3,
-          "dma20": 1262.26,
-          "dma50": 1213.18
+          "o": 6089.0,
+          "h": 6135.0,
+          "l": 6055.0,
+          "c": 6097.0,
+          "dma20": 5807.15,
+          "dma50": 5627.7
         },
         {
           "d": "04 Nov",
-          "o": 1360.0,
-          "h": 1376.7,
-          "l": 1359.8,
-          "c": 1374.0,
-          "dma20": 1270.56,
-          "dma50": 1217.16
+          "o": 6054.0,
+          "h": 6101.0,
+          "l": 5963.0,
+          "c": 6065.0,
+          "dma20": 5834.35,
+          "dma50": 5635.65
         },
         {
           "d": "05 Nov",
-          "o": 1377.0,
-          "h": 1384.0,
-          "l": 1357.0,
-          "c": 1366.0,
-          "dma20": 1278.67,
-          "dma50": 1220.68
+          "o": 6070.0,
+          "h": 6209.0,
+          "l": 6070.0,
+          "c": 6109.5,
+          "dma20": 5864.48,
+          "dma50": 5643.96
         },
         {
           "d": "06 Nov",
-          "o": 1358.4,
-          "h": 1373.0,
-          "l": 1358.4,
-          "c": 1373.0,
-          "dma20": 1288.32,
-          "dma50": 1224.27
+          "o": 6175.0,
+          "h": 6240.0,
+          "l": 6033.0,
+          "c": 6053.5,
+          "dma20": 5893.75,
+          "dma50": 5651.93
         },
         {
           "d": "09 Nov",
-          "o": 1375.0,
-          "h": 1390.3,
-          "l": 1369.3,
-          "c": 1385.0,
-          "dma20": 1297.72,
-          "dma50": 1228.33
+          "o": 6000.0,
+          "h": 6040.0,
+          "l": 5910.0,
+          "c": 6040.0,
+          "dma20": 5907.25,
+          "dma50": 5660.92
         },
         {
           "d": "11 Nov",
-          "o": 1399.0,
-          "h": 1399.0,
-          "l": 1372.4,
-          "c": 1377.0,
-          "dma20": 1305.1,
-          "dma50": 1232.33
+          "o": 6060.0,
+          "h": 6070.0,
+          "l": 5950.0,
+          "c": 5973.5,
+          "dma20": 5916.57,
+          "dma50": 5667.31
         },
         {
           "d": "12 Nov",
-          "o": 1377.0,
-          "h": 1389.8,
-          "l": 1371.9,
-          "c": 1386.6,
-          "dma20": 1312.43,
-          "dma50": 1236.51
+          "o": 5950.0,
+          "h": 6045.5,
+          "l": 5894.0,
+          "c": 6030.0,
+          "dma20": 5918.68,
+          "dma50": 5670.41
         },
         {
           "d": "13 Nov",
-          "o": 1380.0,
-          "h": 1404.0,
-          "l": 1375.8,
-          "c": 1380.0,
-          "dma20": 1320.63,
-          "dma50": 1241.02
+          "o": 6007.0,
+          "h": 6103.0,
+          "l": 5982.0,
+          "c": 6003.0,
+          "dma20": 5923.93,
+          "dma50": 5678.58
         },
         {
           "d": "16 Nov",
-          "o": 1383.0,
-          "h": 1395.0,
-          "l": 1372.3,
-          "c": 1377.9,
-          "dma20": 1328.58,
-          "dma50": 1245.16
+          "o": 6005.0,
+          "h": 6102.5,
+          "l": 5940.0,
+          "c": 5978.5,
+          "dma20": 5930.85,
+          "dma50": 5682.15
         },
         {
           "d": "17 Nov",
-          "o": 1377.0,
-          "h": 1388.9,
-          "l": 1368.7,
-          "c": 1388.0,
-          "dma20": 1336.33,
-          "dma50": 1249.79
+          "o": 5950.0,
+          "h": 6028.0,
+          "l": 5902.5,
+          "c": 5911.0,
+          "dma20": 5939.35,
+          "dma50": 5686.57
         },
         {
           "d": "18 Nov",
-          "o": 1383.7,
-          "h": 1406.1,
-          "l": 1376.4,
-          "c": 1398.2,
-          "dma20": 1344.12,
-          "dma50": 1254.65
+          "o": 5900.0,
+          "h": 5910.0,
+          "l": 5820.0,
+          "c": 5857.0,
+          "dma20": 5947.7,
+          "dma50": 5690.57
         },
         {
           "d": "19 Nov",
-          "o": 1398.0,
-          "h": 1402.7,
-          "l": 1379.1,
-          "c": 1400.9,
-          "dma20": 1351.94,
-          "dma50": 1259.65
+          "o": 5870.0,
+          "h": 5888.5,
+          "l": 5768.0,
+          "c": 5880.0,
+          "dma20": 5948.77,
+          "dma50": 5695.31
         },
         {
           "d": "20 Nov",
-          "o": 1388.0,
-          "h": 1400.0,
-          "l": 1384.8,
-          "c": 1390.2,
-          "dma20": 1359.5,
-          "dma50": 1264.57
+          "o": 5851.5,
+          "h": 6215.0,
+          "l": 5831.0,
+          "c": 6124.0,
+          "dma20": 5967.95,
+          "dma50": 5706.99
         },
         {
           "d": "23 Nov",
-          "o": 1390.3,
-          "h": 1397.9,
-          "l": 1376.5,
-          "c": 1380.1,
-          "dma20": 1367.03,
-          "dma50": 1269.15
+          "o": 6159.5,
+          "h": 6339.5,
+          "l": 6136.0,
+          "c": 6282.5,
+          "dma20": 5995.7,
+          "dma50": 5721.44
         }
       ]
     },
@@ -847,11 +1639,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹1,020 – ₹1,040",
-          "invalidation": 1009.8,
-          "short_strike": 1040,
-          "hedge_strike": 1020,
-          "est_credit": 4.4
+          "zone": "₹1,000 – ₹1,040",
+          "invalidation": 990.0,
+          "short_strike": 1020,
+          "hedge_strike": 980,
+          "est_credit": 11.2
         },
         "next": {
           "zone": "₹1,000 – ₹1,040",
@@ -865,16 +1657,16 @@
       "reasons": {
         "technical": "CMP ₹1,096 (-2.36% 1D, +17.9% 20D) above 50 DMA (₹1,005) & 200 DMA (₹979.4), RSI 60.7.",
         "sr_analysis": "Immediate support S1 at ₹1,036 (-5.4%) and major floor S2 at ₹1,005; resistance R1 at ₹1,130.",
-        "news": "Aligned market coverage: \"Bajaj Finance Share Price - Live NSE: BAJFINANCE Stock Price & Chart - Upstox\"",
+        "news": "Aligned market coverage: \"Bajaj Finance Ltd. Share Price Today - Bajaj Finance Ltd. Stock Price Live NSE/BSE - CNBC TV18\"",
         "risk": "ATR 2.8% (0.92x vol). Cap downside with 980 PE hedge; exit if daily close breaches ₹990."
       },
       "conclusion": "STRONG BULLISH (88/100) — Sell Dec 1020 PE / Buy 980 PE anchored safely below S1 (₹1,036), backed by higher-low uptrend holding above dma support and aligned news flow.",
       "headlines": [
         {
-          "title": "Bajaj Finance Share Price - Live NSE: BAJFINANCE Stock Price & Chart - Upstox",
-          "source": "Upstox",
+          "title": "Bajaj Finance Ltd. Share Price Today - Bajaj Finance Ltd. Stock Price Live NSE/BSE - CNBC TV18",
+          "source": "CNBC TV18",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uWDYwYU9rV1lTNktHU2ZCaFBmU3p2OWIxTjZJNWZ3dVpZU0F3bG1wTVQ1QzFta3RNbGlKam1rV3NPd0ZsUDVGMm9mX2JVZkUyZWRwckVSRWxTNmFzbzFJak5BRDY1VU1qblFtSQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNODU5Y2xkN1gxcTZKUkw3RUVvVzFwQlFXcHBKZmlUa2lSbmpfVnlkc0JEWHZGdWZJX3hYdy1TRllhQXRCdVJBTTctUmYzV1lQRm4wSnEzdUhjbkl5dzRyRGVpRmt5ZlljY05DenZzdnJ3X2d1M2Z6MXZsOTJzVU83cnNn?oc=5"
         },
         {
           "title": "If EPS Growth Is Important To You, Bajaj Finance (NSE:BAJFINANCE) Presents An Opportunity - Simply Wall St",
@@ -883,10 +1675,10 @@
           "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZS1uYUs3aGJBTnp6WFRXRDdESWt2WmtkZUMyTEs2dFJqX3I4M3pxMjRZUlo3MkVFV3g2MUx0a3FTSWxhNlZZaEliZFJRQm1ZSml3Q2ZWOVZ6VWMwME13OU1SWklrQ2VpR2ZPWnFlbU1lRG5RTWY3V2VhVmpzWXctcF8xLWtOQWRxUTFfdDA3SFRZRFJKYWVfSGlxbU5DTXB1Nl9HS3NFd2xXLS1Na2lzUnczay0wYnRDRzdjQWJZV053R2ZWX0ppYnp0SllLZ2c1Z3ZBczl1TkRicDVBRFQ2MEltNTY3S1hRTzFnVtIB8gFBVV95cUxQMzlPLUhKTV95STNCYW5HZExyNHBLdXVKellUTDNRemlRWTZTRzhQc0Z5ZDg1b3FlZGxYNlcyTDI0Q3NuY2JMaTBnWnU1a0EzZnphcWwzRXUtMW5FNVhQWTBPTHZGMlZGQ3RlSU43dHZ3a2JHR1EyRTNBeXlBZlhaaWxmaVZHOFl1dElXTVZQdVNZdl9zckdfTTFkZU5zdVpoWk10dHR2MzVzZzYwT3hUeGEzM0dtTDR1N05LdXhaLWpjMm82RE9GR1hnZlVkMVlTdU4xSG5PUFAxRmNWcjktdG9zMFY0UzdrTEw0dGdzbGxkQQ?oc=5"
         },
         {
-          "title": "Bajaj Finance Share Price Today Live NSE/BSE Graph & Chart - Kotak Neo",
-          "source": "Kotak Neo",
+          "title": "Bajaj Finance Ltd rises for third consecutive session - Business Standard",
+          "source": "Business Standard",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1QbThaMkRUMEJBUFVDbUZ6bC1XZUtuRzlObHpFdlV2UnBLZHRFbmpENWY5Q0VLNjF5eUFEdXA0bS1rMEx2RVZ4OTdQZl9NbThYTW5UZVNxZy1ESGRnX3dRbjQxN1g5Nk4xdmc?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcHJCVHNuT0tfOE5Ta3JGcVBXSTBsaGdHdmpLaktQd0RNaXZreFhMdHkzNEFucENGblFZOHUtZ3lTbGNHeWJOOTJ4LU1CTWZ0aVFsVmN4MmFPNGdGNmJ3ZUFDb3ltYVo5WTJtR3VGVDdrMGdkNm8zd3ctVm0zSWF5WE9iWlQxWGFtdzYybGg2UVN2LUJaX2JGTklmOVROdFRUWHpvOWdLaGFUWXVnQUdLZXIxOTM2WThYNEMxOGFTRzZqZWpoTFN6SmdPT25xVVpO0gHWAUFVX3lxTFB0Z3NtUUpwUjAtWTJ0aUtwUlVXOFVOOUs0Z19XUW5rRXBqbVJwN0ZMMXNtUkllazc2YTVhZ3EyM1hKTUxSaFZoQXl2U0lRSjh5RFhMTjNNMnFCWkJEckZMX2RzcVdiMEo0TXdoUWhZMjhtWUtsQlhoTVlLLURVTXVveS1RNlY5VHA5dlZmaGx0X1k5YnBmRldEZ1hLb2M1dWp6SHJLX2VJSHdEUUxSUlB4MWkxMUVSMGVWbGZWdXVkTkxnUDVscGJSYUx6Mzk4cGJRUkdMM2c?oc=5"
         }
       ],
       "chart_data": [
@@ -1246,8 +2038,8 @@
           "zone": "₹840 – ₹860",
           "invalidation": 831.6,
           "short_strike": 860,
-          "hedge_strike": 840,
-          "est_credit": 4.4
+          "hedge_strike": 820,
+          "est_credit": 11.2
         },
         "next": {
           "zone": "₹840 – ₹860",
@@ -1261,22 +2053,22 @@
       "reasons": {
         "technical": "CMP ₹906 (-0.66% 1D, +15.9% 20D) above 50 DMA (₹783.6) & 200 DMA (₹705.5), RSI 69.1.",
         "sr_analysis": "Immediate support S1 at ₹860.6 (-5.0%) and major floor S2 at ₹783.6; resistance R1 at ₹925.8.",
-        "news": "Aligned market coverage: \"Indian Hotels (NSEI:INDHOTEL) Stock Forecast & Analyst Predictions - Simply Wall St\"",
+        "news": "Aligned market coverage: \"INDHOTEL Stock Price and Chart — NSE:INDHOTEL - TradingView\"",
         "risk": "ATR 2.4% (0.69x vol). Cap downside with 820 PE hedge; exit if daily close breaches ₹831.6."
       },
       "conclusion": "STRONG BULLISH (88/100) — Sell Dec 860 PE / Buy 820 PE anchored safely below S1 (₹860.6), backed by breakout near 52w high above support and aligned news flow.",
       "headlines": [
         {
+          "title": "INDHOTEL Stock Price and Chart — NSE:INDHOTEL - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBJWVR1akJiTmZqWUF4Y2tnUklFaE5HLWdYSnp5dkJuT0E0ZnQ1T3RGTm42a3V1cHRTMGQwMzYyRDBINjZaVXhCY3VtX1J0eU4tdzB1ZHN3Q1lhTHhCQnc?oc=5"
+        },
+        {
           "title": "Indian Hotels (NSEI:INDHOTEL) Stock Forecast & Analyst Predictions - Simply Wall St",
           "source": "Simply Wall St",
           "sentiment": "Neutral",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNam5ONU5fQU1kU1JIRFhRWERWR0VsTzc2bm1CeHAzdjBSbzJmcDRNVkZBdktGQ3FHYzcxMmpiWWRRaWhRcjNGc21WQjJnX1p3SFh0ZDlrNTRXUDE0dVdTSFUyOFF2NDRsU1NKRk9PNV9PS2p4VDFIc2NWZ3dzN1dkUERZZzQzYm91N3QtVTdickMxcnAz?oc=5"
-        },
-        {
-          "title": "INDHOTEL Forecast — Price Target — Prediction for 2027 - TradingView",
-          "source": "TradingView",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE80Nk9UbTNXWnVTc3g3cldneXBCanlGVUhoWjFRQ1dPOFNBUmVBN2k4UW9ac3lITVhQWDRyYllMa0dOZXhUZkY1U0pNTnJkLWdhX3dncjFHY1VaQzlMaXBqWFZWcEFjX2hVRzQtWTBQdnJaNTQ1SXBJeHNodw?oc=5"
         },
         {
           "title": "Indian Hotels Co Ltd Share Price Today NSE/BSE Charts - Alice Blue",
@@ -1639,11 +2431,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹2,000 – ₹2,050",
-          "invalidation": 1980.0,
-          "short_strike": 2050,
-          "hedge_strike": 2000,
-          "est_credit": 11.0
+          "zone": "₹1,950 – ₹2,050",
+          "invalidation": 1930.5,
+          "short_strike": 2000,
+          "hedge_strike": 1950,
+          "est_credit": 14.0
         },
         "next": {
           "zone": "₹1,950 – ₹2,050",
@@ -1657,17 +2449,11 @@
       "reasons": {
         "technical": "CMP ₹2,142 (+2.66% 1D, +12.7% 20D) above 50 DMA (₹1,921) & 200 DMA (₹1,566), RSI 68.7.",
         "sr_analysis": "Immediate support S1 at ₹2,042 (-4.7%) and major floor S2 at ₹1,921; resistance R1 at ₹2,206.",
-        "news": "Aligned market coverage: \"Coforge Share Price - Upstox\"",
+        "news": "Aligned market coverage: \"Coforge (NSEI:COFORGE) Stock Forecast & Analyst Predictions - Simply Wall St\"",
         "risk": "ATR 3.3% (1.92x vol). Cap downside with 1950 PE hedge; exit if daily close breaches ₹1,930."
       },
       "conclusion": "STRONG BULLISH (88/100) — Sell Dec 2000 PE / Buy 1950 PE anchored safely below S1 (₹2,042), backed by breakout near 52w high above support and aligned news flow.",
       "headlines": [
-        {
-          "title": "Coforge Share Price - Upstox",
-          "source": "Upstox",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9US3I1X0pBV2VvWTdZSE90dWhvY1FES1VvMnZ4b1JITGgzSk5KQUFtalBuX1VqT0F5cGtuRFhsbjRHSHlTR2t5Z3cxQktKRE1yUFREVWhmRVJiU2lwZ1BiZTI0YnY?oc=5"
-        },
         {
           "title": "Coforge (NSEI:COFORGE) Stock Forecast & Analyst Predictions - Simply Wall St",
           "source": "Simply Wall St",
@@ -1679,6 +2465,12 @@
           "source": "TradingView",
           "sentiment": "Neutral",
           "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9ZMzNsd2dIcGhsdTI1ck8ya3RPazVLU1lmd0ExaWstMTZYWWFZMFVaUzZUVEpwTWlVVC1OYTZKRTI1Z2JoVkhZcUhHei1sZTlvdVRuRVZKQTBZNDBuVGxCaE9wbmg5Q1Nvc3NLVUhPbl9LLVhEX1lHb3dB?oc=5"
+        },
+        {
+          "title": "Coforge Ltd. Share Price Today - Coforge Ltd. Stock Price Live NSE/BSE - CNBC TV18",
+          "source": "CNBC TV18",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBMcUdud3lFX2l6WEZWM3p3MU5TcFZWQVFmQWl3bjNvNzlNbk9rS2tEQWxqWm0zSzdZNXNrTmtWTjB1X25Kb3pXRFJQSl80QmUyTEtZQnd2WkdBd2dwNllKUDhGNzEyUldFNmcySXFwTW1VUFAtT2FTZw?oc=5"
         }
       ],
       "chart_data": [
@@ -2039,13 +2831,13 @@
           "invalidation": 1980.0,
           "short_strike": 2050,
           "hedge_strike": 2000,
-          "est_credit": 11.0
+          "est_credit": 14.0
         },
         "next": {
-          "zone": "₹2,000 – ₹2,050",
-          "invalidation": 1980.0,
-          "short_strike": 2050,
-          "hedge_strike": 2000,
+          "zone": "₹1,950 – ₹2,050",
+          "invalidation": 1930.5,
+          "short_strike": 2000,
+          "hedge_strike": 1950,
           "est_credit": 14.0
         }
       },
@@ -2065,16 +2857,16 @@
           "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB1dnhmenh5QjNTa0thRU5sVkRBemZ4SGIwcTZxSUtSSUdicWh4V2hMU1oyRHJIWGNPazAwRmJhOHN4Sl9WV080c3UycENkbWdPM3ktNmRMZWpQelJ1MmRiZlFUdlY?oc=5"
         },
         {
-          "title": "Bharti Airtel Limited (NSE:BHARTIARTL) Just Reported First-Quarter Earnings: Have Analysts Changed Their Mind On The Stock? - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYnU1cE5DVDlQVkpZVXdtWEpYVkpaN2tGN2loLWlZQ3VZYm9qd2FsMlVicnUzUTVpT2JLZFVzZGdyM2FfOTdUQVc3NEdtZ056bEJOSG5PNkROWFdVM3dlZXFuaGpkeWtvX1IxVGU0dGV3a2JZOGJXWUV4Wk9KVmlkRmMtUHZCN0czRUpsRkJ5YU1jM0R3dkxtSEh2TUNtTVNzdmIyQ3J4akk2cjdOd1lKNXdvelIwcnZoUnNWcWdVTzEwcVFVLXRIZlNvZ1g4Q1dxRGNQY3hFdFrSAd4BQVVfeXFMTXVWV2lwMUZPR1VEZmNIbDF2NVNqWktKY1pNbnZHb3dYN21pbUtGUWhacWpQRG9UM0ZjeGdUa1hkNVFJMUU4TFNNN0w5bks3ZkNoby00UTQzTWYyM0l6X2FVVmVmd2lxVEdXY002bVBUazZicnZ6UXJjR21aX19DNjlVSnV3WXJUWnB5dkdUOTNVbVdqRzNjREo2a1BwSk9OZC1CWGs4MHZKSHBTaDVHNnBtOU03TWtKRWVYemZGWjVHdDFwNG13aERBVFNDWmJPLWhRdUtpS1I2U1dkOWx3?oc=5"
-        },
-        {
           "title": "BHARTIARTL Forecast — Price Target — Prediction for 2027 - TradingView",
           "source": "TradingView",
           "sentiment": "Neutral",
           "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5sbmdxbHhwdEY3X0Vwa0taTlVUUTE4WHpQdmNaTnJ2Z0tkNEozV0pTVlFzVjFhZWo4bmNkVlVEWmw5UDkteG9uZHBQb2l2Y190dHROY1pFUDRIcG9XRzlVUXE4YlVSWWN0cW91ZVI4dTF1ZEE1Qy1Fd3drV09uQQ?oc=5"
+        },
+        {
+          "title": "Bharti Airtel Limited (NSE:BHARTIARTL) Just Reported First-Quarter Earnings: Have Analysts Changed Their Mind On The Stock? - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQYnU1cE5DVDlQVkpZVXdtWEpYVkpaN2tGN2loLWlZQ3VZYm9qd2FsMlVicnUzUTVpT2JLZFVzZGdyM2FfOTdUQVc3NEdtZ056bEJOSG5PNkROWFdVM3dlZXFuaGpkeWtvX1IxVGU0dGV3a2JZOGJXWUV4Wk9KVmlkRmMtUHZCN0czRUpsRkJ5YU1jM0R3dkxtSEh2TUNtTVNzdmIyQ3J4akk2cjdOd1lKNXdvelIwcnZoUnNWcWdVTzEwcVFVLXRIZlNvZ1g4Q1dxRGNQY3hFdFrSAd4BQVVfeXFMTXVWV2lwMUZPR1VEZmNIbDF2NVNqWktKY1pNbnZHb3dYN21pbUtGUWhacWpQRG9UM0ZjeGdUa1hkNVFJMUU4TFNNN0w5bks3ZkNoby00UTQzTWYyM0l6X2FVVmVmd2lxVEdXY002bVBUazZicnZ6UXJjR21aX19DNjlVSnV3WXJUWnB5dkdUOTNVbVdqRzNjREo2a1BwSk9OZC1CWGs4MHZKSHBTaDVHNnBtOU03TWtKRWVYemZGWjVHdDFwNG13aERBVFNDWmJPLWhRdUtpS1I2U1dkOWx3?oc=5"
         }
       ],
       "chart_data": [
@@ -2394,798 +3186,6 @@
           "dma50": 1920.53
         }
       ]
-    },
-    {
-      "symbol": "DIVISLAB",
-      "name": "Divi's Laboratories",
-      "sector": "Pharma",
-      "bias": "bullish",
-      "rating": 86,
-      "tier": "Strong Bullish",
-      "tier_code": "strong_bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 11203.0,
-      "chg_1d": 0.2,
-      "chg_20d": 25.17,
-      "rsi": 68.7,
-      "dma20": 10538.3,
-      "dma50": 9810.61,
-      "dma200": 7645.31,
-      "dist_52w_high": -5.25,
-      "vol_ratio": 0.88,
-      "scores": {
-        "tech": 98,
-        "sr": 87,
-        "news": 66,
-        "composite": 86
-      },
-      "sr": {
-        "s2": 9810.61,
-        "s1": 10538.3,
-        "pivot": 10629.0,
-        "r1": 11824.0,
-        "r2": 13593.0,
-        "s1_dist_pct": -5.93,
-        "r1_dist_pct": 5.54,
-        "structure": "Higher-Low Uptrend Holding Above DMA Support"
-      },
-      "expiries": {
-        "current": {
-          "zone": "₹10,000 – ₹10,500",
-          "invalidation": 9900.0,
-          "short_strike": 10500,
-          "hedge_strike": 10000,
-          "est_credit": 110.0
-        },
-        "next": {
-          "zone": "₹10,000 – ₹10,500",
-          "invalidation": 9900.0,
-          "short_strike": 10500,
-          "hedge_strike": 10000,
-          "est_credit": 140.0
-        }
-      },
-      "lot_size": 200,
-      "reasons": {
-        "technical": "CMP ₹11,203 (+0.20% 1D, +25.2% 20D) above 50 DMA (₹9,811) & 200 DMA (₹7,645), RSI 68.7.",
-        "sr_analysis": "Immediate support S1 at ₹10,538 (-5.9%) and major floor S2 at ₹9,811; resistance R1 at ₹11,824.",
-        "news": "Aligned market coverage: \"Divis Laboratories Share Price - Live NSE: DIVISLAB Stock Price & Chart - Upstox\"",
-        "risk": "ATR 2.7% (0.88x vol). Cap downside with 10000 PE hedge; exit if daily close breaches ₹9,900."
-      },
-      "conclusion": "STRONG BULLISH (86/100) — Sell Dec 10500 PE / Buy 10000 PE anchored safely below S1 (₹10,538), backed by higher-low uptrend holding above dma support and aligned news flow.",
-      "headlines": [
-        {
-          "title": "Divis Laboratories Share Price - Live NSE: DIVISLAB Stock Price & Chart - Upstox",
-          "source": "Upstox",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE4xZ0Zxem94U0owZ3BVakFqa2pfNl9wTU9iY2JvM19RblREM3hTRFJoUEZjZzU2SnpsenJQLS1rUGlzWnpCUXdfbVhfUGVxVVdPWDJaQjRiSzR2VVQwbnlwMXR0SWozR0Q0ZXMyR0NUQQ?oc=5"
-        },
-        {
-          "title": "Divi's Laboratories (DIVISLAB) Share Price Today (NSE), Market News - TechGraph",
-          "source": "TechGraph",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE11ZXMtVG5fcjRValBSLW1CTU1ySFVwNjM5d21vWHVUdlNlaklyT3g0dFoxVmIybDZGTjRwZ09Sc3lZaHktYlkwcjA5U2ZNRHFmenZLcTVPLTdoYV85TkdKOUh3?oc=5"
-        },
-        {
-          "title": "Divi's Laboratories (NSEI:DIVISLAB) - Stock Analysis - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOTY1UEI4MG9VVGh2dGZaRjVTc3l2Mk9HUHdKOUJpa041RnF4c3EtY1ZXV3hiNmw3M0lzRWMzUV9CWGpYMkxLeDZCZ1Zrc0pXN25tbjlCdFNUWlVjeGNrcjNrbk01Y3FXOGZVU20xOTUyRjc5Q0F6dFprcXp6OEhVcUR2OHNJOFdGNVFiNGtuNGJJRWRLdEhvMFJn?oc=5"
-        }
-      ],
-      "chart_data": [
-        {
-          "d": "01 Oct",
-          "o": 9277.0,
-          "h": 9318.0,
-          "l": 9078.0,
-          "c": 9249.0,
-          "dma20": 9383.6,
-          "dma50": 8807.07
-        },
-        {
-          "d": "05 Oct",
-          "o": 9251.0,
-          "h": 9285.5,
-          "l": 9113.5,
-          "c": 9196.0,
-          "dma20": 9380.9,
-          "dma50": 8845.49
-        },
-        {
-          "d": "06 Oct",
-          "o": 9210.0,
-          "h": 9557.5,
-          "l": 9165.0,
-          "c": 9550.0,
-          "dma20": 9403.4,
-          "dma50": 8891.52
-        },
-        {
-          "d": "07 Oct",
-          "o": 9500.5,
-          "h": 9660.0,
-          "l": 9494.0,
-          "c": 9588.0,
-          "dma20": 9417.05,
-          "dma50": 8935.0
-        },
-        {
-          "d": "08 Oct",
-          "o": 9588.0,
-          "h": 9658.0,
-          "l": 9355.0,
-          "c": 9361.0,
-          "dma20": 9406.35,
-          "dma50": 8973.72
-        },
-        {
-          "d": "09 Oct",
-          "o": 9417.0,
-          "h": 9460.5,
-          "l": 9273.0,
-          "c": 9340.0,
-          "dma20": 9398.95,
-          "dma50": 9004.83
-        },
-        {
-          "d": "12 Oct",
-          "o": 9346.0,
-          "h": 9431.5,
-          "l": 9297.0,
-          "c": 9426.0,
-          "dma20": 9398.33,
-          "dma50": 9036.65
-        },
-        {
-          "d": "13 Oct",
-          "o": 9411.0,
-          "h": 9423.5,
-          "l": 9164.5,
-          "c": 9285.0,
-          "dma20": 9396.48,
-          "dma50": 9061.23
-        },
-        {
-          "d": "14 Oct",
-          "o": 9315.0,
-          "h": 9315.0,
-          "l": 8937.5,
-          "c": 9023.0,
-          "dma20": 9387.73,
-          "dma50": 9069.99
-        },
-        {
-          "d": "15 Oct",
-          "o": 9085.0,
-          "h": 9124.5,
-          "l": 8950.0,
-          "c": 9030.0,
-          "dma20": 9381.33,
-          "dma50": 9083.03
-        },
-        {
-          "d": "16 Oct",
-          "o": 9030.5,
-          "h": 9248.0,
-          "l": 8985.5,
-          "c": 9144.5,
-          "dma20": 9372.4,
-          "dma50": 9098.16
-        },
-        {
-          "d": "19 Oct",
-          "o": 9191.5,
-          "h": 9323.5,
-          "l": 9045.0,
-          "c": 9087.0,
-          "dma20": 9358.0,
-          "dma50": 9112.92
-        },
-        {
-          "d": "21 Oct",
-          "o": 9190.0,
-          "h": 9243.0,
-          "l": 9041.0,
-          "c": 9190.0,
-          "dma20": 9346.98,
-          "dma50": 9131.22
-        },
-        {
-          "d": "22 Oct",
-          "o": 9114.0,
-          "h": 9190.0,
-          "l": 9006.5,
-          "c": 9162.0,
-          "dma20": 9337.48,
-          "dma50": 9148.46
-        },
-        {
-          "d": "23 Oct",
-          "o": 9165.0,
-          "h": 9175.5,
-          "l": 8797.0,
-          "c": 8950.0,
-          "dma20": 9303.77,
-          "dma50": 9155.89
-        },
-        {
-          "d": "26 Oct",
-          "o": 8900.0,
-          "h": 9080.0,
-          "l": 8860.0,
-          "c": 9050.0,
-          "dma20": 9276.17,
-          "dma50": 9164.89
-        },
-        {
-          "d": "27 Oct",
-          "o": 9090.0,
-          "h": 9505.5,
-          "l": 9067.0,
-          "c": 9505.5,
-          "dma20": 9270.48,
-          "dma50": 9185.0
-        },
-        {
-          "d": "28 Oct",
-          "o": 9460.0,
-          "h": 9699.5,
-          "l": 9370.0,
-          "c": 9558.5,
-          "dma20": 9270.9,
-          "dma50": 9206.63
-        },
-        {
-          "d": "29 Oct",
-          "o": 9563.0,
-          "h": 9685.5,
-          "l": 9534.0,
-          "c": 9664.0,
-          "dma20": 9282.55,
-          "dma50": 9230.28
-        },
-        {
-          "d": "30 Oct",
-          "o": 9680.0,
-          "h": 9865.0,
-          "l": 9621.5,
-          "c": 9780.0,
-          "dma20": 9306.98,
-          "dma50": 9254.12
-        },
-        {
-          "d": "02 Nov",
-          "o": 9900.0,
-          "h": 9990.0,
-          "l": 9868.0,
-          "c": 9945.5,
-          "dma20": 9341.8,
-          "dma50": 9281.83
-        },
-        {
-          "d": "03 Nov",
-          "o": 9965.0,
-          "h": 10064.0,
-          "l": 9863.0,
-          "c": 10064.0,
-          "dma20": 9385.2,
-          "dma50": 9311.71
-        },
-        {
-          "d": "04 Nov",
-          "o": 10060.0,
-          "h": 10067.0,
-          "l": 9946.0,
-          "c": 10037.5,
-          "dma20": 9409.58,
-          "dma50": 9340.52
-        },
-        {
-          "d": "05 Nov",
-          "o": 10100.0,
-          "h": 10159.0,
-          "l": 9888.0,
-          "c": 10140.5,
-          "dma20": 9437.2,
-          "dma50": 9373.41
-        },
-        {
-          "d": "06 Nov",
-          "o": 10130.0,
-          "h": 10320.5,
-          "l": 10040.5,
-          "c": 10320.5,
-          "dma20": 9485.17,
-          "dma50": 9404.93
-        },
-        {
-          "d": "09 Nov",
-          "o": 11097.0,
-          "h": 11824.0,
-          "l": 11071.0,
-          "c": 11565.5,
-          "dma20": 9596.45,
-          "dma50": 9455.74
-        },
-        {
-          "d": "11 Nov",
-          "o": 11760.0,
-          "h": 11800.5,
-          "l": 11190.0,
-          "c": 11367.0,
-          "dma20": 9693.5,
-          "dma50": 9501.88
-        },
-        {
-          "d": "12 Nov",
-          "o": 11329.0,
-          "h": 11485.0,
-          "l": 11272.0,
-          "c": 11485.0,
-          "dma20": 9803.5,
-          "dma50": 9546.8
-        },
-        {
-          "d": "13 Nov",
-          "o": 11411.5,
-          "h": 11645.5,
-          "l": 11350.5,
-          "c": 11442.0,
-          "dma20": 9924.45,
-          "dma50": 9586.3
-        },
-        {
-          "d": "16 Nov",
-          "o": 11490.0,
-          "h": 11544.5,
-          "l": 10954.0,
-          "c": 11080.0,
-          "dma20": 10026.95,
-          "dma50": 9624.6
-        },
-        {
-          "d": "17 Nov",
-          "o": 11087.0,
-          "h": 11207.5,
-          "l": 11030.0,
-          "c": 11150.0,
-          "dma20": 10127.23,
-          "dma50": 9663.2
-        },
-        {
-          "d": "18 Nov",
-          "o": 11180.0,
-          "h": 11265.0,
-          "l": 11049.0,
-          "c": 11049.0,
-          "dma20": 10225.33,
-          "dma50": 9699.18
-        },
-        {
-          "d": "19 Nov",
-          "o": 11060.0,
-          "h": 11178.0,
-          "l": 10965.0,
-          "c": 11178.0,
-          "dma20": 10324.73,
-          "dma50": 9740.74
-        },
-        {
-          "d": "20 Nov",
-          "o": 11125.0,
-          "h": 11198.0,
-          "l": 11025.0,
-          "c": 11180.5,
-          "dma20": 10425.65,
-          "dma50": 9778.05
-        },
-        {
-          "d": "23 Nov",
-          "o": 11249.0,
-          "h": 11375.0,
-          "l": 11185.5,
-          "c": 11203.0,
-          "dma20": 10538.3,
-          "dma50": 9810.61
-        }
-      ]
-    },
-    {
-      "symbol": "KOTAKBANK",
-      "name": "Kotak Mahindra Bank",
-      "sector": "Private Banking",
-      "bias": "bullish",
-      "rating": 86,
-      "tier": "Strong Bullish",
-      "tier_code": "strong_bullish",
-      "strategy": "Bull Put Spread / OTM Put Sell",
-      "cmp": 502.85,
-      "chg_1d": -2.51,
-      "chg_20d": 16.81,
-      "rsi": 68.9,
-      "dma20": 476.37,
-      "dma50": 445.01,
-      "dma200": 405.05,
-      "dist_52w_high": -3.58,
-      "vol_ratio": 0.8,
-      "scores": {
-        "tech": 98,
-        "sr": 87,
-        "news": 66,
-        "composite": 86
-      },
-      "sr": {
-        "s2": 445.01,
-        "s1": 476.37,
-        "pivot": 487.32,
-        "r1": 521.5,
-        "r2": 571.22,
-        "s1_dist_pct": -5.27,
-        "r1_dist_pct": 3.71,
-        "structure": "Higher-Low Uptrend Holding Above DMA Support"
-      },
-      "expiries": {
-        "current": {
-          "zone": "₹470 – ₹480",
-          "invalidation": 465.3,
-          "short_strike": 480,
-          "hedge_strike": 470,
-          "est_credit": 2.2
-        },
-        "next": {
-          "zone": "₹460 – ₹480",
-          "invalidation": 455.4,
-          "short_strike": 470,
-          "hedge_strike": 450,
-          "est_credit": 5.6
-        }
-      },
-      "lot_size": 400,
-      "reasons": {
-        "technical": "CMP ₹502.9 (-2.51% 1D, +16.8% 20D) above 50 DMA (₹445.0) & 200 DMA (₹405.1), RSI 68.9.",
-        "sr_analysis": "Immediate support S1 at ₹476.4 (-5.3%) and major floor S2 at ₹445.0; resistance R1 at ₹521.5.",
-        "news": "Aligned market coverage: \"Kotak Mahindra Bank shares down over 3% - The Hindu\"",
-        "risk": "ATR 2.3% (0.80x vol). Cap downside with 450 PE hedge; exit if daily close breaches ₹455.4."
-      },
-      "conclusion": "STRONG BULLISH (86/100) — Sell Dec 470 PE / Buy 450 PE anchored safely below S1 (₹476.4), backed by higher-low uptrend holding above dma support and aligned news flow.",
-      "headlines": [
-        {
-          "title": "Kotak Mahindra Bank shares down over 3% - The Hindu",
-          "source": "The Hindu",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQLW1UVHdkd0lMaXFzUHZlR1BlQmpOdS02eGtNZGh6MXdCTC1laG5KbG0yU1pXN2FPazk3VzRtZmFkVjVQQzBWNllUMVhhaFRsTDdtSnQzcG9QZ3VLNEdReWVsRVlQRTlSNDNqdTNZXzU0bmRpdkgwNzRvYzgzeXI0ZDdkRklmUTNrZG1Ia0ZkckhBWllUVWs4LWs3TmtDX2xsQVE?oc=5"
-        },
-        {
-          "title": "Here's Why Kotak Mahindra Bank (NSE:KOTAKBANK) Has Caught The Eye Of Investors - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQSUE0MnhpWDNIZzFpQkNDWmhHVVFUUUxPNGRXWDJjYWRYOEZGU0VWcWJfcGpOOFJiSEtSX0dsVm9lQXhQLTBRWk5vTW11M25rMkkyVUV6eF9sZHNEeUZMRC1IQVZhb3ZlSUlzNkFFMEtPUmcxNlluMGg0SDF4T1VQTXFhMXhtOHcydi1MMGdtTGplOFZ1QVNCODNtUFlMTG55WTI5R2pTR3licXNvNVc5X2V3OFVkUGhlT1p2TEExdGl1aG95RWdnVXgwcklhS1VZa0FWUGlTUjdOaXBabWow0gHkAUFVX3lxTE9PeWJRQy1Fa2g1SFdfa0xMa21Ma0lFTzBKNk9ja0twM25Pd25FWHIwWWpOSGczRThvMGhwOVNrdUtMeWVWZmx2RjhrWmhwbVVTY0U1RktZYmt0V1o3N3BKYzhPdTJrTnZzS3otZnBmSFM0WV9xelhXUzhqTFZZX0RVbmNXa2N3Q1hTU2NHcFZHQlZOTUFEZWc2OE8yTnl5SDZ1OGpXakdkVE5wQlFxN0xDWkFEeWVjZ3gzWDFNTUQ5SkhBc0dYWTlxaTJzUUI3RzBPN3FnWU00YjJJM3ZWS0dpRm96bQ?oc=5"
-        },
-        {
-          "title": "Kotak Mahindra Bank Executes Rs. 193.52 Crore Block Trade on NSE - scanx.trade",
-          "source": "scanx.trade",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcUltSWdQOFJ5S1BWOU5Vbktjb19aQm9RZmZubHJaM2VnSDU2ZzhORGRoV0J5ZGV5eW1nN2lEb0N3S2NCSG1NNDVtY1VUUVNWV0FiYlEwNlI5LTc4OXZnX2hVR21YY09nUXNEOHg0NnJ6ZWdFZ0xZaVJSRHZsQXd4TlV5OXZtNHdoY3VVemQwSGlmLV9aRlNXV0FZLUpQN241TVBLVHF5VTB1eV9hZlZvNFFKQ1hKNEphblpLNk95dw?oc=5"
-        }
-      ],
-      "chart_data": [
-        {
-          "d": "01 Oct",
-          "o": 426.0,
-          "h": 435.6,
-          "l": 416.05,
-          "c": 418.35,
-          "dma20": 414.15,
-          "dma50": 404.76
-        },
-        {
-          "d": "05 Oct",
-          "o": 418.0,
-          "h": 424.45,
-          "l": 413.75,
-          "c": 416.0,
-          "dma20": 413.89,
-          "dma50": 405.41
-        },
-        {
-          "d": "06 Oct",
-          "o": 422.0,
-          "h": 435.3,
-          "l": 421.3,
-          "c": 431.9,
-          "dma20": 414.26,
-          "dma50": 406.35
-        },
-        {
-          "d": "07 Oct",
-          "o": 432.05,
-          "h": 441.5,
-          "l": 429.0,
-          "c": 440.0,
-          "dma20": 415.15,
-          "dma50": 407.46
-        },
-        {
-          "d": "08 Oct",
-          "o": 440.0,
-          "h": 440.0,
-          "l": 432.95,
-          "c": 435.0,
-          "dma20": 415.94,
-          "dma50": 408.45
-        },
-        {
-          "d": "09 Oct",
-          "o": 438.0,
-          "h": 445.25,
-          "l": 437.85,
-          "c": 441.0,
-          "dma20": 417.29,
-          "dma50": 409.47
-        },
-        {
-          "d": "12 Oct",
-          "o": 442.2,
-          "h": 443.65,
-          "l": 438.9,
-          "c": 443.4,
-          "dma20": 418.63,
-          "dma50": 410.55
-        },
-        {
-          "d": "13 Oct",
-          "o": 443.1,
-          "h": 443.35,
-          "l": 437.5,
-          "c": 439.0,
-          "dma20": 419.63,
-          "dma50": 411.52
-        },
-        {
-          "d": "14 Oct",
-          "o": 439.0,
-          "h": 444.9,
-          "l": 437.2,
-          "c": 438.05,
-          "dma20": 421.05,
-          "dma50": 412.34
-        },
-        {
-          "d": "15 Oct",
-          "o": 439.65,
-          "h": 447.95,
-          "l": 437.6,
-          "c": 447.95,
-          "dma20": 422.69,
-          "dma50": 413.33
-        },
-        {
-          "d": "16 Oct",
-          "o": 448.7,
-          "h": 453.1,
-          "l": 443.65,
-          "c": 447.4,
-          "dma20": 424.24,
-          "dma50": 414.28
-        },
-        {
-          "d": "19 Oct",
-          "o": 440.5,
-          "h": 447.15,
-          "l": 438.6,
-          "c": 442.3,
-          "dma20": 425.73,
-          "dma50": 415.25
-        },
-        {
-          "d": "21 Oct",
-          "o": 444.45,
-          "h": 446.85,
-          "l": 434.5,
-          "c": 437.8,
-          "dma20": 426.88,
-          "dma50": 416.19
-        },
-        {
-          "d": "22 Oct",
-          "o": 435.2,
-          "h": 442.5,
-          "l": 433.75,
-          "c": 437.0,
-          "dma20": 428.1,
-          "dma50": 417.06
-        },
-        {
-          "d": "23 Oct",
-          "o": 438.25,
-          "h": 439.4,
-          "l": 427.7,
-          "c": 430.5,
-          "dma20": 428.96,
-          "dma50": 417.81
-        },
-        {
-          "d": "26 Oct",
-          "o": 440.9,
-          "h": 446.3,
-          "l": 437.6,
-          "c": 440.75,
-          "dma20": 430.75,
-          "dma50": 418.82
-        },
-        {
-          "d": "27 Oct",
-          "o": 441.45,
-          "h": 444.8,
-          "l": 439.9,
-          "c": 442.5,
-          "dma20": 432.67,
-          "dma50": 419.82
-        },
-        {
-          "d": "28 Oct",
-          "o": 441.0,
-          "h": 444.3,
-          "l": 438.3,
-          "c": 440.0,
-          "dma20": 434.59,
-          "dma50": 420.8
-        },
-        {
-          "d": "29 Oct",
-          "o": 441.8,
-          "h": 460.2,
-          "l": 439.25,
-          "c": 459.0,
-          "dma20": 437.24,
-          "dma50": 422.12
-        },
-        {
-          "d": "30 Oct",
-          "o": 459.2,
-          "h": 462.9,
-          "l": 457.05,
-          "c": 461.6,
-          "dma20": 439.47,
-          "dma50": 423.6
-        },
-        {
-          "d": "02 Nov",
-          "o": 462.0,
-          "h": 465.95,
-          "l": 456.45,
-          "c": 458.35,
-          "dma20": 441.47,
-          "dma50": 424.96
-        },
-        {
-          "d": "03 Nov",
-          "o": 460.0,
-          "h": 464.65,
-          "l": 455.4,
-          "c": 464.65,
-          "dma20": 443.91,
-          "dma50": 426.31
-        },
-        {
-          "d": "04 Nov",
-          "o": 462.95,
-          "h": 465.45,
-          "l": 456.35,
-          "c": 459.4,
-          "dma20": 445.28,
-          "dma50": 427.44
-        },
-        {
-          "d": "05 Nov",
-          "o": 472.45,
-          "h": 472.5,
-          "l": 457.15,
-          "c": 467.0,
-          "dma20": 446.63,
-          "dma50": 428.75
-        },
-        {
-          "d": "06 Nov",
-          "o": 464.15,
-          "h": 480.0,
-          "l": 463.0,
-          "c": 480.0,
-          "dma20": 448.88,
-          "dma50": 430.32
-        },
-        {
-          "d": "09 Nov",
-          "o": 482.35,
-          "h": 483.2,
-          "l": 474.65,
-          "c": 479.5,
-          "dma20": 450.81,
-          "dma50": 431.58
-        },
-        {
-          "d": "11 Nov",
-          "o": 485.8,
-          "h": 491.05,
-          "l": 481.45,
-          "c": 487.7,
-          "dma20": 453.02,
-          "dma50": 432.85
-        },
-        {
-          "d": "12 Nov",
-          "o": 485.95,
-          "h": 494.05,
-          "l": 484.35,
-          "c": 490.4,
-          "dma20": 455.59,
-          "dma50": 434.18
-        },
-        {
-          "d": "13 Nov",
-          "o": 490.4,
-          "h": 490.4,
-          "l": 483.95,
-          "c": 488.55,
-          "dma20": 458.12,
-          "dma50": 435.56
-        },
-        {
-          "d": "16 Nov",
-          "o": 490.5,
-          "h": 497.9,
-          "l": 489.55,
-          "c": 494.2,
-          "dma20": 460.43,
-          "dma50": 436.95
-        },
-        {
-          "d": "17 Nov",
-          "o": 494.5,
-          "h": 499.9,
-          "l": 492.2,
-          "c": 497.25,
-          "dma20": 462.92,
-          "dma50": 438.42
-        },
-        {
-          "d": "18 Nov",
-          "o": 498.0,
-          "h": 503.05,
-          "l": 492.2,
-          "c": 494.85,
-          "dma20": 465.55,
-          "dma50": 439.9
-        },
-        {
-          "d": "19 Nov",
-          "o": 495.0,
-          "h": 503.0,
-          "l": 492.0,
-          "c": 503.0,
-          "dma20": 468.81,
-          "dma50": 441.47
-        },
-        {
-          "d": "20 Nov",
-          "o": 499.0,
-          "h": 516.6,
-          "l": 499.0,
-          "c": 515.8,
-          "dma20": 472.75,
-          "dma50": 443.34
-        },
-        {
-          "d": "23 Nov",
-          "o": 518.3,
-          "h": 521.5,
-          "l": 501.1,
-          "c": 502.85,
-          "dma20": 476.37,
-          "dma50": 445.01
-        }
-      ]
     }
   ],
   "bearish": [
@@ -3225,17 +3225,17 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹7,800 – ₹7,900",
-          "invalidation": 7979.0,
-          "short_strike": 7800,
-          "hedge_strike": 8000,
-          "est_credit": 44.0
-        },
-        "next": {
           "zone": "₹7,800 – ₹8,000",
           "invalidation": 8080.0,
           "short_strike": 7900,
           "hedge_strike": 8200,
+          "est_credit": 84.0
+        },
+        "next": {
+          "zone": "₹7,800 – ₹8,100",
+          "invalidation": 8181.0,
+          "short_strike": 8000,
+          "hedge_strike": 8300,
           "est_credit": 84.0
         }
       },
@@ -3243,17 +3243,11 @@
       "reasons": {
         "technical": "CMP ₹7,430 (-1.85% 1D, -0.1% 20D) pressured below 50 DMA (₹8,014) & 200 DMA (₹8,453), RSI 38.3.",
         "sr_analysis": "Overhead resistance R1 at ₹7,768 (+4.5%) and R2 at ₹8,014; downside support S1 at ₹7,204.",
-        "news": "Strong confirming catalyst: \"Polycab India (NSEI:POLYCAB) Stock Forecast & Analyst Predictions - Simply Wall St\"",
+        "news": "Strong confirming catalyst: \"F&O alert: Polycab to exit NSE's Futures & Options segment; stock dips 5% - Business Standard\"",
         "risk": "ATR 3.4% (1.77x vol). Check NSE MWPL ban list; cap upside with 8200 CE and exit above ₹8,080."
       },
       "conclusion": "STRONG BEARISH (89/100) — Sell Dec 7900 CE / Buy 8200 CE positioned above R1 resistance (₹7,768), backed by bearish chart structure and negative news overhang.",
       "headlines": [
-        {
-          "title": "Polycab India (NSEI:POLYCAB) Stock Forecast & Analyst Predictions - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSVV3dUVPODNBX0tVN0tKcmkyaklGSEt1azVLUlRwNkpjejFOM2pWbkt6ZVRjemxFcG9LdUpFV0NIWEtUU0c5c3gxTlhmRV93bjhyUVNBay1BamNnVVNMd0JRUzhMb2dia0RvV2F0OGtKYUxrOWtEX1dVTGwtZWNHcV9pOEl0NjVvSDRydDZn?oc=5"
-        },
         {
           "title": "F&O alert: Polycab to exit NSE's Futures & Options segment; stock dips 5% - Business Standard",
           "source": "Business Standard",
@@ -3265,6 +3259,12 @@
           "source": "Kotak Neo",
           "sentiment": "Negative",
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPd2FpOVhJWnpjbHdwa2hFODFlS1pEdFVOcjFWQk9CUDRWQ0xFQWhjS2FxZ2huRFkwOXJMNTMxZ3REOVNBV1RITXVJYmFrT01wZU9KUnY3eERQLTVsZWZSNWRoRkRpN0FrMWp6TUxyaHVuS1E2ZTc3R0g3RFBMZ2hmYTJ3Z0JaMlZFbWsyLU9Bb0dCRTFSUzZaZHVEbUpZcjIxcy1Yd1RlZWxYRmpNcEE3UQ?oc=5"
+        },
+        {
+          "title": "Polycab India shares decline 5% as NSE removes stock from F&O segment; details here - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOUlhadllqNnh1QmxPT0FFQmEwWVV5TmU1Q1Q3LXpBejdGWEdBSEZPMzM5WGpBcjlLZkM0REZSX1M2T1hBcDhrU3VIUS1mcDJ5bzBfV1EzbHhuSDFHSEFieWllajVRUEVtOTBrVXRyTGNrZXFCdVNpdFZ1MFR0M0dYT2g4QTctRVdjTlVlQ0lvT2tNNVd6QTVpNHMtdl9xdC16eGV5OFlMX2syTEhnX1c4ZUxwYW1qWTIzTmdUd3lXLTRaVWoza1cwcktKV2xXNHBwVFJrb3lud3EwSGM?oc=5"
         }
       ],
       "chart_data": [
@@ -3621,11 +3621,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹180 – ₹180",
-          "invalidation": 181.8,
-          "short_strike": 175,
-          "hedge_strike": 180,
-          "est_credit": 1.1
+          "zone": "₹180 – ₹185",
+          "invalidation": 186.8,
+          "short_strike": 180,
+          "hedge_strike": 185,
+          "est_credit": 1.4
         },
         "next": {
           "zone": "₹180 – ₹185",
@@ -3639,11 +3639,17 @@
       "reasons": {
         "technical": "CMP ₹163 (-8.43% 1D, -2.8% 20D) pressured below 50 DMA (₹179.4) & 200 DMA (₹191.5), RSI 32.0.",
         "sr_analysis": "Overhead resistance R1 at ₹178.2 (+9.3%) and R2 at ₹191.5; downside support S1 at ₹157.8.",
-        "news": "Aligned market coverage: \"Tata Steel (NSE:TATASTEEL) Approves Acquisition of 26.38% Stake in APL Apollo Tubes for Rs 15,511 Crore - Kalkine Media\"",
+        "news": "Aligned market coverage: \"Tata Steel Limited (TATASTEEL.NS) stock price, news, quote and history - Yahoo Finance Singapore\"",
         "risk": "ATR 3.5% (2.43x vol). Check NSE MWPL ban list; cap upside with 185 CE and exit above ₹186.8."
       },
       "conclusion": "STRONG BEARISH (88/100) — Sell Dec 180 CE / Buy 185 CE positioned above R1 resistance (₹178.2), backed by bearish chart structure and negative news overhang.",
       "headlines": [
+        {
+          "title": "Tata Steel Limited (TATASTEEL.NS) stock price, news, quote and history - Yahoo Finance Singapore",
+          "source": "Yahoo Finance Singapore",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE81WXNmV1RqYjdHVHN1cUx1aGVzNVZiZWMzSi1kSDZDMmhZZzg3QWd2bXY4U3JyRFdFLV9zV2J4aE9NWU5rYUhkOWFPeDhOTU9MZktrdU1WNm1aMTNN?oc=5"
+        },
         {
           "title": "Tata Steel (NSE:TATASTEEL) Approves Acquisition of 26.38% Stake in APL Apollo Tubes for Rs 15,511 Crore - Kalkine Media",
           "source": "Kalkine Media",
@@ -3651,16 +3657,10 @@
           "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPcmEyMEgtcEpSVFdhNFRCaERVaXhvd1dZZFBrcFk1OTViQlBoMlRRU3VSdzRaOHBYeEg2ZjZ5ejJ3aFpkNG9aRzlJampsQlV2cE1NMi1aVUlVekU3a0xjOWduNExpbmQyWmx0Y2lMOE5fMFNvdk9mSFExenJrYWxZUmlXdGo5SUw2WXhOX21rb3pjazdMSVpYelhoT2ZIZmRzaU1HRnBtM3BONVgtWHh1amVXdnBiLVRmd1N6emZsOHpxc09aQkwwbEM2TF94c3VDNzNra3JxMTZLVWQ2?oc=5"
         },
         {
-          "title": "Tata Steel (NSEI:TATASTEEL) Stock Forecast & Analyst Predictions - Simply Wall St",
-          "source": "Simply Wall St",
+          "title": "Tata Steel Ltd eases for fifth straight session - Business Standard",
+          "source": "Business Standard",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdGwyVEI0QWZIdzlfc1RxU2pSeGNVWGt3ZXMwWmdmdWM1M0hwQ0dfb1Nyb0FBTUdjRFgwbkp4Z20tZUVHN205TTA1UHo2N1pndE16X0ZBSTdIRk1DQjlzd0tUUnZ1Y2tsQ1c0RVZ2MTY4MFlGM1c5b2gxbHVkTHFuUkY1Q1Rqc1U?oc=5"
-        },
-        {
-          "title": "Tata Steel Ltd Partly Paid Up Share Price Today NSE/BSE Charts - Alice Blue",
-          "source": "Alice Blue",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQa2g5Ul8ycDI1Z2g2VTlaZXlPSzA5cEpRVGE3dURWOXcxMnlPeHpKTUV5UkRsbEtBNnV2RVFOYWl3NHA1MGoyM0ZiTUpvNHlsOXhObGRoY3ZGTHZGY2l0UkxRSEJsSmpweHhpQjFrYnU3QWt1aW1CVkRJTXNpMWtIUA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNVzhnSFFkSVZrZUNsRnhpR3UzendfYzROZFJIUXBoTVctSnBhYUhyYWxBM0lJRHhmTmtOTE1LYmt4amlrQlgxY0l6eHY2U2dKbmlhQ0xRZG4yZk9TTTJuT2UxaHRGRmR3c2p2aWE3VHc1bUFYY0g4QkQ2UTNfSGRKbkVremRtdFhaUDNxMG5RTWVuWTFiUjEzVm1jdmcyVGR4SDF1LTBheERWS1RZY0RxZ2lDa3N2WmJjVHlTc3dkNEs3VTlPRHVhWdIBzgFBVV95cUxOZ29VTTBaTUF2UWhCY0tiY0h4UWl1ZnBfNlpiMmtlWkV4aFh6WW0zU0VZSC1WekEtOW1uVXpnRlZjWGVKTnprMTdESUxobUozeFVuek9EZk9hTjg3ZjZPYzk0cV9TUlFLRjdJd2lXdVZZZnRZU01KT3JNbTJROEY2UGVmTDExRlRENHhxUFNsNDlhVUJKOF93eVl6VzdEZDRuc1VDVUFjdFFFdS1QTjJQYThkcUI1N0RQcENjMmpGejdTcTFqaWUyQXhpTkFxdw?oc=5"
         }
       ],
       "chart_data": [
@@ -4017,11 +4017,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹2,100 – ₹1,850",
-          "invalidation": 1868.5,
-          "short_strike": 1800,
-          "hedge_strike": 1850,
-          "est_credit": 11.0
+          "zone": "₹2,100 – ₹2,200",
+          "invalidation": 2222.0,
+          "short_strike": 2150,
+          "hedge_strike": 2200,
+          "est_credit": 14.0
         },
         "next": {
           "zone": "₹2,100 – ₹2,200",
@@ -4047,16 +4047,16 @@
           "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxPb1UzTUxxb0pKcVpuSk5CYWw0TXNLSWFKX2l3cHBCNUNzVVQ0NzhneWdORnBJTk5jdUkwRm5WdUl6ZmtaVkRqNlNfRmxIOW5ybGwzaFpBT1Vva0MybUhuYTJteGFwRVNOSDBPMXo2aFdzTWR1SzBabmNyVTJxNS1FZlRZdGR5Mk9nXzg2Q29acS12OVVjZHRzUG9ZZGlmblBJb0ZnTTNhZm5vaFFqVVFKZ0Jjb1FyVWF5QnVvV0o4RFpXeDNrNFFnaGxwS0c4aElMNW4xTnUyZk5lX2hyam02cUZpWDBlcWJaQTRGd3VtdHJ6SVJZM0t0bm8tRXpVWHNPVGhzMWs3VDlGemJ3UGNCeW5Fa3FXMXRWY0IxMlZTOHNLdVZHeDZYX2tnRWF5LU15dkJJMVNmSlVqX2daUHhxYWphWjV4TnlhUVY2djhEN0R3VkxOM1h3VDBwN3lzSzlL0gHnAkFVX3lxTE9iWFlKZjZUV19BbEIzaHJMc1VaN3pTd3pqN093NnU5SmhfZkxyRFFiZUU3V3dKUnBPbEFLc0M5WDlmOUxmeDJmNWk0Mk8tNGdJZ3RkN2JZNE1ncHYtdklUMThOVzE5SXBoMXRURFV6T1hZME9Xa20zM1NrYWU0Zl9tN3VyM0tfQzJyZTk2ck1qZEpiMjFhdk5Ld3l5QkJwMmtPTzUtQzJKYzM0UUJwLXdWX1VhdFA1alRSX2d0dU83ajRlQ2NZM3I2b05MU0Rwdm9XRW1KVE1xSGUwZl8zT1hfTDVGYXNDUnh1UXdPMzFzWXJ3WW5YLVNwUWlkNlgyUi1CV1NRX1hBMzZoZmZkSUE2R29CdUdDVlJrdVRTY00zenBIdThla1dfTzRXaml2MnNiMVhWbjI4eGN1R1o4eVQxRGYyWjdWS2lxQXp5OFJLMTJvRkJ2X0FkNmlVVDhZRzZ6SncxY19Z?oc=5"
         },
         {
+          "title": "Block Deals: Tata Steel acquires 9.99% stake in APL Apollo Tubes from promoter entity in first tranche - Moneycontrol.com",
+          "source": "Moneycontrol.com",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOZWdWckNlYUpfWEx0VGhsNXVuMHc0blFpeE5JbDdBU01tSm8wS0NEaFlTOUZDMjJna2hFQTJjU3E0Zm1yX1ZzdzRiaEc3NUtaN1BxbTlDcE1RWng4Wi16RW9OdERQWkVrRkhpM1FXRGF5UGRaNm5GUGVWS0tyWkpGdnc1MC1DamgzSmFVWjlpbXVWSFFLOG1hb3NUcHVLX3BmcTc2LWVtcm1EejJUcURiTndoVzIwanVyNlF3SE1LOXR6Yy0wMEFkdHdRZXpORFZOQU9uSlJtMFA4T3hfdExmbHBxdGJ6T2xIUUJuMk1iNklXUFJrYXkyaNIB_gFBVV95cUxQR29wQVk3Zko5ZEhXWmNaMzdDb0w5VUpOZ0xpREs2QmJESnltd0xNRWdJbUZEREhTRGJVN1hfVEhBVjNIaDB6cF9WZktmUU1aMlV0Y2F3aEdRNndZMmhXQnE2cEYzN2RYQWhnQ01fMi1ReWtVVEh1NHVKc3ZkdFJULUExTWwySVJjU0RHQV85V3lpYWJLaFpjSVBBZkdtRjZDX2FuSTNaQVNWQjhDQWZCUXM0cnRFa2hZMkVZdHRVRHI3Qmw0UkJyb2NndkIzejJRUmRReWJkcU5EM2Y3ZmRfOXlla2tvMzAxYzVFXzBfSjJRVUY5MUxaU01aMUxDQQ?oc=5"
+        },
+        {
           "title": "APL Apollo Tubes Share Price - Live NSE: APLAPOLLO Stock Price & Chart - Upstox",
           "source": "Upstox",
           "sentiment": "Neutral",
           "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9kc2hfWXUxOTNHeEpsZTJiRVBUUlJTbEY3dDYtLTByNTBTMmNzLTRSRF9EVHE1S1FPS2c1ZGxPTjlSTXJMOV8tYjBfaU5haDJ6RlpQOUR1UXZwWktLcnZaQ1l0MUFKZ3I0QkJJ?oc=5"
-        },
-        {
-          "title": "Tata Steel to Acquire 26.38% Stake in APL Apollo Tubes (NSE:APLAPOLLO) in Rs 2,100 Per Share Deal - Kalkine Media",
-          "source": "Kalkine Media",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxORk4xYW1VOUV0WmEwZTBHY0ZJNkJPMU1zNFlQcGtEQTUyYk9hMGxCTFZFSG03czdkWjNTOUNVQjlfcDJIQzNuNE1VOF9ZZndXQVJROWxvcXZZOVJsR2k4U2ZVRHY1djJkeUNIdi1aQUxQZk8yRThSTTU0Zm54TjFiS0VDckJyemIyRHYyck94dV9PS2NoMXRFeTRoTEk0NXlNMU1ndzMydmJFVm9kT3A2emE5VFZDLTdwSTVpRnZpc21UVGRjVGFyLTlmVkdUWVlhbGY4MA?oc=5"
         }
       ],
       "chart_data": [
@@ -4413,11 +4413,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹33,500 – ₹32,500",
-          "invalidation": 32825.0,
-          "short_strike": 32000,
-          "hedge_strike": 33000,
-          "est_credit": 220.0
+          "zone": "₹33,500 – ₹34,000",
+          "invalidation": 34340.0,
+          "short_strike": 33500,
+          "hedge_strike": 34500,
+          "est_credit": 280.0
         },
         "next": {
           "zone": "₹33,500 – ₹34,000",
@@ -4809,11 +4809,11 @@
       },
       "expiries": {
         "current": {
-          "zone": "₹920 – ₹960",
-          "invalidation": 969.6,
-          "short_strike": 940,
-          "hedge_strike": 960,
-          "est_credit": 4.4
+          "zone": "₹920 – ₹980",
+          "invalidation": 989.8,
+          "short_strike": 960,
+          "hedge_strike": 1000,
+          "est_credit": 11.2
         },
         "next": {
           "zone": "₹920 – ₹980",
@@ -4827,11 +4827,17 @@
       "reasons": {
         "technical": "CMP ₹900.5 (-3.13% 1D, +3.5% 20D) pressured below 50 DMA (₹933.0) & 200 DMA (₹976.7), RSI 43.1.",
         "sr_analysis": "Overhead resistance R1 at ₹924.9 (+2.7%) and R2 at ₹976.7; downside support S1 at ₹851.1.",
-        "news": "Aligned market coverage: \"STOCK OF THE DAY Hindalco: -Aditya Birla group to charge royalty from the company. -Royalty capped at 0.25% of revenue or max. Rs. 225 cr. Per annum. -Its slight negative but was expected #StockOfTheDay #Hindalco #MetalStocks #StockMarket - Facebook\"",
+        "news": "Aligned market coverage: \"Does Hindalco Industries (NSE:HINDALCO) Deserve A Spot On Your Watchlist? - Simply Wall St\"",
         "risk": "ATR 3.0% (1.43x vol). Check NSE MWPL ban list; cap upside with 1000 CE and exit above ₹989.8."
       },
       "conclusion": "BEARISH (82/100) — Sell Dec 960 CE / Buy 1000 CE positioned above R1 resistance (₹924.9), backed by bearish chart structure and negative news overhang.",
       "headlines": [
+        {
+          "title": "Does Hindalco Industries (NSE:HINDALCO) Deserve A Spot On Your Watchlist? - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPcDJnXzZKeHMtSU5yenc1UUstNGtMVE9mQkdldngzN2ZYS29uT0xKT3JGcU9xRzN4VXFCVkxTZnlBZTlWVG5LYWF5MXVQUjU3RXJUeGsyczBseXFodnVsUUVkZ3Z5RTZCTV94N3VrRkZURm9oU3dJMTV6QkxSMUZ2WEd3cWRVMmpBNzdXcEZ2dFVSQm0tV29XYkY1MjhTTDBiMGlvVlhBNkhhT2JJc2Fic2lBdU5GUHo4bUNRQ3RPSXlpU3UxazRxX0pOajdoZldkbWtWV0R0eTQxZ3RjSWpFdWZn?oc=5"
+        },
         {
           "title": "STOCK OF THE DAY Hindalco: -Aditya Birla group to charge royalty from the company. -Royalty capped at 0.25% of revenue or max. Rs. 225 cr. Per annum. -Its slight negative but was expected #StockOfTheDay #Hindalco #MetalStocks #StockMarket - Facebook",
           "source": "Facebook",
@@ -4839,16 +4845,10 @@
           "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPX25teE02WDN3M3hnLU84WHdqb25Vai1Vd3lmSTQ4YWE1TkFiRnVtcGkyMUtLRnFzcnVCODhyUjRKVTZva2w2LUVpOGNwcHRqME5LeE9pRDc1ZWdlaWhwOVM4QmZ4UHZTSzkxOTYyeDBXdXdzYzR5Q0VfNEUwd0Q3SGxlOXpNN25meXpKSkxmbUlkN2NnRGtzd1FRLVRZZFF1SG51YWVGc184LXdKcHhDeUJBOF90VmowNUhOVU1TY1cyWEtvMGZuOVlvOHd2WEZXTW5yT2FFdFJkdnhTUHgwQk13?oc=5"
         },
         {
-          "title": "Hindalco Industries Share Price Gains to Rs 929 on Wednesday - Univest",
-          "source": "Univest",
+          "title": "Hindalco Industries Share Price Target: Should You Buy, Sell or Hold This Aditya Birla Stock? - Kotak Neo",
+          "source": "Kotak Neo",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQOWF1TjNpVXFyVjduLXpCUmEyVXFCRFFnVVJabzNFd3NFOHVGTjZ6RWw5LTZ6Qmh1R0VLdC1SYnFuclVybGIwcl9xYXJURm9hbDQ3eXdjOTJPS092Ui1taXVyRk43Z3FsakJQOWE4MW9BOWpEQlhSNVRMQ09OXzJrTy1hcnZSNWM?oc=5"
-        },
-        {
-          "title": "Hindalco shares slip 0.3%; brokerages bullish on realisations after Q2 results, but warn about near-term... - Moneycontrol.com",
-          "source": "Moneycontrol.com",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPcVA0UzRvTTEyNGstQ0tYMFJkMkl1bzhyU0xMYVFWRXBMWW9xb0lIbllIOEhJa2phR1R3M3Mxb210NGZYQU5sOEtTUy1NV2s3ZlRuT1hmSFlDTF9BTFVaY2ZHcFBLTDM5RHFmZE0wSDRaUC1KMW1nYkk2UXUzbGF5blU4S0JyU21aQzJNNV9IRm9MRzVtLXY0Um5BU3lxTFVTOEtOSGR1YUV1WEN5TUExTURpa2tST1pQZzE0amdkUFFYSHVsNjhrRHF6UHBKdWxhVXVDd2hOeEc4U1ZnNUpjQVlzZWFhNDI2ZkJtMWhvdnJpY0xzYjd2YUQyQW82dTcwcEHSAYcCQVVfeXFMTk8yeWY0Wkhxck56aFNxMVRDVjV1NTRTMlhSQTlKUjlVYVIyTTBTRFVVTUR5NDNQNnRlSGh1VTg0NUdkaVZib2lwY21qUXh4WnBCc0ViWnd5b282RUUxYUhYSXllZlh4UGNOM0hPUk95cVFjelJtaS0tUDI5NTJTeVpoUHo0TEtyTVFvSV92WGlWQmJEa1hSWnd6QVh3b0hfam5aNU1VOXVxRXVjNVQ2c0dYV2xoek94S0tLY2prbFBFYmpSb1FSN0FjZzRTalY1T1Z1bndrSi1KQ29uY19rNDZveHZRVkxaWkw0NXVTa3hoUDdFcHJqQUtsSTVITWYzRHNaZlZNbzA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcVJZeTJwQnBfZ29GY3h6SHFSclhwdWdZZkFrVmMwWkt2RWVVWDRBLV94ZFU4T3VhWEFlTU1za3NYQUlpSzk2dmhEU196LVhnV3RDNkJyTjB2dDhGNHZwMDJiTm1oSmFoNms0T05xc2dGQ0hhdFdSUE0wNFFRMEd6Zmo3SXduZ3B4eTBaLVI0S0czSDRk?oc=5"
         }
       ],
       "chart_data": [
@@ -5170,11 +5170,803 @@
       ]
     },
     {
+      "symbol": "COALINDIA",
+      "name": "Coal India Ltd.",
+      "sector": "Mining / PSU",
+      "bias": "bearish",
+      "rating": 81,
+      "tier": "Bearish",
+      "tier_code": "bearish",
+      "strategy": "Bear Call Spread / OTM Call Sell",
+      "cmp": 382.0,
+      "chg_1d": -2.05,
+      "chg_20d": -1.41,
+      "rsi": 38.2,
+      "dma20": 393.65,
+      "dma50": 401.65,
+      "dma200": 413.27,
+      "dist_52w_high": -18.15,
+      "vol_ratio": 0.84,
+      "scores": {
+        "tech": 88,
+        "sr": 85,
+        "news": 66,
+        "composite": 81
+      },
+      "sr": {
+        "s2": 349.66,
+        "s1": 370.84,
+        "pivot": 387.01,
+        "r1": 393.65,
+        "r2": 401.65,
+        "s1_dist_pct": -2.92,
+        "r1_dist_pct": 3.05,
+        "structure": "Lower-High Downtrend Under Overhead DMA Supply"
+      },
+      "expiries": {
+        "current": {
+          "zone": "₹390 – ₹410",
+          "invalidation": 414.1,
+          "short_strike": 400,
+          "hedge_strike": 410,
+          "est_credit": 2.8
+        },
+        "next": {
+          "zone": "₹390 – ₹410",
+          "invalidation": 414.1,
+          "short_strike": 400,
+          "hedge_strike": 410,
+          "est_credit": 2.8
+        }
+      },
+      "lot_size": 1050,
+      "reasons": {
+        "technical": "CMP ₹382 (-2.05% 1D, -1.4% 20D) pressured below 50 DMA (₹401.6) & 200 DMA (₹413.3), RSI 38.2.",
+        "sr_analysis": "Overhead resistance R1 at ₹393.6 (+3.0%) and R2 at ₹401.6; downside support S1 at ₹370.8.",
+        "news": "Aligned market coverage: \"Weekly Recap: COALINDIA shares rise and OFS of 10% Mahanadi stake - TradingView\"",
+        "risk": "ATR 2.2% (0.84x vol). Check NSE MWPL ban list; cap upside with 410 CE and exit above ₹414.1."
+      },
+      "conclusion": "BEARISH (81/100) — Sell Dec 400 CE / Buy 410 CE positioned above R1 resistance (₹393.6), backed by bearish chart structure and negative news overhang.",
+      "headlines": [
+        {
+          "title": "Weekly Recap: COALINDIA shares rise and OFS of 10% Mahanadi stake - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTGQzTjloWXA5aTdnWlVIblptZE16RkJ3SERvX1ptbGhiSnczNlFUUGxWejhfS1dlaDRKbV84Z3pMR0lZVzZaYlh4ZEpvdE5leVVWLXdPY1VMQzdFcmhiamgyckgyQVhObm40TS02UWhwcFVIOWFlWFptRDZ5Z0VyX3liMEhJWUF4TkJhS3NQVTd0RHd3S2RNWlQ0bUpkelV6Mkd6UnViZXZfTlpWaXRnZW92eDBIV3RSWi1HNkxWcld3a00?oc=5"
+        },
+        {
+          "title": "Coal India (NSE:COALINDIA) Gets LoI Under Rare Earth Magnet Scheme - Kalkine India",
+          "source": "Kalkine India",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNLU1DRkpZaGMwYTgzRkpyXzd4VWhlM2RFUUxhLW9raU5jUTluNmJxUUhid1pZM3YyZHhWYWVDYjRpeVRMQkFfZWJiaVZ5U2czaFZXYTdhMkNYLXA3a1lRMF9jenZ1djFDTHJHZlBNekRyWWlMNm16YVlZczBTdlpGWFUxMzVMQ1VScU84SGJDTHpMQWJWR2ZrZXYwNVhrM3Mxc0ZTWEllbFBOY042VG1FRWlKeUJVUHNNOE1lZ0FzZkxaUUMxeDZnVEp2VXFjSUVMUDBlWlBfcktQcDV0dEpCVDV1M2hIU3M?oc=5"
+        },
+        {
+          "title": "Coal India Share Price Today Live NSE/BSE Graph & Chart - Kotak Neo",
+          "source": "Kotak Neo",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE00cHI5ZGtSbC1UZ0hBTmhyU1dSWmx6WFJMaElDRU1yUjFyZE9qeXRjb2tSQlU2WE9HLXJ3dXNDa3c0OWVxbGxFZEg1RkhDbHBDMWloX0dTQVE0YlRZNWJBeEFkWjYxdw?oc=5"
+        }
+      ],
+      "chart_data": [
+        {
+          "d": "01 Oct",
+          "o": 410.62,
+          "h": 415.64,
+          "l": 405.84,
+          "c": 409.84,
+          "dma20": 411.22,
+          "dma50": 401.12
+        },
+        {
+          "d": "05 Oct",
+          "o": 414.32,
+          "h": 420.07,
+          "l": 411.01,
+          "c": 414.42,
+          "dma20": 411.72,
+          "dma50": 401.3
+        },
+        {
+          "d": "06 Oct",
+          "o": 415.35,
+          "h": 416.22,
+          "l": 400.28,
+          "c": 401.31,
+          "dma20": 411.54,
+          "dma50": 401.2
+        },
+        {
+          "d": "07 Oct",
+          "o": 401.31,
+          "h": 405.4,
+          "l": 400.48,
+          "c": 404.09,
+          "dma20": 411.33,
+          "dma50": 401.16
+        },
+        {
+          "d": "08 Oct",
+          "o": 404.09,
+          "h": 404.09,
+          "l": 393.7,
+          "c": 399.07,
+          "dma20": 410.8,
+          "dma50": 401.35
+        },
+        {
+          "d": "09 Oct",
+          "o": 398.19,
+          "h": 401.89,
+          "l": 394.34,
+          "c": 401.21,
+          "dma20": 409.85,
+          "dma50": 401.59
+        },
+        {
+          "d": "12 Oct",
+          "o": 402.67,
+          "h": 403.11,
+          "l": 392.0,
+          "c": 394.63,
+          "dma20": 408.52,
+          "dma50": 401.55
+        },
+        {
+          "d": "13 Oct",
+          "o": 394.83,
+          "h": 399.85,
+          "l": 392.68,
+          "c": 398.24,
+          "dma20": 407.65,
+          "dma50": 401.54
+        },
+        {
+          "d": "14 Oct",
+          "o": 400.38,
+          "h": 408.13,
+          "l": 399.7,
+          "c": 406.52,
+          "dma20": 407.54,
+          "dma50": 401.66
+        },
+        {
+          "d": "15 Oct",
+          "o": 407.69,
+          "h": 409.74,
+          "l": 404.62,
+          "c": 407.5,
+          "dma20": 407.33,
+          "dma50": 401.77
+        },
+        {
+          "d": "16 Oct",
+          "o": 407.5,
+          "h": 407.89,
+          "l": 402.62,
+          "c": 406.72,
+          "dma20": 407.29,
+          "dma50": 401.91
+        },
+        {
+          "d": "19 Oct",
+          "o": 406.72,
+          "h": 409.25,
+          "l": 401.36,
+          "c": 401.36,
+          "dma20": 407.38,
+          "dma50": 401.93
+        },
+        {
+          "d": "21 Oct",
+          "o": 401.36,
+          "h": 405.26,
+          "l": 392.39,
+          "c": 397.26,
+          "dma20": 407.03,
+          "dma50": 401.88
+        },
+        {
+          "d": "22 Oct",
+          "o": 394.53,
+          "h": 394.53,
+          "l": 385.71,
+          "c": 392.44,
+          "dma20": 405.79,
+          "dma50": 401.82
+        },
+        {
+          "d": "23 Oct",
+          "o": 392.88,
+          "h": 393.22,
+          "l": 380.84,
+          "c": 387.47,
+          "dma20": 404.47,
+          "dma50": 401.62
+        },
+        {
+          "d": "26 Oct",
+          "o": 387.47,
+          "h": 394.83,
+          "l": 384.39,
+          "c": 394.83,
+          "dma20": 403.64,
+          "dma50": 401.64
+        },
+        {
+          "d": "27 Oct",
+          "o": 392.34,
+          "h": 394.58,
+          "l": 388.0,
+          "c": 388.0,
+          "dma20": 402.27,
+          "dma50": 401.49
+        },
+        {
+          "d": "28 Oct",
+          "o": 388.0,
+          "h": 388.39,
+          "l": 381.37,
+          "c": 382.15,
+          "dma20": 400.78,
+          "dma50": 401.3
+        },
+        {
+          "d": "29 Oct",
+          "o": 383.22,
+          "h": 387.47,
+          "l": 378.74,
+          "c": 383.22,
+          "dma20": 399.23,
+          "dma50": 401.1
+        },
+        {
+          "d": "30 Oct",
+          "o": 388.0,
+          "h": 388.05,
+          "l": 370.84,
+          "c": 379.23,
+          "dma20": 397.47,
+          "dma50": 400.85
+        },
+        {
+          "d": "02 Nov",
+          "o": 387.81,
+          "h": 397.75,
+          "l": 385.08,
+          "c": 397.75,
+          "dma20": 396.87,
+          "dma50": 401.1
+        },
+        {
+          "d": "03 Nov",
+          "o": 400.67,
+          "h": 400.67,
+          "l": 395.02,
+          "c": 397.75,
+          "dma20": 396.04,
+          "dma50": 401.31
+        },
+        {
+          "d": "04 Nov",
+          "o": 397.75,
+          "h": 401.35,
+          "l": 396.05,
+          "c": 399.65,
+          "dma20": 395.95,
+          "dma50": 401.5
+        },
+        {
+          "d": "05 Nov",
+          "o": 401.95,
+          "h": 402.3,
+          "l": 393.05,
+          "c": 394.3,
+          "dma20": 395.46,
+          "dma50": 401.55
+        },
+        {
+          "d": "06 Nov",
+          "o": 396.5,
+          "h": 400.0,
+          "l": 392.0,
+          "c": 400.0,
+          "dma20": 395.51,
+          "dma50": 401.77
+        },
+        {
+          "d": "09 Nov",
+          "o": 403.0,
+          "h": 403.5,
+          "l": 398.55,
+          "c": 401.5,
+          "dma20": 395.53,
+          "dma50": 402.03
+        },
+        {
+          "d": "11 Nov",
+          "o": 403.0,
+          "h": 408.2,
+          "l": 402.1,
+          "c": 406.3,
+          "dma20": 396.11,
+          "dma50": 402.46
+        },
+        {
+          "d": "12 Nov",
+          "o": 406.4,
+          "h": 406.5,
+          "l": 402.65,
+          "c": 404.3,
+          "dma20": 396.41,
+          "dma50": 402.82
+        },
+        {
+          "d": "13 Nov",
+          "o": 404.6,
+          "h": 406.2,
+          "l": 402.3,
+          "c": 403.5,
+          "dma20": 396.26,
+          "dma50": 403.16
+        },
+        {
+          "d": "16 Nov",
+          "o": 404.8,
+          "h": 404.8,
+          "l": 395.0,
+          "c": 397.5,
+          "dma20": 395.76,
+          "dma50": 403.38
+        },
+        {
+          "d": "17 Nov",
+          "o": 397.5,
+          "h": 398.5,
+          "l": 387.75,
+          "c": 391.55,
+          "dma20": 395.0,
+          "dma50": 403.16
+        },
+        {
+          "d": "18 Nov",
+          "o": 392.2,
+          "h": 393.2,
+          "l": 386.55,
+          "c": 388.0,
+          "dma20": 394.33,
+          "dma50": 402.83
+        },
+        {
+          "d": "19 Nov",
+          "o": 389.95,
+          "h": 393.45,
+          "l": 386.55,
+          "c": 391.5,
+          "dma20": 394.05,
+          "dma50": 402.57
+        },
+        {
+          "d": "20 Nov",
+          "o": 394.0,
+          "h": 394.0,
+          "l": 387.85,
+          "c": 390.0,
+          "dma20": 393.92,
+          "dma50": 402.2
+        },
+        {
+          "d": "23 Nov",
+          "o": 390.0,
+          "h": 392.35,
+          "l": 381.5,
+          "c": 382.0,
+          "dma20": 393.65,
+          "dma50": 401.65
+        }
+      ]
+    },
+    {
+      "symbol": "LUPIN",
+      "name": "Lupin Ltd.",
+      "sector": "Pharma",
+      "bias": "bearish",
+      "rating": 80,
+      "tier": "Bearish",
+      "tier_code": "bearish",
+      "strategy": "Bear Call Spread / OTM Call Sell",
+      "cmp": 1975.6,
+      "chg_1d": -1.91,
+      "chg_20d": 2.42,
+      "rsi": 46.1,
+      "dma20": 1990.67,
+      "dma50": 2011.82,
+      "dma200": 2221.3,
+      "dist_52w_high": -21.72,
+      "vol_ratio": 0.86,
+      "scores": {
+        "tech": 80,
+        "sr": 95,
+        "news": 66,
+        "composite": 80
+      },
+      "sr": {
+        "s2": 1833.67,
+        "s1": 1912.4,
+        "pivot": 1983.37,
+        "r1": 2012.44,
+        "r2": 2133.07,
+        "s1_dist_pct": -3.2,
+        "r1_dist_pct": 1.86,
+        "structure": "Lower-High Downtrend Under Overhead DMA Supply"
+      },
+      "expiries": {
+        "current": {
+          "zone": "₹2,000 – ₹2,100",
+          "invalidation": 2121.0,
+          "short_strike": 2050,
+          "hedge_strike": 2100,
+          "est_credit": 14.0
+        },
+        "next": {
+          "zone": "₹2,000 – ₹2,150",
+          "invalidation": 2171.5,
+          "short_strike": 2100,
+          "hedge_strike": 2150,
+          "est_credit": 14.0
+        }
+      },
+      "lot_size": 425,
+      "reasons": {
+        "technical": "CMP ₹1,976 (-1.91% 1D, +2.4% 20D) pressured below 50 DMA (₹2,012) & 200 DMA (₹2,221), RSI 46.1.",
+        "sr_analysis": "Overhead resistance R1 at ₹2,012 (+1.9%) and R2 at ₹2,133; downside support S1 at ₹1,912.",
+        "news": "Aligned market coverage: \"Lupin (NSEI:LUPIN) - Stock Analysis - Simply Wall St\"",
+        "risk": "ATR 2.1% (0.86x vol). Check NSE MWPL ban list; cap upside with 2100 CE and exit above ₹2,121."
+      },
+      "conclusion": "BEARISH (80/100) — Sell Dec 2050 CE / Buy 2100 CE positioned above R1 resistance (₹2,012), backed by bearish chart structure and negative news overhang.",
+      "headlines": [
+        {
+          "title": "Lupin (NSEI:LUPIN) - Stock Analysis - Simply Wall St",
+          "source": "Simply Wall St",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2lKc0g0MmlzZ0dzY0lNOG5FVktKMWJYcTFJb0lPNDZ0WW56cUhPVTY5eW9CRENsdnA2NGljbXZGUXpFTmdYLVZFMm56eDNiUEJ3cmFiNDhkVXl1aG9mTV8wcFFISXNad21hOU96RGJNcXpVSXJjUjVKeVhkazhVV3NpaWM?oc=5"
+        },
+        {
+          "title": "Stocks to watch, Nov 4: Lupin, NSE, BSE, Nykaa, PFC, Premier Energies, Waaree Energies, Yatharth Hospital - Upstox",
+          "source": "Upstox",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNGhKc1lhM0ZoRG8tV2xReGIzVi02X0VWRjBhcVBsRmtfTzFpNXBHYXgyWjdwaVVocklHOXgzZ1FncUN2SURkWUd0bmNjbkNkQXRXU3BQUy1DUDR4TElUQmh6elplVWV2UVFwQjVsSS1VbHh4RUFJUFJaQ1dteW43TXlxNXE2Q25HV1JWSjBOVzNzRlZzS05ZeHBzVXNKcjMwYXUzYWMzNmhmSnN0U3RrR1dFQlBiWHRELUZ2VmsyTDNGSWpzaWNxRUtHcnpXN2g0a2lvNFYwUWlscC04YWNRbURta1ozMnlZRTBB?oc=5"
+        },
+        {
+          "title": "LUPIN Forecast — Price Target — Prediction for 2027 - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5zX1hyYlZQU1JqM0g5RkFsdWNOOE40bEtEN3laRUZWTzI4dW51bnN4MkwzZ0xfUndNYV93M1N1Z21Qdk82UlhGQmdncDNDRWJubGJ0VDZGQk5FQ21wQ0JuaW9PQnF0WmxQaUtxaGhyQmtXSUgxczNv?oc=5"
+        }
+      ],
+      "chart_data": [
+        {
+          "d": "01 Oct",
+          "o": 2030.3,
+          "h": 2044.1,
+          "l": 2004.2,
+          "c": 2031.2,
+          "dma20": 2087.22,
+          "dma50": 2207.58
+        },
+        {
+          "d": "05 Oct",
+          "o": 2015.4,
+          "h": 2029.0,
+          "l": 1996.3,
+          "c": 2011.0,
+          "dma20": 2081.17,
+          "dma50": 2199.87
+        },
+        {
+          "d": "06 Oct",
+          "o": 2011.0,
+          "h": 2031.4,
+          "l": 2003.0,
+          "c": 2029.3,
+          "dma20": 2077.13,
+          "dma50": 2193.05
+        },
+        {
+          "d": "07 Oct",
+          "o": 2029.3,
+          "h": 2030.8,
+          "l": 2001.5,
+          "c": 2012.9,
+          "dma20": 2072.53,
+          "dma50": 2185.1
+        },
+        {
+          "d": "08 Oct",
+          "o": 2012.9,
+          "h": 2020.9,
+          "l": 1936.9,
+          "c": 1936.9,
+          "dma20": 2064.14,
+          "dma50": 2175.93
+        },
+        {
+          "d": "09 Oct",
+          "o": 1948.0,
+          "h": 1968.9,
+          "l": 1942.0,
+          "c": 1956.5,
+          "dma20": 2056.96,
+          "dma50": 2166.12
+        },
+        {
+          "d": "12 Oct",
+          "o": 1955.9,
+          "h": 1964.9,
+          "l": 1933.2,
+          "c": 1935.0,
+          "dma20": 2049.82,
+          "dma50": 2156.39
+        },
+        {
+          "d": "13 Oct",
+          "o": 1935.0,
+          "h": 1958.4,
+          "l": 1926.5,
+          "c": 1953.6,
+          "dma20": 2042.75,
+          "dma50": 2147.16
+        },
+        {
+          "d": "14 Oct",
+          "o": 1950.0,
+          "h": 1954.8,
+          "l": 1925.7,
+          "c": 1953.2,
+          "dma20": 2037.25,
+          "dma50": 2138.37
+        },
+        {
+          "d": "15 Oct",
+          "o": 1943.0,
+          "h": 1990.9,
+          "l": 1943.0,
+          "c": 1980.9,
+          "dma20": 2034.05,
+          "dma50": 2129.79
+        },
+        {
+          "d": "16 Oct",
+          "o": 1980.0,
+          "h": 1980.5,
+          "l": 1947.0,
+          "c": 1961.6,
+          "dma20": 2027.22,
+          "dma50": 2121.26
+        },
+        {
+          "d": "19 Oct",
+          "o": 1955.8,
+          "h": 1971.6,
+          "l": 1930.0,
+          "c": 1939.2,
+          "dma20": 2020.03,
+          "dma50": 2112.34
+        },
+        {
+          "d": "21 Oct",
+          "o": 1948.1,
+          "h": 1964.0,
+          "l": 1929.0,
+          "c": 1964.0,
+          "dma20": 2012.0,
+          "dma50": 2104.35
+        },
+        {
+          "d": "22 Oct",
+          "o": 1942.0,
+          "h": 1945.7,
+          "l": 1896.1,
+          "c": 1922.0,
+          "dma20": 2001.35,
+          "dma50": 2096.79
+        },
+        {
+          "d": "23 Oct",
+          "o": 1922.0,
+          "h": 1929.9,
+          "l": 1892.9,
+          "c": 1928.9,
+          "dma20": 1992.66,
+          "dma50": 2089.79
+        },
+        {
+          "d": "26 Oct",
+          "o": 1928.0,
+          "h": 1959.9,
+          "l": 1912.4,
+          "c": 1959.9,
+          "dma20": 1985.62,
+          "dma50": 2083.37
+        },
+        {
+          "d": "27 Oct",
+          "o": 1949.0,
+          "h": 1966.6,
+          "l": 1942.4,
+          "c": 1952.0,
+          "dma20": 1978.62,
+          "dma50": 2077.4
+        },
+        {
+          "d": "28 Oct",
+          "o": 1954.0,
+          "h": 1974.0,
+          "l": 1935.0,
+          "c": 1972.7,
+          "dma20": 1974.15,
+          "dma50": 2072.16
+        },
+        {
+          "d": "29 Oct",
+          "o": 1977.4,
+          "h": 1999.6,
+          "l": 1962.3,
+          "c": 1989.9,
+          "dma20": 1971.04,
+          "dma50": 2066.78
+        },
+        {
+          "d": "30 Oct",
+          "o": 1995.7,
+          "h": 2021.8,
+          "l": 1974.0,
+          "c": 2011.0,
+          "dma20": 1970.08,
+          "dma50": 2062.36
+        },
+        {
+          "d": "02 Nov",
+          "o": 2019.8,
+          "h": 2033.8,
+          "l": 1996.5,
+          "c": 1996.5,
+          "dma20": 1968.35,
+          "dma50": 2057.79
+        },
+        {
+          "d": "03 Nov",
+          "o": 2014.9,
+          "h": 2016.8,
+          "l": 1988.9,
+          "c": 2015.9,
+          "dma20": 1968.6,
+          "dma50": 2054.07
+        },
+        {
+          "d": "04 Nov",
+          "o": 2025.0,
+          "h": 2062.1,
+          "l": 2004.5,
+          "c": 2008.6,
+          "dma20": 1967.56,
+          "dma50": 2050.21
+        },
+        {
+          "d": "05 Nov",
+          "o": 1990.0,
+          "h": 1994.7,
+          "l": 1944.1,
+          "c": 1988.0,
+          "dma20": 1966.31,
+          "dma50": 2046.21
+        },
+        {
+          "d": "06 Nov",
+          "o": 1985.5,
+          "h": 1996.9,
+          "l": 1968.2,
+          "c": 1988.1,
+          "dma20": 1968.87,
+          "dma50": 2042.46
+        },
+        {
+          "d": "09 Nov",
+          "o": 1997.4,
+          "h": 2036.5,
+          "l": 1991.0,
+          "c": 2025.0,
+          "dma20": 1972.3,
+          "dma50": 2039.26
+        },
+        {
+          "d": "11 Nov",
+          "o": 2032.6,
+          "h": 2032.7,
+          "l": 1998.1,
+          "c": 2023.4,
+          "dma20": 1976.72,
+          "dma50": 2036.57
+        },
+        {
+          "d": "12 Nov",
+          "o": 2018.2,
+          "h": 2030.9,
+          "l": 2006.0,
+          "c": 2015.0,
+          "dma20": 1979.79,
+          "dma50": 2033.44
+        },
+        {
+          "d": "13 Nov",
+          "o": 2017.0,
+          "h": 2027.0,
+          "l": 1980.3,
+          "c": 1980.3,
+          "dma20": 1981.15,
+          "dma50": 2029.28
+        },
+        {
+          "d": "16 Nov",
+          "o": 1982.3,
+          "h": 2012.0,
+          "l": 1960.2,
+          "c": 1976.7,
+          "dma20": 1980.93,
+          "dma50": 2025.75
+        },
+        {
+          "d": "17 Nov",
+          "o": 1972.0,
+          "h": 1984.8,
+          "l": 1947.4,
+          "c": 1950.0,
+          "dma20": 1980.35,
+          "dma50": 2021.65
+        },
+        {
+          "d": "18 Nov",
+          "o": 1963.6,
+          "h": 1993.0,
+          "l": 1946.2,
+          "c": 1971.9,
+          "dma20": 1981.99,
+          "dma50": 2018.44
+        },
+        {
+          "d": "19 Nov",
+          "o": 1969.0,
+          "h": 1998.9,
+          "l": 1956.4,
+          "c": 1998.8,
+          "dma20": 1983.73,
+          "dma50": 2016.22
+        },
+        {
+          "d": "20 Nov",
+          "o": 1992.0,
+          "h": 2014.0,
+          "l": 1985.1,
+          "c": 2014.0,
+          "dma20": 1988.33,
+          "dma50": 2014.4
+        },
+        {
+          "d": "23 Nov",
+          "o": 2011.9,
+          "h": 2017.0,
+          "l": 1973.0,
+          "c": 1975.6,
+          "dma20": 1990.67,
+          "dma50": 2011.82
+        }
+      ]
+    },
+    {
       "symbol": "VEDL",
       "name": "Vedanta Ltd.",
       "sector": "Metals",
       "bias": "bearish",
-      "rating": 80,
+      "rating": 77,
       "tier": "Bearish",
       "tier_code": "bearish",
       "strategy": "Bear Call Spread / OTM Call Sell",
@@ -5190,8 +5982,8 @@
       "scores": {
         "tech": 87,
         "sr": 95,
-        "news": 58,
-        "composite": 80
+        "news": 47,
+        "composite": 77
       },
       "sr": {
         "s2": 197.31,
@@ -5208,8 +6000,8 @@
           "zone": "₹250 – ₹255",
           "invalidation": 257.6,
           "short_strike": 250,
-          "hedge_strike": 255,
-          "est_credit": 1.1
+          "hedge_strike": 260,
+          "est_credit": 2.8
         },
         "next": {
           "zone": "₹250 – ₹255",
@@ -5223,22 +6015,22 @@
       "reasons": {
         "technical": "CMP ₹235.5 (-1.05% 1D, +4.0% 20D) pressured below 50 DMA (₹250.8) & 200 DMA (₹393.7), RSI 37.3.",
         "sr_analysis": "Overhead resistance R1 at ₹247.6 (+5.1%) and R2 at ₹284.1; downside support S1 at ₹221.6.",
-        "news": "Mixed/cautious headlines—size conservatively: \"Vedanta Share Price - Live NSE: VEDL Stock Price & Chart - Upstox\"",
+        "news": "Mixed/cautious headlines—size conservatively: \"Vedanta Ltd. Share Price Today - Vedanta Ltd. Stock Price Live NSE/BSE - CNBC TV18\"",
         "risk": "ATR 3.2% (1.17x vol). Check NSE MWPL ban list; cap upside with 260 CE and exit above ₹257.6."
       },
-      "conclusion": "BEARISH (80/100) — Sell Dec 250 CE / Buy 260 CE positioned above R1 resistance (₹247.6), backed by bearish chart structure and negative news overhang.",
+      "conclusion": "BEARISH (77/100) — Sell Dec 250 CE / Buy 260 CE positioned above R1 resistance (₹247.6), backed by bearish chart structure and negative news overhang.",
       "headlines": [
-        {
-          "title": "Vedanta Share Price - Live NSE: VEDL Stock Price & Chart - Upstox",
-          "source": "Upstox",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE91QTlKSUg2Y3pJamcwYkpIc2tRWWpzQjA2dzFVbEtGcVB3bXZzWjdfZHRRUlVtcDRLQ1hGamxTcGVlbU9mc0FTUy1oekQ5d1NvY3NKb2FSSTZmZXNuRnFJNEFZbHU?oc=5"
-        },
         {
           "title": "Vedanta Ltd. Share Price Today - Vedanta Ltd. Stock Price Live NSE/BSE - CNBC TV18",
           "source": "CNBC TV18",
           "sentiment": "Neutral",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5VWVktUkt1QXlJLVZjNk9GX0c0MjdJNTFRZnVkdkczaGdZaFhlclp5WTNIZjhYbldZQVhtTWFmeUp0Y1d3a0UyRDJRSGoydm1pdDJWS29LbDFNd3A0ZDh6ZnlUbHMtWnk5QzVTdG5iNDA2Y1U5?oc=5"
+        },
+        {
+          "title": "Vedanta Aluminium, Hindustan Zinc, Vedanta Ltd: Vedanta group stocks rally; key developments to know - Upstox",
+          "source": "Upstox",
+          "sentiment": "Positive",
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQZlJLX29LcFgtY1MtYjlUcTIwVW02ck1kQzVYbVViSm5jVHZkZHJnM3dDWVA0V04yRzVtUWN0S05zc0t5QzR0V19rOTVEaGRaZjAwakNERm44X2hCSkZ1MTlLWGpnekJpS1V0SkY0Mk9yeEZ1RnA4WVBzVzRkWF9GMXAyeXZtQ0dpVmpwOFlCUTBHMkY2Z21XOGFCRXJ1QXNEdnRFa0o3Q2t4RnhNODE1RHZIUUhmRl9HYm5KUzhSM211MGs5SnlMcFU1YUtrRTNhNEdOM3FPMU0zaGJnZnpWSklxbDlyV0hNOEZv?oc=5"
         },
         {
           "title": "Don't Buy Vedanta Limited (NSE:VEDL) For Its Next Dividend Without Doing These Checks - Simply Wall St",
@@ -5564,1221 +6356,9 @@
           "dma50": 250.78
         }
       ]
-    },
-    {
-      "symbol": "LUPIN",
-      "name": "Lupin Ltd.",
-      "sector": "Pharma",
-      "bias": "bearish",
-      "rating": 80,
-      "tier": "Bearish",
-      "tier_code": "bearish",
-      "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 1975.6,
-      "chg_1d": -1.91,
-      "chg_20d": 2.42,
-      "rsi": 46.1,
-      "dma20": 1990.67,
-      "dma50": 2011.82,
-      "dma200": 2221.3,
-      "dist_52w_high": -21.72,
-      "vol_ratio": 0.86,
-      "scores": {
-        "tech": 80,
-        "sr": 95,
-        "news": 66,
-        "composite": 80
-      },
-      "sr": {
-        "s2": 1833.67,
-        "s1": 1912.4,
-        "pivot": 1983.37,
-        "r1": 2012.44,
-        "r2": 2133.07,
-        "s1_dist_pct": -3.2,
-        "r1_dist_pct": 1.86,
-        "structure": "Lower-High Downtrend Under Overhead DMA Supply"
-      },
-      "expiries": {
-        "current": {
-          "zone": "₹2,000 – ₹2,100",
-          "invalidation": 2121.0,
-          "short_strike": 2050,
-          "hedge_strike": 2100,
-          "est_credit": 11.0
-        },
-        "next": {
-          "zone": "₹2,000 – ₹2,100",
-          "invalidation": 2121.0,
-          "short_strike": 2050,
-          "hedge_strike": 2100,
-          "est_credit": 14.0
-        }
-      },
-      "lot_size": 425,
-      "reasons": {
-        "technical": "CMP ₹1,976 (-1.91% 1D, +2.4% 20D) pressured below 50 DMA (₹2,012) & 200 DMA (₹2,221), RSI 46.1.",
-        "sr_analysis": "Overhead resistance R1 at ₹2,012 (+1.9%) and R2 at ₹2,133; downside support S1 at ₹1,912.",
-        "news": "Aligned market coverage: \"Lupin (NSEI:LUPIN) Stock Forecast & Analyst Predictions - Simply Wall St\"",
-        "risk": "ATR 2.1% (0.86x vol). Check NSE MWPL ban list; cap upside with 2100 CE and exit above ₹2,121."
-      },
-      "conclusion": "BEARISH (80/100) — Sell Dec 2050 CE / Buy 2100 CE positioned above R1 resistance (₹2,012), backed by bearish chart structure and negative news overhang.",
-      "headlines": [
-        {
-          "title": "Lupin (NSEI:LUPIN) Stock Forecast & Analyst Predictions - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZ0NCU2tHZDJCU25LcVVNTTNHb2MtMmVMbDBpLVpPWmtreWpFNlhJVGI5X3BjYVBJVHNMWlB6Z2dfcmdxQTdxZXNkbWNZbDA3djc4SGtPYVhuRzJiR0ljMlR4V3lzRE5SYkttU3k4dWZnbUZDOW50SzhVdmlfZ3B0MENUdjh1TFJpS21mTXh3?oc=5"
-        },
-        {
-          "title": "Stocks to watch, Nov 4: Lupin, NSE, BSE, Nykaa, PFC, Premier Energies, Waaree Energies, Yatharth Hospital - Upstox",
-          "source": "Upstox",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPNGhKc1lhM0ZoRG8tV2xReGIzVi02X0VWRjBhcVBsRmtfTzFpNXBHYXgyWjdwaVVocklHOXgzZ1FncUN2SURkWUd0bmNjbkNkQXRXU3BQUy1DUDR4TElUQmh6elplVWV2UVFwQjVsSS1VbHh4RUFJUFJaQ1dteW43TXlxNXE2Q25HV1JWSjBOVzNzRlZzS05ZeHBzVXNKcjMwYXUzYWMzNmhmSnN0U3RrR1dFQlBiWHRELUZ2VmsyTDNGSWpzaWNxRUtHcnpXN2g0a2lvNFYwUWlscC04YWNRbURta1ozMnlZRTBB?oc=5"
-        },
-        {
-          "title": "Stocks to Watch Today: NSE, Lupin, Metropolis, MK Jewels, Lloyds Metals, MCX India, Awfis Space, Aarti... - Moneycontrol.com",
-          "source": "Moneycontrol.com",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxPOTI3VEQ4RUd2cjZIN0lEYXVwclFuNDZzRFVDS2NxR3Baek9OQnVHMmNQSkVHandlOGp1c3BiZE9HSVkydGVYYlRsbzFuSjBwcW0xN1FiWXVoWTVKWDU0bWxQUFowc1haQTIyb0k5blVONmdRdnVxMnlwNVBNa1FMQ2FCd0FrdE9wQmFId2ZvMk90d29iM0NUREhZN3pzME9wRzVPT0hUVlFTWDNpLWNHOUJRS1hZN1VTN2JSMkJudkQ0SVJNOWlEMUl1N1MyTzRNRmxyYVo3VDV1ZDFjYjExRFFiMEZEWGF5Y1E0Q0duenZ0WHNrNTZwX1FzREJ0a3o2Y3ptbVpGR0NKZGVCMWNhLTBqOWNKc2RKZlhPbGw0NGlDZFhoZUpzS1NnT0xLTkZVbnZxdmhGSFJub2pfalM2NHhR0gHHAkFVX3lxTFBhS3FPVDloTE1NdVJTTXlpT2dQTjhJOGxQbGRMRnRQSGUxTThDSlllTzloemdwLUxRWmZIQ3AtUUNReFJZaWFRMVp1S05fdmFkNG9qYmtmemRpUFNNRjdXMVIxQWV0a2c2UXdsQUlBYmF0UklNdmxjczBYTUV2X3lPTHhjN1FmQzRNVnFOUmhBRFVfSTJmUzg1TnR3dTQzb2tuSTQ0RXN6SUlXazRNMUE2YTJ3RmttZlJCNkVSXy14eTVXcnZ0Z0RKSG93cFRZeHRQQVU2UFNVRkR1SVpNRm9BU0N0M2l6XzdNSGVIVmFHbUFBbkh2SE1ScDdOai1IWXBQbVZQRGs4ZjhaWlQ2cnEyUVZLNWQxNXpxYjVQTU1nb1VrQUFlRzR4MjdjQS1VTmlhb2x1cDFWa1ZnakJhT2lZSDJaSTdSRQ?oc=5"
-        }
-      ],
-      "chart_data": [
-        {
-          "d": "01 Oct",
-          "o": 2030.3,
-          "h": 2044.1,
-          "l": 2004.2,
-          "c": 2031.2,
-          "dma20": 2087.22,
-          "dma50": 2207.58
-        },
-        {
-          "d": "05 Oct",
-          "o": 2015.4,
-          "h": 2029.0,
-          "l": 1996.3,
-          "c": 2011.0,
-          "dma20": 2081.17,
-          "dma50": 2199.87
-        },
-        {
-          "d": "06 Oct",
-          "o": 2011.0,
-          "h": 2031.4,
-          "l": 2003.0,
-          "c": 2029.3,
-          "dma20": 2077.13,
-          "dma50": 2193.05
-        },
-        {
-          "d": "07 Oct",
-          "o": 2029.3,
-          "h": 2030.8,
-          "l": 2001.5,
-          "c": 2012.9,
-          "dma20": 2072.53,
-          "dma50": 2185.1
-        },
-        {
-          "d": "08 Oct",
-          "o": 2012.9,
-          "h": 2020.9,
-          "l": 1936.9,
-          "c": 1936.9,
-          "dma20": 2064.14,
-          "dma50": 2175.93
-        },
-        {
-          "d": "09 Oct",
-          "o": 1948.0,
-          "h": 1968.9,
-          "l": 1942.0,
-          "c": 1956.5,
-          "dma20": 2056.96,
-          "dma50": 2166.12
-        },
-        {
-          "d": "12 Oct",
-          "o": 1955.9,
-          "h": 1964.9,
-          "l": 1933.2,
-          "c": 1935.0,
-          "dma20": 2049.82,
-          "dma50": 2156.39
-        },
-        {
-          "d": "13 Oct",
-          "o": 1935.0,
-          "h": 1958.4,
-          "l": 1926.5,
-          "c": 1953.6,
-          "dma20": 2042.75,
-          "dma50": 2147.16
-        },
-        {
-          "d": "14 Oct",
-          "o": 1950.0,
-          "h": 1954.8,
-          "l": 1925.7,
-          "c": 1953.2,
-          "dma20": 2037.25,
-          "dma50": 2138.37
-        },
-        {
-          "d": "15 Oct",
-          "o": 1943.0,
-          "h": 1990.9,
-          "l": 1943.0,
-          "c": 1980.9,
-          "dma20": 2034.05,
-          "dma50": 2129.79
-        },
-        {
-          "d": "16 Oct",
-          "o": 1980.0,
-          "h": 1980.5,
-          "l": 1947.0,
-          "c": 1961.6,
-          "dma20": 2027.22,
-          "dma50": 2121.26
-        },
-        {
-          "d": "19 Oct",
-          "o": 1955.8,
-          "h": 1971.6,
-          "l": 1930.0,
-          "c": 1939.2,
-          "dma20": 2020.03,
-          "dma50": 2112.34
-        },
-        {
-          "d": "21 Oct",
-          "o": 1948.1,
-          "h": 1964.0,
-          "l": 1929.0,
-          "c": 1964.0,
-          "dma20": 2012.0,
-          "dma50": 2104.35
-        },
-        {
-          "d": "22 Oct",
-          "o": 1942.0,
-          "h": 1945.7,
-          "l": 1896.1,
-          "c": 1922.0,
-          "dma20": 2001.35,
-          "dma50": 2096.79
-        },
-        {
-          "d": "23 Oct",
-          "o": 1922.0,
-          "h": 1929.9,
-          "l": 1892.9,
-          "c": 1928.9,
-          "dma20": 1992.66,
-          "dma50": 2089.79
-        },
-        {
-          "d": "26 Oct",
-          "o": 1928.0,
-          "h": 1959.9,
-          "l": 1912.4,
-          "c": 1959.9,
-          "dma20": 1985.62,
-          "dma50": 2083.37
-        },
-        {
-          "d": "27 Oct",
-          "o": 1949.0,
-          "h": 1966.6,
-          "l": 1942.4,
-          "c": 1952.0,
-          "dma20": 1978.62,
-          "dma50": 2077.4
-        },
-        {
-          "d": "28 Oct",
-          "o": 1954.0,
-          "h": 1974.0,
-          "l": 1935.0,
-          "c": 1972.7,
-          "dma20": 1974.15,
-          "dma50": 2072.16
-        },
-        {
-          "d": "29 Oct",
-          "o": 1977.4,
-          "h": 1999.6,
-          "l": 1962.3,
-          "c": 1989.9,
-          "dma20": 1971.04,
-          "dma50": 2066.78
-        },
-        {
-          "d": "30 Oct",
-          "o": 1995.7,
-          "h": 2021.8,
-          "l": 1974.0,
-          "c": 2011.0,
-          "dma20": 1970.08,
-          "dma50": 2062.36
-        },
-        {
-          "d": "02 Nov",
-          "o": 2019.8,
-          "h": 2033.8,
-          "l": 1996.5,
-          "c": 1996.5,
-          "dma20": 1968.35,
-          "dma50": 2057.79
-        },
-        {
-          "d": "03 Nov",
-          "o": 2014.9,
-          "h": 2016.8,
-          "l": 1988.9,
-          "c": 2015.9,
-          "dma20": 1968.6,
-          "dma50": 2054.07
-        },
-        {
-          "d": "04 Nov",
-          "o": 2025.0,
-          "h": 2062.1,
-          "l": 2004.5,
-          "c": 2008.6,
-          "dma20": 1967.56,
-          "dma50": 2050.21
-        },
-        {
-          "d": "05 Nov",
-          "o": 1990.0,
-          "h": 1994.7,
-          "l": 1944.1,
-          "c": 1988.0,
-          "dma20": 1966.31,
-          "dma50": 2046.21
-        },
-        {
-          "d": "06 Nov",
-          "o": 1985.5,
-          "h": 1996.9,
-          "l": 1968.2,
-          "c": 1988.1,
-          "dma20": 1968.87,
-          "dma50": 2042.46
-        },
-        {
-          "d": "09 Nov",
-          "o": 1997.4,
-          "h": 2036.5,
-          "l": 1991.0,
-          "c": 2025.0,
-          "dma20": 1972.3,
-          "dma50": 2039.26
-        },
-        {
-          "d": "11 Nov",
-          "o": 2032.6,
-          "h": 2032.7,
-          "l": 1998.1,
-          "c": 2023.4,
-          "dma20": 1976.72,
-          "dma50": 2036.57
-        },
-        {
-          "d": "12 Nov",
-          "o": 2018.2,
-          "h": 2030.9,
-          "l": 2006.0,
-          "c": 2015.0,
-          "dma20": 1979.79,
-          "dma50": 2033.44
-        },
-        {
-          "d": "13 Nov",
-          "o": 2017.0,
-          "h": 2027.0,
-          "l": 1980.3,
-          "c": 1980.3,
-          "dma20": 1981.15,
-          "dma50": 2029.28
-        },
-        {
-          "d": "16 Nov",
-          "o": 1982.3,
-          "h": 2012.0,
-          "l": 1960.2,
-          "c": 1976.7,
-          "dma20": 1980.93,
-          "dma50": 2025.75
-        },
-        {
-          "d": "17 Nov",
-          "o": 1972.0,
-          "h": 1984.8,
-          "l": 1947.4,
-          "c": 1950.0,
-          "dma20": 1980.35,
-          "dma50": 2021.65
-        },
-        {
-          "d": "18 Nov",
-          "o": 1963.6,
-          "h": 1993.0,
-          "l": 1946.2,
-          "c": 1971.9,
-          "dma20": 1981.99,
-          "dma50": 2018.44
-        },
-        {
-          "d": "19 Nov",
-          "o": 1969.0,
-          "h": 1998.9,
-          "l": 1956.4,
-          "c": 1998.8,
-          "dma20": 1983.73,
-          "dma50": 2016.22
-        },
-        {
-          "d": "20 Nov",
-          "o": 1992.0,
-          "h": 2014.0,
-          "l": 1985.1,
-          "c": 2014.0,
-          "dma20": 1988.33,
-          "dma50": 2014.4
-        },
-        {
-          "d": "23 Nov",
-          "o": 2011.9,
-          "h": 2017.0,
-          "l": 1973.0,
-          "c": 1975.6,
-          "dma20": 1990.67,
-          "dma50": 2011.82
-        }
-      ]
-    },
-    {
-      "symbol": "COALINDIA",
-      "name": "Coal India Ltd.",
-      "sector": "Mining / PSU",
-      "bias": "bearish",
-      "rating": 78,
-      "tier": "Bearish",
-      "tier_code": "bearish",
-      "strategy": "Bear Call Spread / OTM Call Sell",
-      "cmp": 382.0,
-      "chg_1d": -2.05,
-      "chg_20d": -1.41,
-      "rsi": 38.2,
-      "dma20": 393.65,
-      "dma50": 401.65,
-      "dma200": 413.27,
-      "dist_52w_high": -18.15,
-      "vol_ratio": 0.84,
-      "scores": {
-        "tech": 88,
-        "sr": 85,
-        "news": 58,
-        "composite": 78
-      },
-      "sr": {
-        "s2": 349.66,
-        "s1": 370.84,
-        "pivot": 387.01,
-        "r1": 393.65,
-        "r2": 401.65,
-        "s1_dist_pct": -2.92,
-        "r1_dist_pct": 3.05,
-        "structure": "Lower-High Downtrend Under Overhead DMA Supply"
-      },
-      "expiries": {
-        "current": {
-          "zone": "₹390 – ₹410",
-          "invalidation": 414.1,
-          "short_strike": 400,
-          "hedge_strike": 410,
-          "est_credit": 2.2
-        },
-        "next": {
-          "zone": "₹390 – ₹410",
-          "invalidation": 414.1,
-          "short_strike": 400,
-          "hedge_strike": 410,
-          "est_credit": 2.8
-        }
-      },
-      "lot_size": 1050,
-      "reasons": {
-        "technical": "CMP ₹382 (-2.05% 1D, -1.4% 20D) pressured below 50 DMA (₹401.6) & 200 DMA (₹413.3), RSI 38.2.",
-        "sr_analysis": "Overhead resistance R1 at ₹393.6 (+3.0%) and R2 at ₹401.6; downside support S1 at ₹370.8.",
-        "news": "Mixed/cautious headlines—size conservatively: \"Coal India Share Price Today Live NSE/BSE Graph & Chart - Kotak Neo\"",
-        "risk": "ATR 2.2% (0.84x vol). Check NSE MWPL ban list; cap upside with 410 CE and exit above ₹414.1."
-      },
-      "conclusion": "BEARISH (78/100) — Sell Dec 400 CE / Buy 410 CE positioned above R1 resistance (₹393.6), backed by bearish chart structure and negative news overhang.",
-      "headlines": [
-        {
-          "title": "Coal India Share Price Today Live NSE/BSE Graph & Chart - Kotak Neo",
-          "source": "Kotak Neo",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE00cHI5ZGtSbC1UZ0hBTmhyU1dSWmx6WFJMaElDRU1yUjFyZE9qeXRjb2tSQlU2WE9HLXJ3dXNDa3c0OWVxbGxFZEg1RkhDbHBDMWloX0dTQVE0YlRZNWJBeEFkWjYxdw?oc=5"
-        },
-        {
-          "title": "Coal India Limited (NSE:COALINDIA) Looks Interesting, And It's About To Pay A Dividend - Simply Wall St",
-          "source": "Simply Wall St",
-          "sentiment": "Positive",
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUHVXbWZLVEpuOUNhQXJIUUJsZU44MnNCRGZmVGxMSXlYdzkxOEVVeDRZQkpzNFFETmQ5VXlQLXR0cnVVNzJPWnRHUmpBcXIySHkzWS01UDBPNnZ0RWl4N3RwUUR0eXZWV2NGYl9TU29FMGs5Sng3blZvdElKSVZaSXRNWVNWZlRlNktMclVVMXFGdnFaOHEtSEd1Q1JZUmNBd2RvUUFvVjEwdXRiNjY5RkJUa0xGWjVoTDQySEtKUmRMTEljZmdENXR1cUthMnd2cFHSAdcBQVVfeXFMT1lfcWZ2S3BUX3pFLWRzbkRGYlBkS2hhc1NDVWhDVU9zb1dOZ1lYNVZQZGloMHdNNmdmSHhNV00zVGZ5MlZLUFJjZkVQdmhqQXZ0WHJmQ2NHSnlHSmhRenZZUG5Mekk5NFYyN1hSMjBfMU1HSVdyZkQwUS0zd0djVlpCRlFDVGV5WGZtd0RhNm5FdFRQTlVTZzRFeEpFdE9MWUxkVldxYUFZcHBweEVuZ0I5ZUZITmVpOWd0bERoczFxQy1fck9XQ3ZGUm56R0c2aHZLZWdHM0k?oc=5"
-        },
-        {
-          "title": "Coal India Ltd Share Price Today NSE/BSE Charts - Alice Blue",
-          "source": "Alice Blue",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBPVGlQOENfZDJkVDNTWEp5d2hQSjVZeTBORmxBa1ZKbDRldklUcUxJVG40NVc2R05FbjRYdzhtNmJHN0ZPV1dDS2VIQWQ3c1dqQU1rdlhjWnVEOTkwbUJXNUdJcnR3blVPQ2prbg?oc=5"
-        }
-      ],
-      "chart_data": [
-        {
-          "d": "01 Oct",
-          "o": 410.62,
-          "h": 415.64,
-          "l": 405.84,
-          "c": 409.84,
-          "dma20": 411.22,
-          "dma50": 401.12
-        },
-        {
-          "d": "05 Oct",
-          "o": 414.32,
-          "h": 420.07,
-          "l": 411.01,
-          "c": 414.42,
-          "dma20": 411.72,
-          "dma50": 401.3
-        },
-        {
-          "d": "06 Oct",
-          "o": 415.35,
-          "h": 416.22,
-          "l": 400.28,
-          "c": 401.31,
-          "dma20": 411.54,
-          "dma50": 401.2
-        },
-        {
-          "d": "07 Oct",
-          "o": 401.31,
-          "h": 405.4,
-          "l": 400.48,
-          "c": 404.09,
-          "dma20": 411.33,
-          "dma50": 401.16
-        },
-        {
-          "d": "08 Oct",
-          "o": 404.09,
-          "h": 404.09,
-          "l": 393.7,
-          "c": 399.07,
-          "dma20": 410.8,
-          "dma50": 401.35
-        },
-        {
-          "d": "09 Oct",
-          "o": 398.19,
-          "h": 401.89,
-          "l": 394.34,
-          "c": 401.21,
-          "dma20": 409.85,
-          "dma50": 401.59
-        },
-        {
-          "d": "12 Oct",
-          "o": 402.67,
-          "h": 403.11,
-          "l": 392.0,
-          "c": 394.63,
-          "dma20": 408.52,
-          "dma50": 401.55
-        },
-        {
-          "d": "13 Oct",
-          "o": 394.83,
-          "h": 399.85,
-          "l": 392.68,
-          "c": 398.24,
-          "dma20": 407.65,
-          "dma50": 401.54
-        },
-        {
-          "d": "14 Oct",
-          "o": 400.38,
-          "h": 408.13,
-          "l": 399.7,
-          "c": 406.52,
-          "dma20": 407.54,
-          "dma50": 401.66
-        },
-        {
-          "d": "15 Oct",
-          "o": 407.69,
-          "h": 409.74,
-          "l": 404.62,
-          "c": 407.5,
-          "dma20": 407.33,
-          "dma50": 401.77
-        },
-        {
-          "d": "16 Oct",
-          "o": 407.5,
-          "h": 407.89,
-          "l": 402.62,
-          "c": 406.72,
-          "dma20": 407.29,
-          "dma50": 401.91
-        },
-        {
-          "d": "19 Oct",
-          "o": 406.72,
-          "h": 409.25,
-          "l": 401.36,
-          "c": 401.36,
-          "dma20": 407.38,
-          "dma50": 401.93
-        },
-        {
-          "d": "21 Oct",
-          "o": 401.36,
-          "h": 405.26,
-          "l": 392.39,
-          "c": 397.26,
-          "dma20": 407.03,
-          "dma50": 401.88
-        },
-        {
-          "d": "22 Oct",
-          "o": 394.53,
-          "h": 394.53,
-          "l": 385.71,
-          "c": 392.44,
-          "dma20": 405.79,
-          "dma50": 401.82
-        },
-        {
-          "d": "23 Oct",
-          "o": 392.88,
-          "h": 393.22,
-          "l": 380.84,
-          "c": 387.47,
-          "dma20": 404.47,
-          "dma50": 401.62
-        },
-        {
-          "d": "26 Oct",
-          "o": 387.47,
-          "h": 394.83,
-          "l": 384.39,
-          "c": 394.83,
-          "dma20": 403.64,
-          "dma50": 401.64
-        },
-        {
-          "d": "27 Oct",
-          "o": 392.34,
-          "h": 394.58,
-          "l": 388.0,
-          "c": 388.0,
-          "dma20": 402.27,
-          "dma50": 401.49
-        },
-        {
-          "d": "28 Oct",
-          "o": 388.0,
-          "h": 388.39,
-          "l": 381.37,
-          "c": 382.15,
-          "dma20": 400.78,
-          "dma50": 401.3
-        },
-        {
-          "d": "29 Oct",
-          "o": 383.22,
-          "h": 387.47,
-          "l": 378.74,
-          "c": 383.22,
-          "dma20": 399.23,
-          "dma50": 401.1
-        },
-        {
-          "d": "30 Oct",
-          "o": 388.0,
-          "h": 388.05,
-          "l": 370.84,
-          "c": 379.23,
-          "dma20": 397.47,
-          "dma50": 400.85
-        },
-        {
-          "d": "02 Nov",
-          "o": 387.81,
-          "h": 397.75,
-          "l": 385.08,
-          "c": 397.75,
-          "dma20": 396.87,
-          "dma50": 401.1
-        },
-        {
-          "d": "03 Nov",
-          "o": 400.67,
-          "h": 400.67,
-          "l": 395.02,
-          "c": 397.75,
-          "dma20": 396.04,
-          "dma50": 401.31
-        },
-        {
-          "d": "04 Nov",
-          "o": 397.75,
-          "h": 401.35,
-          "l": 396.05,
-          "c": 399.65,
-          "dma20": 395.95,
-          "dma50": 401.5
-        },
-        {
-          "d": "05 Nov",
-          "o": 401.95,
-          "h": 402.3,
-          "l": 393.05,
-          "c": 394.3,
-          "dma20": 395.46,
-          "dma50": 401.55
-        },
-        {
-          "d": "06 Nov",
-          "o": 396.5,
-          "h": 400.0,
-          "l": 392.0,
-          "c": 400.0,
-          "dma20": 395.51,
-          "dma50": 401.77
-        },
-        {
-          "d": "09 Nov",
-          "o": 403.0,
-          "h": 403.5,
-          "l": 398.55,
-          "c": 401.5,
-          "dma20": 395.53,
-          "dma50": 402.03
-        },
-        {
-          "d": "11 Nov",
-          "o": 403.0,
-          "h": 408.2,
-          "l": 402.1,
-          "c": 406.3,
-          "dma20": 396.11,
-          "dma50": 402.46
-        },
-        {
-          "d": "12 Nov",
-          "o": 406.4,
-          "h": 406.5,
-          "l": 402.65,
-          "c": 404.3,
-          "dma20": 396.41,
-          "dma50": 402.82
-        },
-        {
-          "d": "13 Nov",
-          "o": 404.6,
-          "h": 406.2,
-          "l": 402.3,
-          "c": 403.5,
-          "dma20": 396.26,
-          "dma50": 403.16
-        },
-        {
-          "d": "16 Nov",
-          "o": 404.8,
-          "h": 404.8,
-          "l": 395.0,
-          "c": 397.5,
-          "dma20": 395.76,
-          "dma50": 403.38
-        },
-        {
-          "d": "17 Nov",
-          "o": 397.5,
-          "h": 398.5,
-          "l": 387.75,
-          "c": 391.55,
-          "dma20": 395.0,
-          "dma50": 403.16
-        },
-        {
-          "d": "18 Nov",
-          "o": 392.2,
-          "h": 393.2,
-          "l": 386.55,
-          "c": 388.0,
-          "dma20": 394.33,
-          "dma50": 402.83
-        },
-        {
-          "d": "19 Nov",
-          "o": 389.95,
-          "h": 393.45,
-          "l": 386.55,
-          "c": 391.5,
-          "dma20": 394.05,
-          "dma50": 402.57
-        },
-        {
-          "d": "20 Nov",
-          "o": 394.0,
-          "h": 394.0,
-          "l": 387.85,
-          "c": 390.0,
-          "dma20": 393.92,
-          "dma50": 402.2
-        },
-        {
-          "d": "23 Nov",
-          "o": 390.0,
-          "h": 392.35,
-          "l": 381.5,
-          "c": 382.0,
-          "dma20": 393.65,
-          "dma50": 401.65
-        }
-      ]
     }
   ],
   "commodities": [
-    {
-      "symbol": "SILVERM",
-      "name": "MCX Silver Mini",
-      "asset_class": "commodity",
-      "sector": "Precious Metals (MCX)",
-      "unit_label": "₹ / kg",
-      "lot_desc": "5 kg (₹5 per ₹1 move)",
-      "lot_size": 5,
-      "settlement": "Physical Delivery (Devolves to Fut — Exit before expiry)",
-      "bias": "bearish",
-      "rating": 92,
-      "tier": "Strong Bearish",
-      "tier_code": "strong_bearish",
-      "strategy": "Bear Call Spread (News-Safe)",
-      "cmp": 154718.55,
-      "chg_1d": 6.08,
-      "chg_20d": -19.55,
-      "rsi": 31.2,
-      "dma20": 175583.17,
-      "dma50": 198978.3,
-      "dma200": 239359.94,
-      "dist_52w_high": -64.11,
-      "vol_ratio": 6.49,
-      "global_ref": {
-        "benchmark": "SI=F: 43.53 $/oz (-19.5% 20D)",
-        "usdinr": 92.9,
-        "dxy_note": "DXY 104.1 (+0.5% 5D) · USD/INR 92.90 (-1.4% 5D)"
-      },
-      "scores": {
-        "tech": 98,
-        "sr": 95,
-        "news": 79,
-        "composite": 92
-      },
-      "sr": {
-        "s2": 116893.73,
-        "s1": 145477.39,
-        "pivot": 164389.8,
-        "r1": 175583.17,
-        "r2": 198978.3,
-        "s1_dist_pct": -5.97,
-        "r1_dist_pct": 13.49,
-        "structure": "Downtrend / Resistance-Capped Below Moving Averages"
-      },
-      "expiry_meta": {
-        "current": {
-          "label": "25 Nov 2026 Opt",
-          "fut": "30 Nov 2026 Fut",
-          "dte": 2
-        },
-        "next": {
-          "label": "28 Dec 2026 Opt",
-          "fut": "26 Feb 2027 Fut",
-          "dte": 35
-        },
-        "recommended": "next",
-        "rule_note": "Next option (28 Dec 2026) is 35 DTE (≤ 45d) — Next Expiry is Primary."
-      },
-      "expiries": {
-        "current": {
-          "zone": "₹175,000 – ₹180,000",
-          "invalidation": 181800.0,
-          "short_strike": 177500,
-          "hedge_strike": 182500,
-          "est_credit": 1300.0
-        },
-        "next": {
-          "zone": "₹175,000 – ₹180,000",
-          "invalidation": 181800.0,
-          "short_strike": 177500,
-          "hedge_strike": 182500,
-          "est_credit": 1300.0
-        }
-      },
-      "reasons": {
-        "global_trend": "Global SI=F at 43.53 $/oz (-19.5% 20D) with DXY at 104.1 and USD/INR at ₹92.90.",
-        "technical": "MCX est. ₹154,719 (+6.08% 1D, -19.6% 20D), RSI(14) 31.2, 20 DMA ₹175,583, 50 DMA ₹198,978.",
-        "sr_analysis": "Support S1 ₹145,477 / S2 ₹116,894 · Resistance R1 ₹175,583 / R2 ₹198,978.",
-        "news": "Global/MCX catalyst: \"How High Can Silver Go in 2026 as COMEX Inventory Tightens? New Silver Price Predictions From BofA, Citi, and Reuters Target $300 - Finance Magnates\"",
-        "risk": "High-impact macro/geopolitical news detected — applied extra OTM safety buffer. Physical Delivery (Devolves to Fut — Exit before expiry); exit before expiry if near ITM."
-      },
-      "conclusion": "STRONG BEARISH (92/100) — Safe news-buffered trade: Sell 28 Dec 2026 Opt 177500 CE / Buy 182500 CE (14.7% safety cushion beyond R1).",
-      "headlines": [
-        {
-          "title": "How High Can Silver Go in 2026 as COMEX Inventory Tightens? New Silver Price Predictions From BofA, Citi, and Reuters Target $300 - Finance Magnates",
-          "source": "Finance Magnates",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNdEZCdkRtWXJRcm91V3NPSnZ6RnZfSWZBekVqcHA4MWNuLUtMX2JfMjhhaVg2ajdRdUUxb0xSTU9sOU1ZX0xjdExVM2pKdV82aFVvUjBKUDg5dzNPQnFsX09qUDV6aU93VDdHb3hIT0tGM005YWVJOFVaSUloT2dBTXZOYVFSejlzamVpZXVuUlppYVkwR180aHUwcTRGZDNWTHlwWm0wb3N2LU55WE1Qc0FPYUpheEw1c0JMa2hYUEMxSnowM2VPZ0lkQ096eWM2QmotTnZxa3VVU3ZENWpONHpMQXlwVzZrb01fUVFrcEVPRDVrRmpsSGZQSQ?oc=5"
-        },
-        {
-          "title": "Silver Price Crash 2026: MCX, COMEX Rates Fall Over 50% from January Peak to Oct; Check Details? - APAC Media",
-          "source": "APAC Media",
-          "sentiment": "Negative",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQT1VuNmFucFlnTWVPUU5HMXNXaG9SS1I0SUxtT0RPeGpCaVo0ZzRLTmdDQWNUb0NqRTcxa3ptbzBjRmpXUWFiTXBwQmZyUnZlSjItVmVSMXFKME9aMWotWkZZX3VvQ0dOMVRWU0Rwc083YkhHTXczdU93bkVJWW5UVUtXRV80bURKRTdHT0d4TQ?oc=5"
-        },
-        {
-          "title": "Silver Price Forecast: Supply Deficit vs Fed Pressure - Equiti Global",
-          "source": "Equiti Global",
-          "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMTFYbFRvOU9idzF0d1pPZlctOUh3LWRseE5SOVBsU01rMlBOX2o1U0pfUFE2TVlWUFA0eFlYemRIVUR5a044bVFLOHAtOHFxdFRiM2ZCYVE4SW16aHFnS284eEZZbmNhX1FMdFJuRFY2OGR3YmpweF91cHpJRDVsQUhSTE53WVFudkdHaDNuU0NOenZMamJGa0hJaXV6eHlrZEE?oc=5"
-        }
-      ],
-      "chart_data": [
-        {
-          "d": "06 Oct",
-          "o": 216527.78,
-          "h": 218144.99,
-          "l": 216527.78,
-          "c": 217409.25,
-          "dma20": 225415.13,
-          "dma50": 227447.73
-        },
-        {
-          "d": "07 Oct",
-          "o": 216385.62,
-          "h": 216385.62,
-          "l": 211587.31,
-          "c": 212898.84,
-          "dma20": 223985.77,
-          "dma50": 227632.76
-        },
-        {
-          "d": "08 Oct",
-          "o": 209931.01,
-          "h": 209931.01,
-          "l": 209401.43,
-          "c": 209931.01,
-          "dma20": 223058.1,
-          "dma50": 227718.14
-        },
-        {
-          "d": "09 Oct",
-          "o": 215639.21,
-          "h": 215941.33,
-          "l": 215639.21,
-          "c": 215639.21,
-          "dma20": 222367.85,
-          "dma50": 227850.0
-        },
-        {
-          "d": "12 Oct",
-          "o": 213758.99,
-          "h": 213758.99,
-          "l": 213758.99,
-          "c": 213758.99,
-          "dma20": 221768.6,
-          "dma50": 228031.27
-        },
-        {
-          "d": "13 Oct",
-          "o": 210275.78,
-          "h": 210275.78,
-          "l": 210275.78,
-          "c": 210275.78,
-          "dma20": 221044.41,
-          "dma50": 228137.47
-        },
-        {
-          "d": "14 Oct",
-          "o": 201688.59,
-          "h": 201688.59,
-          "l": 197263.5,
-          "c": 197441.21,
-          "dma20": 219491.54,
-          "dma50": 227817.16
-        },
-        {
-          "d": "15 Oct",
-          "o": 202015.6,
-          "h": 202015.6,
-          "l": 202015.6,
-          "c": 202015.6,
-          "dma20": 217957.33,
-          "dma50": 227443.11
-        },
-        {
-          "d": "16 Oct",
-          "o": 202577.17,
-          "h": 202648.26,
-          "l": 202577.17,
-          "c": 202577.17,
-          "dma20": 216258.19,
-          "dma50": 227127.2
-        },
-        {
-          "d": "19 Oct",
-          "o": 202612.72,
-          "h": 203483.52,
-          "l": 202502.53,
-          "c": 202502.53,
-          "dma20": 214685.24,
-          "dma50": 226675.24
-        },
-        {
-          "d": "20 Oct",
-          "o": 201670.83,
-          "h": 205104.28,
-          "l": 201670.83,
-          "c": 205104.28,
-          "dma20": 213223.36,
-          "dma50": 226149.2
-        },
-        {
-          "d": "21 Oct",
-          "o": 203483.52,
-          "h": 204094.86,
-          "l": 203483.52,
-          "c": 204094.86,
-          "dma20": 211986.46,
-          "dma50": 225626.93
-        },
-        {
-          "d": "22 Oct",
-          "o": 202594.94,
-          "h": 202594.94,
-          "l": 193318.23,
-          "c": 194647.53,
-          "dma20": 210441.59,
-          "dma50": 224859.84
-        },
-        {
-          "d": "23 Oct",
-          "o": 190904.85,
-          "h": 190904.85,
-          "l": 190904.85,
-          "c": 190904.85,
-          "dma20": 208569.54,
-          "dma50": 224066.38
-        },
-        {
-          "d": "26 Oct",
-          "o": 192315.92,
-          "h": 192315.92,
-          "l": 192315.92,
-          "c": 192315.92,
-          "dma20": 207305.63,
-          "dma50": 223292.97
-        },
-        {
-          "d": "27 Oct",
-          "o": 190990.16,
-          "h": 192973.46,
-          "l": 190705.81,
-          "c": 192973.46,
-          "dma20": 206172.7,
-          "dma50": 222452.16
-        },
-        {
-          "d": "28 Oct",
-          "o": 191665.48,
-          "h": 191665.48,
-          "l": 189817.24,
-          "c": 190002.07,
-          "dma20": 204992.49,
-          "dma50": 221706.9
-        },
-        {
-          "d": "29 Oct",
-          "o": 189159.7,
-          "h": 189159.7,
-          "l": 184290.31,
-          "c": 185502.33,
-          "dma20": 203475.88,
-          "dma50": 220744.18
-        },
-        {
-          "d": "30 Oct",
-          "o": 184254.77,
-          "h": 184254.77,
-          "l": 173751.81,
-          "c": 174505.33,
-          "dma20": 201542.34,
-          "dma50": 219398.59
-        },
-        {
-          "d": "02 Nov",
-          "o": 178070.29,
-          "h": 180984.81,
-          "l": 178070.29,
-          "c": 180273.96,
-          "dma20": 199738.71,
-          "dma50": 218066.02
-        },
-        {
-          "d": "03 Nov",
-          "o": 172667.77,
-          "h": 177697.09,
-          "l": 172561.13,
-          "c": 176246.94,
-          "dma20": 197680.59,
-          "dma50": 216718.65
-        },
-        {
-          "d": "04 Nov",
-          "o": 184574.66,
-          "h": 185249.97,
-          "l": 184574.66,
-          "c": 185249.97,
-          "dma20": 196298.15,
-          "dma50": 215544.6
-        },
-        {
-          "d": "05 Nov",
-          "o": 186511.74,
-          "h": 188200.04,
-          "l": 183650.53,
-          "c": 185651.61,
-          "dma20": 195084.18,
-          "dma50": 214424.5
-        },
-        {
-          "d": "06 Nov",
-          "o": 184123.27,
-          "h": 184272.55,
-          "l": 184123.27,
-          "c": 184123.27,
-          "dma20": 193508.38,
-          "dma50": 213171.54
-        },
-        {
-          "d": "09 Nov",
-          "o": 187400.32,
-          "h": 189124.15,
-          "l": 186422.89,
-          "c": 186828.08,
-          "dma20": 192161.84,
-          "dma50": 212145.69
-        },
-        {
-          "d": "10 Nov",
-          "o": 185978.61,
-          "h": 185996.38,
-          "l": 181628.15,
-          "c": 181628.15,
-          "dma20": 190729.46,
-          "dma50": 211070.88
-        },
-        {
-          "d": "11 Nov",
-          "o": 182513.16,
-          "h": 184400.5,
-          "l": 182424.31,
-          "c": 184400.5,
-          "dma20": 190077.42,
-          "dma50": 210165.45
-        },
-        {
-          "d": "12 Nov",
-          "o": 179438.7,
-          "h": 179438.7,
-          "l": 176577.49,
-          "c": 177615.34,
-          "dma20": 188857.41,
-          "dma50": 209116.87
-        },
-        {
-          "d": "13 Nov",
-          "o": 176559.71,
-          "h": 176559.71,
-          "l": 171885.82,
-          "c": 174270.74,
-          "dma20": 187442.09,
-          "dma50": 207841.44
-        },
-        {
-          "d": "16 Nov",
-          "o": 170002.04,
-          "h": 170002.04,
-          "l": 165150.42,
-          "c": 166287.8,
-          "dma20": 185631.35,
-          "dma50": 206472.18
-        },
-        {
-          "d": "17 Nov",
-          "o": 168384.83,
-          "h": 169237.87,
-          "l": 167425.17,
-          "c": 168075.6,
-          "dma20": 183779.92,
-          "dma50": 205120.91
-        },
-        {
-          "d": "18 Nov",
-          "o": 162840.12,
-          "h": 162840.12,
-          "l": 158521.65,
-          "c": 159939.82,
-          "dma20": 181572.16,
-          "dma50": 203489.99
-        },
-        {
-          "d": "19 Nov",
-          "o": 159481.31,
-          "h": 159872.29,
-          "l": 157519.35,
-          "c": 157519.35,
-          "dma20": 179715.76,
-          "dma50": 202070.68
-        },
-        {
-          "d": "20 Nov",
-          "o": 150080.2,
-          "h": 150826.61,
-          "l": 145477.39,
-          "c": 145850.59,
-          "dma20": 177463.04,
-          "dma50": 200398.81
-        },
-        {
-          "d": "23 Nov",
-          "o": 147858.76,
-          "h": 154860.73,
-          "l": 147147.91,
-          "c": 154718.55,
-          "dma20": 175583.17,
-          "dma50": 198978.3
-        }
-      ]
-    },
     {
       "symbol": "GOLDM",
       "name": "MCX Gold Mini",
@@ -6789,78 +6369,78 @@
       "lot_size": 10,
       "settlement": "Physical Delivery (Devolves to Fut — Exit before expiry)",
       "bias": "bearish",
-      "rating": 89,
+      "rating": 93,
       "tier": "Strong Bearish",
       "tier_code": "strong_bearish",
       "strategy": "Bear Call Spread (News-Safe)",
-      "cmp": 126386.93,
-      "chg_1d": 4.4,
-      "chg_20d": -9.12,
-      "rsi": 34.5,
-      "dma20": 135125.02,
-      "dma50": 141099.6,
-      "dma200": 152839.73,
-      "dist_52w_high": -34.3,
-      "vol_ratio": 1.0,
+      "cmp": 125439.89,
+      "chg_1d": -0.24,
+      "chg_20d": -10.6,
+      "rsi": 32.8,
+      "dma20": 134348.96,
+      "dma50": 140611.34,
+      "dma200": 152589.11,
+      "dist_52w_high": -34.79,
+      "vol_ratio": 1.3,
       "global_ref": {
-        "benchmark": "GC=F: 3,670.00 $/oz (-9.1% 20D)",
+        "benchmark": "GC=F: 3,642.50 $/oz (-10.6% 20D)",
         "usdinr": 92.9,
-        "dxy_note": "DXY 104.1 (+0.5% 5D) · USD/INR 92.90 (-1.4% 5D)"
+        "dxy_note": "DXY 103.9 (+0.4% 5D) · USD/INR 92.90 (-1.1% 5D)"
       },
       "scores": {
-        "tech": 93,
+        "tech": 98,
         "sr": 95,
-        "news": 79,
-        "composite": 89
+        "news": 84,
+        "composite": 93
       },
       "sr": {
-        "s2": 107517.27,
+        "s2": 107201.59,
         "s1": 120632.36,
-        "pivot": 130067.19,
-        "r1": 135125.02,
-        "r2": 141099.6,
-        "s1_dist_pct": -4.55,
-        "r1_dist_pct": 6.91,
+        "pivot": 129751.51,
+        "r1": 134348.96,
+        "r2": 140611.34,
+        "s1_dist_pct": -3.83,
+        "r1_dist_pct": 7.1,
         "structure": "Downtrend / Resistance-Capped Below Moving Averages"
       },
       "expiry_meta": {
         "current": {
           "label": "27 Nov 2026 Opt",
           "fut": "04 Dec 2026 Fut",
-          "dte": 4
+          "dte": 3
         },
         "next": {
           "label": "29 Dec 2026 Opt",
           "fut": "05 Jan 2027 Fut",
-          "dte": 36
+          "dte": 35
         },
         "recommended": "next",
-        "rule_note": "Next option (29 Dec 2026) is 36 DTE (≤ 45d) — Next Expiry is Primary."
+        "rule_note": "Next option (29 Dec 2026) is 35 DTE (≤ 45d) — Next Expiry is Primary."
       },
       "expiries": {
         "current": {
-          "zone": "₹135,000 – ₹137,000",
-          "invalidation": 138370.0,
-          "short_strike": 136000,
-          "hedge_strike": 139000,
+          "zone": "₹134,000 – ₹136,000",
+          "invalidation": 137360.0,
+          "short_strike": 135000,
+          "hedge_strike": 138000,
           "est_credit": 780.0
         },
         "next": {
-          "zone": "₹136,000 – ₹138,000",
-          "invalidation": 139380.0,
-          "short_strike": 137000,
-          "hedge_strike": 141000,
+          "zone": "₹135,000 – ₹137,000",
+          "invalidation": 138370.0,
+          "short_strike": 136000,
+          "hedge_strike": 140000,
           "est_credit": 1040.0
         }
       },
       "reasons": {
-        "global_trend": "Global GC=F at 3,670.00 $/oz (-9.1% 20D) with DXY at 104.1 and USD/INR at ₹92.90.",
-        "technical": "MCX est. ₹126,387 (+4.40% 1D, -9.1% 20D), RSI(14) 34.5, 20 DMA ₹135,125, 50 DMA ₹141,100.",
-        "sr_analysis": "Support S1 ₹120,632 / S2 ₹107,517 · Resistance R1 ₹135,125 / R2 ₹141,100.",
+        "global_trend": "Global GC=F at 3,642.50 $/oz (-10.6% 20D) with DXY at 103.9 and USD/INR at ₹92.90.",
+        "technical": "MCX est. ₹125,440 (-0.24% 1D, -10.6% 20D), RSI(14) 32.8, 20 DMA ₹134,349, 50 DMA ₹140,611.",
+        "sr_analysis": "Support S1 ₹120,632 / S2 ₹107,202 · Resistance R1 ₹134,349 / R2 ₹140,611.",
         "news": "Global/MCX catalyst: \"Gold Price Forecast Today: Fed Hike Fallout, INR Rates - CoinDCX\"",
         "risk": "High-impact macro/geopolitical news detected — applied extra OTM safety buffer. Physical Delivery (Devolves to Fut — Exit before expiry); exit before expiry if near ITM."
       },
-      "conclusion": "STRONG BEARISH (89/100) — Safe news-buffered trade: Sell 29 Dec 2026 Opt 137000 CE / Buy 141000 CE (8.4% safety cushion beyond R1).",
+      "conclusion": "STRONG BEARISH (93/100) — Safe news-buffered trade: Sell 29 Dec 2026 Opt 136000 CE / Buy 140000 CE (8.4% safety cushion beyond R1).",
       "headlines": [
         {
           "title": "Gold Price Forecast Today: Fed Hike Fallout, INR Rates - CoinDCX",
@@ -6869,28 +6449,19 @@
           "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBBeUpJY29WVEw0MWowblRfOFRNZ0xpRkhRV0s4bTh0dDJqTFVYSVN2SFRDa21wSUxqRE9TTjBTSV9wcDVJVm1WeEo1U2FSZnpXVWlqNENzeEplN3MxanlSRXRMLVlkNm5veEZHelRQOA?oc=5"
         },
         {
-          "title": "Gold edges up as softer inflation data dents Fed rate-hike bets - Reuters",
-          "source": "Reuters",
+          "title": "Gold price prediction today: Where are gold & silver headed? Check July 15, 2026 outlook - The Times of India",
+          "source": "The Times of India",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRjFDcnNwNW1uWWdUaW5iaWRNLV8wbnl4QlBGWHFjN0twMDlINnBTclUwYnRGN1pTVTJYbE94MFEyRk5yQ0FUcXlQLXNkYkdPQXQ3eFlDUko4cXF1Vkc5TUg2LXZKSTAzc3hnOGJrT1hoNl92bG1mY1lSM2MwR3lBcGVQS2NmNDVEWUdURERqcDVkYUhpVTVXZDZqUEF6c1RCMjFFeWpOZWNKVzdGS3dFNzQ3VQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxQV0FIUW8xX0NGLXYyRF9GZGdXZW9mVkZaRlBpdWI1emtRamh0MWdCSUwwMWFnRGh4cnlIa1JRdVBkSWlwZVU2NFN3RGxZOTZCZm44X2FKdGhnREpEbTlCeEVfREp0WGw0Z09zMFFZVGgzN2ZmTzR1MjBwMDFudFBHRm9MUUYtc0EtVmhRYUdlMVAzcWhpVFMzel9ZSmlfZDJza3JXLTVzV0VVTm1lTVJ1bHVoOGRZQXVDZGRtUnkwMnlON2tybXJwU0xpd1prRUE2RV8yb29XLVMxNnhzVWM4WUxTbDlEd0dnVHZCSkRwNlZMN2tuWmhtMjhWbWQwd25WNEN4TnRnNGxxTVh3VF9kMmtnaTREX0YzMTFHeW5fOHpTeFF4Y0VWb3NFYUczYXl5RHhJMHF2MS1IV1lOcV9PNWkyWC0zTFV1YkHSAc8CQVVfeXFMTkxUM2h4Y3JETmdNWDBJc1lfVWFKVGlMcm5IYnRZakRwdTJ1RHdRSXVZb01kdU1Ja1luU0MzT3pDRk40OFVRcmdrTm9pcjB3T2swZk1pQ2ZhdHlHbFExamxsZ241SkYyNkxYb3R3WDdYWmdNWUVFTmg0ZkZXOFg4dnFZb0JNQTVhYVFuMVcyR1pWZlZMZko2Y25MUWlDZElOYndFVFdkS1BqdldQZ2REam11S3l2eDRDaGc3V05VN196akMyaTczRDBZYk1zNktCcFhPenFzczJvWjF6ZlFzYmd4U2l0akI4bWdhLU82LXlDMnc3Q0lyZGRHY2MzZHVyM1BGMWEwOGlDV2FjTzhXOE45dE0wU21XdjZEVzEyQzktbkROSVY2bjRhblloRFR4VEx0cWJiYldIRk1ZYkVaSVZLWENUdGM3dmM1Ny1aT2c?oc=5"
         },
         {
-          "title": "Gold price crash with 31% correction: Why investors should wait for November 25, December 4 and 9 - What’s special? - Livemint",
-          "source": "Livemint",
+          "title": "Gold price drops to ₹1.46 lakh, falls ₹8,500 in 10 days: What next for the yellow metal? - Fortune India",
+          "source": "Fortune India",
           "sentiment": "Negative",
-          "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxObTVVQ09hYUtlTjdESktxVC0tUktiQ3NEUy1FUFMybTlmNzRaM1ZnaHpZS3VfMDEwRkVCTmE2aVlocktRVTVxNWlldEk1MS04Vl9sNkdualJRdlBMSHpkek9uMVB5ekM5Q0FDcndMRDdtYzBMcFdWTDlfR1BmV3FQWmZRR2cxTUQycXctWk9wYi1ISkNxcWhrZ2h0WXFnelJaOUUtX3plSk01UklZU0VqTFRvdHJWLXRCMXVxZzJYU0NvVmo5VWJRbVZidzRKeC01Y1A5VFNXM3ZvSzREZ1hPWWsyM0pFOWhtX3BzdGlGOUxNckNMRHdSM0IwQkFHNHVsMnE5TlZjaVXSAY4CQVVfeXFMT0FMVEo0YlQ2TGlhT3VDQjVvd3hyTjFjR25IM09YeUhjQnM4YmotTE9iTHFRODJpN3UyWWljTlkxMUNCQnRIeV9paWJXZzg0V25Zb3NvT0czei1zaUVFUzVJbkozQkRvZVFaSHZqN3otZ1hBOWlfWUYtVGhNTzVSUEtZVWN0OGltNGZ0ZzgzODFkd05Sd1BBdHZXalRha0xtVF9zYmdORnpxYkIyVkxzZjEzeEltNU1DdjJEa0hPQkNyN0RWR1N4Y25SWWJpVHhQU2lSUGxHQW9oNEloOVRHWDNhX3JDUWNnTUQxc3dWbnl5U2M1STRhZ2hKRlVmQXVuSWFDekZHYXMzRV82cFB3?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNYmlwb1dwNlh4RjQzRS11SnVpMU0xS000YzlPSjhESE5FUlVtOXJ3WVphNG9LS1EtVUUtYnBycUVtSkM4RzF6RXF6ZDMtYmxLQ2Q5UkJMZVJFWEtRcGtMVWdtSzE4cE1xY3NtV3piN05Nbi1FZEJCV2lCV1hHNlR6dndvSjJDTEc0cnNVY3FWQ0xpX0RCWVZBZ3RCTmxtYzhlLS1XcUF0NE1LWjR5dmlnVGFQUFp1TFNYZDY4UG5ER25McWd4T0llNlhOdzRZZkXSAdwBQVVfeXFMTWVlb3Rzd09rcXRvZW04T19udWFTYlJMc3hyNF9XZjJnZU9KXzJieFhLS1prV0FXMXR3cTBYNEhISFc5RWdtUndGR0tGd1dneWVYMUVnN19XMXFBQ3NSTEduWWh4Zl83UUVNVHJRTEEzTGhqZmxJRklqWTBKdXNqMEp0czZSOGJDS1p1SGlFWktSYTFaYTVmeDIyOEpiUnpzZXpEOUVGSi1JZEhveDFfbHpJYnB2MThCT3JGS3dwQnBjRTRWWl94bUhVUkx1eENDck8zVmlDLUFiTDFkYw?oc=5"
         }
       ],
       "chart_data": [
-        {
-          "d": "06 Oct",
-          "o": 143578.31,
-          "h": 145066.02,
-          "l": 142252.45,
-          "c": 144194.75,
-          "dma20": 148280.62,
-          "dma50": 150500.11
-        },
         {
           "d": "07 Oct",
           "o": 144466.8,
@@ -7191,11 +6762,440 @@
         {
           "d": "23 Nov",
           "o": 122960.36,
-          "h": 126431.7,
+          "h": 127110.12,
           "l": 122333.59,
-          "c": 126386.93,
-          "dma20": 135125.02,
-          "dma50": 141099.6
+          "c": 125746.38,
+          "dma20": 135092.99,
+          "dma50": 141086.79
+        },
+        {
+          "d": "24 Nov",
+          "o": 125229.81,
+          "h": 126617.66,
+          "l": 124196.68,
+          "c": 125439.89,
+          "dma20": 134348.96,
+          "dma50": 140611.34
+        }
+      ]
+    },
+    {
+      "symbol": "SILVERM",
+      "name": "MCX Silver Mini",
+      "asset_class": "commodity",
+      "sector": "Precious Metals (MCX)",
+      "unit_label": "₹ / kg",
+      "lot_desc": "5 kg (₹5 per ₹1 move)",
+      "lot_size": 5,
+      "settlement": "Physical Delivery (Devolves to Fut — Exit before expiry)",
+      "bias": "bearish",
+      "rating": 88,
+      "tier": "Strong Bearish",
+      "tier_code": "strong_bearish",
+      "strategy": "Bear Call Spread (News-Safe)",
+      "cmp": 150702.21,
+      "chg_1d": -1.73,
+      "chg_20d": -21.91,
+      "rsi": 28.7,
+      "dma20": 173401.55,
+      "dma50": 197469.93,
+      "dma200": 238648.22,
+      "dist_52w_high": -65.05,
+      "vol_ratio": 6.39,
+      "global_ref": {
+        "benchmark": "SI=F: 42.40 $/oz (-21.9% 20D)",
+        "usdinr": 92.9,
+        "dxy_note": "DXY 103.9 (+0.4% 5D) · USD/INR 92.90 (-1.1% 5D)"
+      },
+      "scores": {
+        "tech": 98,
+        "sr": 95,
+        "news": 66,
+        "composite": 88
+      },
+      "sr": {
+        "s2": 116426.94,
+        "s1": 145213.96,
+        "pivot": 162615.02,
+        "r1": 173401.55,
+        "r2": 197469.93,
+        "s1_dist_pct": -3.64,
+        "r1_dist_pct": 15.06,
+        "structure": "Downtrend / Resistance-Capped Below Moving Averages"
+      },
+      "expiry_meta": {
+        "current": {
+          "label": "25 Nov 2026 Opt",
+          "fut": "30 Nov 2026 Fut",
+          "dte": 1
+        },
+        "next": {
+          "label": "28 Dec 2026 Opt",
+          "fut": "26 Feb 2027 Fut",
+          "dte": 34
+        },
+        "recommended": "next",
+        "rule_note": "Next option (28 Dec 2026) is 34 DTE (≤ 45d) — Next Expiry is Primary."
+      },
+      "expiries": {
+        "current": {
+          "zone": "₹172,500 – ₹177,500",
+          "invalidation": 179275.0,
+          "short_strike": 175000,
+          "hedge_strike": 180000,
+          "est_credit": 1300.0
+        },
+        "next": {
+          "zone": "₹172,500 – ₹177,500",
+          "invalidation": 179275.0,
+          "short_strike": 175000,
+          "hedge_strike": 180000,
+          "est_credit": 1300.0
+        }
+      },
+      "reasons": {
+        "global_trend": "Global SI=F at 42.40 $/oz (-21.9% 20D) with DXY at 103.9 and USD/INR at ₹92.90.",
+        "technical": "MCX est. ₹150,702 (-1.73% 1D, -21.9% 20D), RSI(14) 28.7, 20 DMA ₹173,402, 50 DMA ₹197,470.",
+        "sr_analysis": "Support S1 ₹145,214 / S2 ₹116,427 · Resistance R1 ₹173,402 / R2 ₹197,470.",
+        "news": "Global/MCX catalyst: \"Silver price on February 3 gains nearly 9% at $83.79/oz, as global tensions rise - Moneycontrol.com\"",
+        "risk": "High-impact macro/geopolitical news detected — applied extra OTM safety buffer. Physical Delivery (Devolves to Fut — Exit before expiry); exit before expiry if near ITM."
+      },
+      "conclusion": "STRONG BEARISH (88/100) — Safe news-buffered trade: Sell 28 Dec 2026 Opt 175000 CE / Buy 180000 CE (16.1% safety cushion beyond R1).",
+      "headlines": [
+        {
+          "title": "Silver price on February 3 gains nearly 9% at $83.79/oz, as global tensions rise - Moneycontrol.com",
+          "source": "Moneycontrol.com",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQRmE0dmwxUnRQLTZkTWxVRGc5MzVCUGVBNG94Y3BRcUI0YzFvdmJYOFFIUFdabzM4Y25CZHNkbEQ1WHFGZGhmUHFJdTNJUGo5MUZlT3hoVm1GSjZPNDRNNTJfYTUzMmRUd0J0X1BfbUtIaGtsVEFrMFVpUFc0dWV4c0I0MTRsalBFZGVpaVNnNWRjMGRhVzNsRmswSFhQTkttQlQ4VlZULVk0eXFUQ0Q2SHVjRFNTMFhXcWR6MUNoalFqUnVtZC1uQWJVTjI2dmMwbjhGcDBJaWM4U3Q1YmhiazlkdWjSAeoBQVVfeXFMTmZGSmREaXlYUE1DcjRURnZMbkswTWlPZkdXX0ZjTU1QMXNBMVR3LTZlUXhicWJHWHFlOTZtZ2RxM2duMWhXMEFnd2RPU3lSV3ZPVnpFTGtpZ3Bpc3Nsb2hQbXhoVjFIRGRQU2JEYk4wQWktRXNNWTQzYlBULW15WmRzLUUwSkZUU2lNWEFJaHBPbG50LXBLSGlvcjNVV2Rva1VvQnI3QXlUbE82S0c0LTc4Q0hfZGtKSXpxMmw0ZHRxSkU1MXh5Q2dUY0UxLTJnczZITU5fQVBMYkVjU0RZRjM3Vk5CSkRTN3Bn?oc=5"
+        },
+        {
+          "title": "Why Silver Price Is Going Up Today? XAG/USD Breaks $91 Key Level, Gold Doesn't Follow - TradingView",
+          "source": "TradingView",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQTm5lRGpmVG5RUnRCOVVoR2pTREZlSlNyLUs2MVNTR21aRkVzRzQ5WmdMY1l4U2RGNEpBY3NkUGt4cE9ZUHlsUXhqTXVsWlBBOFhuMy1Cend2Z25qTTdJVXQwaFI0dzE3N0JLellERk4zRTY1UjN1S2tuU3hnNjQwSUt3Q0RFS3NRYjAzZ1Zra0NXaEJZcldrSDk1VjNzWnlla2dDbzhqNmtnSEtPaWU4czdaTDVCcUtDUWdvVTVuZjEydDZvSXA1dVF6YW9hQnJzdG8wTWZHNTlfcHBEcVBDNFZn?oc=5"
+        },
+        {
+          "title": "Gold price tests $4,000 floor before divisive Fed decision, silver in bear clutches - Mining.com",
+          "source": "Mining.com",
+          "sentiment": "Neutral",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTUdOcWV5aW5xY1QtdDVGeUVONzlqdVRVSVFUU29oUmxvSXdyYTRoN0hHYnJxUXRDaEE4Ri0tMW5ENmRkdW5aaFpJYXprczM1Ym1pME12U3dYTlNrb2MwVmlsdUNsZVN5VE45aEZiallITmtuX3pfdkhMWWNOQnBJVjc0RHlvM01PNU82YzF4X013YjVCY2JDSi14ZHpOa250Z0kw?oc=5"
+        }
+      ],
+      "chart_data": [
+        {
+          "d": "07 Oct",
+          "o": 216385.62,
+          "h": 216385.62,
+          "l": 211587.31,
+          "c": 212898.84,
+          "dma20": 223985.77,
+          "dma50": 227632.76
+        },
+        {
+          "d": "08 Oct",
+          "o": 209931.01,
+          "h": 209931.01,
+          "l": 209401.43,
+          "c": 209931.01,
+          "dma20": 223058.1,
+          "dma50": 227718.14
+        },
+        {
+          "d": "09 Oct",
+          "o": 215639.21,
+          "h": 215941.33,
+          "l": 215639.21,
+          "c": 215639.21,
+          "dma20": 222367.85,
+          "dma50": 227850.0
+        },
+        {
+          "d": "12 Oct",
+          "o": 213758.99,
+          "h": 213758.99,
+          "l": 213758.99,
+          "c": 213758.99,
+          "dma20": 221768.6,
+          "dma50": 228031.27
+        },
+        {
+          "d": "13 Oct",
+          "o": 210275.78,
+          "h": 210275.78,
+          "l": 210275.78,
+          "c": 210275.78,
+          "dma20": 221044.41,
+          "dma50": 228137.47
+        },
+        {
+          "d": "14 Oct",
+          "o": 201688.59,
+          "h": 201688.59,
+          "l": 197263.5,
+          "c": 197441.21,
+          "dma20": 219491.54,
+          "dma50": 227817.16
+        },
+        {
+          "d": "15 Oct",
+          "o": 202015.6,
+          "h": 202015.6,
+          "l": 202015.6,
+          "c": 202015.6,
+          "dma20": 217957.33,
+          "dma50": 227443.11
+        },
+        {
+          "d": "16 Oct",
+          "o": 202577.17,
+          "h": 202648.26,
+          "l": 202577.17,
+          "c": 202577.17,
+          "dma20": 216258.19,
+          "dma50": 227127.2
+        },
+        {
+          "d": "19 Oct",
+          "o": 202612.72,
+          "h": 203483.52,
+          "l": 202502.53,
+          "c": 202502.53,
+          "dma20": 214685.24,
+          "dma50": 226675.24
+        },
+        {
+          "d": "20 Oct",
+          "o": 201670.83,
+          "h": 205104.28,
+          "l": 201670.83,
+          "c": 205104.28,
+          "dma20": 213223.36,
+          "dma50": 226149.2
+        },
+        {
+          "d": "21 Oct",
+          "o": 203483.52,
+          "h": 204094.86,
+          "l": 203483.52,
+          "c": 204094.86,
+          "dma20": 211986.46,
+          "dma50": 225626.93
+        },
+        {
+          "d": "22 Oct",
+          "o": 202594.94,
+          "h": 202594.94,
+          "l": 193318.23,
+          "c": 194647.53,
+          "dma20": 210441.59,
+          "dma50": 224859.84
+        },
+        {
+          "d": "23 Oct",
+          "o": 190904.85,
+          "h": 190904.85,
+          "l": 190904.85,
+          "c": 190904.85,
+          "dma20": 208569.54,
+          "dma50": 224066.38
+        },
+        {
+          "d": "26 Oct",
+          "o": 192315.92,
+          "h": 192315.92,
+          "l": 192315.92,
+          "c": 192315.92,
+          "dma20": 207305.63,
+          "dma50": 223292.97
+        },
+        {
+          "d": "27 Oct",
+          "o": 190990.16,
+          "h": 192973.46,
+          "l": 190705.81,
+          "c": 192973.46,
+          "dma20": 206172.7,
+          "dma50": 222452.16
+        },
+        {
+          "d": "28 Oct",
+          "o": 191665.48,
+          "h": 191665.48,
+          "l": 189817.24,
+          "c": 190002.07,
+          "dma20": 204992.49,
+          "dma50": 221706.9
+        },
+        {
+          "d": "29 Oct",
+          "o": 189159.7,
+          "h": 189159.7,
+          "l": 184290.31,
+          "c": 185502.33,
+          "dma20": 203475.88,
+          "dma50": 220744.18
+        },
+        {
+          "d": "30 Oct",
+          "o": 184254.77,
+          "h": 184254.77,
+          "l": 173751.81,
+          "c": 174505.33,
+          "dma20": 201542.34,
+          "dma50": 219398.59
+        },
+        {
+          "d": "02 Nov",
+          "o": 178070.29,
+          "h": 180984.81,
+          "l": 178070.29,
+          "c": 180273.96,
+          "dma20": 199738.71,
+          "dma50": 218066.02
+        },
+        {
+          "d": "03 Nov",
+          "o": 172667.77,
+          "h": 177697.09,
+          "l": 172561.13,
+          "c": 176246.94,
+          "dma20": 197680.59,
+          "dma50": 216718.65
+        },
+        {
+          "d": "04 Nov",
+          "o": 184574.66,
+          "h": 185249.97,
+          "l": 184574.66,
+          "c": 185249.97,
+          "dma20": 196298.15,
+          "dma50": 215544.6
+        },
+        {
+          "d": "05 Nov",
+          "o": 186511.74,
+          "h": 188200.04,
+          "l": 183650.53,
+          "c": 185651.61,
+          "dma20": 195084.18,
+          "dma50": 214424.5
+        },
+        {
+          "d": "06 Nov",
+          "o": 184123.27,
+          "h": 184272.55,
+          "l": 184123.27,
+          "c": 184123.27,
+          "dma20": 193508.38,
+          "dma50": 213171.54
+        },
+        {
+          "d": "09 Nov",
+          "o": 187400.32,
+          "h": 189124.15,
+          "l": 186422.89,
+          "c": 186828.08,
+          "dma20": 192161.84,
+          "dma50": 212145.69
+        },
+        {
+          "d": "10 Nov",
+          "o": 185978.61,
+          "h": 185996.38,
+          "l": 181628.15,
+          "c": 181628.15,
+          "dma20": 190729.46,
+          "dma50": 211070.88
+        },
+        {
+          "d": "11 Nov",
+          "o": 182513.16,
+          "h": 184400.5,
+          "l": 182424.31,
+          "c": 184400.5,
+          "dma20": 190077.42,
+          "dma50": 210165.45
+        },
+        {
+          "d": "12 Nov",
+          "o": 179438.7,
+          "h": 179438.7,
+          "l": 176577.49,
+          "c": 177615.34,
+          "dma20": 188857.41,
+          "dma50": 209116.87
+        },
+        {
+          "d": "13 Nov",
+          "o": 176559.71,
+          "h": 176559.71,
+          "l": 171885.82,
+          "c": 174270.74,
+          "dma20": 187442.09,
+          "dma50": 207841.44
+        },
+        {
+          "d": "16 Nov",
+          "o": 170002.04,
+          "h": 170002.04,
+          "l": 165150.42,
+          "c": 166287.8,
+          "dma20": 185631.35,
+          "dma50": 206472.18
+        },
+        {
+          "d": "17 Nov",
+          "o": 168384.83,
+          "h": 169237.87,
+          "l": 167425.17,
+          "c": 168075.6,
+          "dma20": 183779.92,
+          "dma50": 205120.91
+        },
+        {
+          "d": "18 Nov",
+          "o": 162840.12,
+          "h": 162840.12,
+          "l": 158521.65,
+          "c": 159939.82,
+          "dma20": 181572.16,
+          "dma50": 203489.99
+        },
+        {
+          "d": "19 Nov",
+          "o": 159481.31,
+          "h": 159872.29,
+          "l": 157519.35,
+          "c": 157519.35,
+          "dma20": 179715.76,
+          "dma50": 202070.68
+        },
+        {
+          "d": "20 Nov",
+          "o": 150080.2,
+          "h": 150826.61,
+          "l": 145477.39,
+          "c": 145850.59,
+          "dma20": 177463.04,
+          "dma50": 200398.81
+        },
+        {
+          "d": "23 Nov",
+          "o": 151075.41,
+          "h": 153357.26,
+          "l": 149724.77,
+          "c": 153357.26,
+          "dma20": 175515.11,
+          "dma50": 198951.08
+        },
+        {
+          "d": "24 Nov",
+          "o": 153012.49,
+          "h": 155713.77,
+          "l": 147983.16,
+          "c": 150702.21,
+          "dma20": 173401.55,
+          "dma50": 197469.93
         }
       ]
     },
@@ -7209,78 +7209,78 @@
       "lot_size": 10,
       "settlement": "Cash Settled",
       "bias": "bearish",
-      "rating": 83,
+      "rating": 82,
       "tier": "Bearish",
       "tier_code": "bearish",
       "strategy": "Bear Call Spread (News-Safe)",
-      "cmp": 7658.69,
-      "chg_1d": -2.32,
-      "chg_20d": -19.39,
-      "rsi": 34.2,
-      "dma20": 8457.66,
-      "dma50": 8754.02,
-      "dma200": 8252.08,
-      "dist_52w_high": -31.34,
-      "vol_ratio": 0.36,
+      "cmp": 7488.77,
+      "chg_1d": 0.05,
+      "chg_20d": -19.71,
+      "rsi": 32.1,
+      "dma20": 8357.06,
+      "dma50": 8702.71,
+      "dma200": 8258.61,
+      "dist_52w_high": -32.87,
+      "vol_ratio": 0.83,
       "global_ref": {
-        "benchmark": "CL=F: 82.03 $/bbl (-19.4% 20D)",
+        "benchmark": "CL=F: 80.21 $/bbl (-19.7% 20D)",
         "usdinr": 92.9,
-        "dxy_note": "DXY 104.1 (+0.5% 5D) · USD/INR 92.90 (-1.4% 5D)"
+        "dxy_note": "DXY 103.9 (+0.4% 5D) · USD/INR 92.90 (-1.1% 5D)"
       },
       "scores": {
-        "tech": 93,
+        "tech": 90,
         "sr": 85,
         "news": 66,
-        "composite": 83
+        "composite": 82
       },
       "sr": {
-        "s2": 6045.35,
-        "s1": 7321.95,
-        "pivot": 8327.18,
-        "r1": 8457.66,
-        "r2": 8754.02,
-        "s1_dist_pct": -4.4,
-        "r1_dist_pct": 10.43,
+        "s2": 5808.21,
+        "s1": 7163.23,
+        "pivot": 8225.41,
+        "r1": 8357.06,
+        "r2": 8702.71,
+        "s1_dist_pct": -4.35,
+        "r1_dist_pct": 11.59,
         "structure": "Downtrend / Resistance-Capped Below Moving Averages"
       },
       "expiry_meta": {
         "current": {
           "label": "16 Dec 2026 Opt",
           "fut": "18 Dec 2026 Fut",
-          "dte": 23
+          "dte": 22
         },
         "next": {
           "label": "15 Jan 2027 Opt",
           "fut": "19 Jan 2027 Fut",
-          "dte": 53
+          "dte": 52
         },
         "recommended": "current",
-        "rule_note": "Next option (15 Jan 2027) is 53 DTE (> 45d) — Active Dec 2026 Option (23 DTE) is Primary."
+        "rule_note": "Next option (15 Jan 2027) is 52 DTE (> 45d) — Active Dec 2026 Option (22 DTE) is Primary."
       },
       "expiries": {
         "current": {
-          "zone": "₹8,400 – ₹8,600",
-          "invalidation": 8686.0,
-          "short_strike": 8500,
-          "hedge_strike": 8700,
+          "zone": "₹8,300 – ₹8,500",
+          "invalidation": 8585.0,
+          "short_strike": 8400,
+          "hedge_strike": 8600,
           "est_credit": 52.0
         },
         "next": {
-          "zone": "₹8,900 – ₹9,100",
-          "invalidation": 9191.0,
-          "short_strike": 9000,
-          "hedge_strike": 9300,
+          "zone": "₹8,700 – ₹8,900",
+          "invalidation": 8989.0,
+          "short_strike": 8800,
+          "hedge_strike": 9100,
           "est_credit": 78.0
         }
       },
       "reasons": {
-        "global_trend": "Global CL=F at 82.03 $/bbl (-19.4% 20D) with DXY at 104.1 and USD/INR at ₹92.90.",
-        "technical": "MCX est. ₹7,659 (-2.32% 1D, -19.4% 20D), RSI(14) 34.2, 20 DMA ₹8,458, 50 DMA ₹8,754.",
-        "sr_analysis": "Support S1 ₹7,322 / S2 ₹6,045 · Resistance R1 ₹8,458 / R2 ₹8,754.",
+        "global_trend": "Global CL=F at 80.21 $/bbl (-19.7% 20D) with DXY at 103.9 and USD/INR at ₹92.90.",
+        "technical": "MCX est. ₹7,489 (+0.05% 1D, -19.7% 20D), RSI(14) 32.1, 20 DMA ₹8,357, 50 DMA ₹8,703.",
+        "sr_analysis": "Support S1 ₹7,163 / S2 ₹5,808 · Resistance R1 ₹8,357 / R2 ₹8,703.",
         "news": "Global/MCX catalyst: \"Short-Term Energy Outlook - U.S. Energy Information Administration (EIA) (.gov)\"",
         "risk": "High-impact macro/geopolitical news detected — applied extra OTM safety buffer. Cash Settled; exit before expiry if near ITM."
       },
-      "conclusion": "BEARISH (83/100) — Safe news-buffered trade: Sell 16 Dec 2026 Opt 8500 CE / Buy 8700 CE (11.0% safety cushion beyond R1).",
+      "conclusion": "BEARISH (82/100) — Safe news-buffered trade: Sell 16 Dec 2026 Opt 8400 CE / Buy 8600 CE (12.2% safety cushion beyond R1).",
       "headlines": [
         {
           "title": "Short-Term Energy Outlook - U.S. Energy Information Administration (EIA) (.gov)",
@@ -7295,22 +7295,13 @@
           "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBzb0FzNEVwMXdxSktvU3BhMjZKOW9MY3FJbC1ZM01QZ01mY3N4RjlqZ0sydnpFUGtUS1FCaGtxejRmRGduOW5tRXhQV3NKYW1MLXFDVlRrY2dHZUtkWEZodWdB?oc=5"
         },
         {
-          "title": "Crude oil prices briefly traded below $0 in spring 2020 but have since been mostly flat - U.S. Energy Information Administration (EIA) (.gov)",
-          "source": "U.S. Energy Information Administration (EIA) (.gov)",
+          "title": "Crude Oil Price Declines Amid OPEC Plus Output Rise - EBC Financial Group",
+          "source": "EBC Financial Group",
           "sentiment": "Neutral",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5YS0VpR2phcjBpZDV4WHNmZHBWQi0yMlhNOFhLeFctbFRaMjdjUTQ0bENmM0tWSE1Nel9OUlo0bEQ4aXgxXzZyZTZiMmFaZTRLWjY5MFBSVGliUTFTb01GWmxaOA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcG52WW9OaFItX1drS3NiV1oyYTg4RExYZklwOW1RMERmZjNfWWRsRExEUmVSQjV1NDBJS3pRMlU1UmZmNXo4ak4xOFhEbF9PbFVua1R5VjZTWkoxVmVQSmU2ZWoyOHN5ZXpkTXhrbUpfRV9oVXhjZUk1MFlFclQwU1F4aw?oc=5"
         }
       ],
       "chart_data": [
-        {
-          "d": "06 Oct",
-          "o": 8334.65,
-          "h": 8407.47,
-          "l": 8109.64,
-          "c": 8350.52,
-          "dma20": 8940.77,
-          "dma50": 8282.85
-        },
         {
           "d": "07 Oct",
           "o": 8399.07,
@@ -7612,10 +7603,19 @@
           "d": "23 Nov",
           "o": 7811.81,
           "h": 7837.95,
-          "l": 7520.51,
-          "c": 7658.69,
-          "dma20": 8457.66,
-          "dma50": 8754.02
+          "l": 7457.02,
+          "c": 7485.03,
+          "dma20": 8448.97,
+          "dma50": 8750.55
+        },
+        {
+          "d": "24 Nov",
+          "o": 7502.77,
+          "h": 7526.11,
+          "l": 7385.13,
+          "c": 7488.77,
+          "dma20": 8357.06,
+          "dma50": 8702.71
         }
       ]
     }
